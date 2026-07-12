@@ -67,6 +67,10 @@ export function CocktailGallery() {
 
   return (
     <section className={styles.gallery} id="atmosfera" aria-label="Brunch atmosfera">
+      <header className={styles.mobileIntro}>
+        <p>Brunch atmosfera</p>
+        <h2>Trenuci koje<br /><em>nosimo sa sobom.</em></h2>
+      </header>
       <button className={`${styles.arrow} ${styles.previous}`} type="button" onClick={previous} aria-label="Prethodna fotografija">
         <span aria-hidden="true" />
       </button>
@@ -90,6 +94,7 @@ export function CocktailGallery() {
           {renderedSlides.map((cocktail, index) => (
             <figure className={styles.card} key={`${cocktail.src}-${index}`} aria-hidden={index >= cocktails.length}>
               <img src={cocktail.src} alt={index < cocktails.length ? cocktail.alt : ""} draggable={false} />
+              {index < cocktails.length && <figcaption><span>{String(index + 1).padStart(2, "0")}</span> Food · Coffee · Good mood</figcaption>}
             </figure>
           ))}
         </div>

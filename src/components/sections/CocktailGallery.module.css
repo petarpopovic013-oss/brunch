@@ -9,6 +9,8 @@
   background: #0e0d0a;
 }
 
+.mobileIntro { display: none; }
+
 .viewport {
   width: 1200px;
   max-width: calc(100% - 60px);
@@ -41,11 +43,14 @@
 }
 
 .card {
+  position: relative;
   flex: 0 0 var(--card-width);
   width: var(--card-width);
   margin: 0;
   overflow: hidden;
 }
+
+.card figcaption { display: none; }
 
 .card img {
   width: 100%;
@@ -167,41 +172,52 @@
 
 @media (max-width: 767px) {
   .gallery {
-    width: min(328px, calc(100vw - 40px));
-    height: 675px;
-    padding: 60px 0;
+    width: 100%;
+    max-width: none;
+    height: 760px;
+    padding: 74px 0 66px;
     overflow: hidden;
   }
+
+  .mobileIntro { display: block; width: calc(100% - 48px); margin: 0 24px 34px; }
+  .mobileIntro p { margin: 0 0 12px; color: #e9782f; font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+  .mobileIntro h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(44px, 13vw, 56px); font-weight: 500; letter-spacing: -.03em; line-height: .88; }
+  .mobileIntro h2 em { color: #e9782f; font-weight: 400; }
 
   .viewport {
     width: 100%;
     max-width: none;
-    height: 491px;
+    height: 430px;
   }
 
   .track {
-    --card-width: min(328px, calc(100vw - 40px));
-    --card-gap: 0px;
+    --card-width: calc(100vw - 62px);
+    --card-gap: 14px;
     align-items: stretch;
-    height: 491px;
+    height: 430px;
+    padding-left: 24px;
   }
 
   .card {
-    height: 491px;
+    height: 430px;
   }
 
   .card img {
-    height: 491px;
+    height: 430px;
     max-height: none;
     object-fit: cover;
   }
+
+  .card::after { position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.72)); content: ""; pointer-events: none; }
+  .card figcaption { position: absolute; z-index: 1; right: 18px; bottom: 17px; left: 18px; display: flex; align-items: center; justify-content: space-between; color: rgba(255,255,255,.82); font-size: 8px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+  .card figcaption span { color: #e9782f; font-size: 11px; }
 
   .arrow {
     display: none;
   }
 
   .dots {
-    bottom: 59px;
+    bottom: 35px;
     gap: 9px;
   }
 
@@ -209,6 +225,13 @@
     width: 4px;
     height: 4px;
   }
+}
+
+@media (max-width: 380px) {
+  .gallery { height: 720px; }
+  .mobileIntro { width: calc(100% - 40px); margin-right: 20px; margin-left: 20px; }
+  .viewport, .track, .card, .card img { height: 405px; }
+  .track { --card-width: calc(100vw - 52px); padding-left: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

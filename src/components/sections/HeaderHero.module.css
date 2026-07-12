@@ -348,7 +348,9 @@
 }
 
 @media (max-width: 767px) {
-  .hero { min-height: 640px; height: max(100svh, 640px); }
+  .hero { min-height: 700px; height: max(100svh, 700px); background-position: 57% center; }
+  .heroShade { background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(0,0,0,.04) 34%, rgba(0,0,0,.78) 100%); }
+  .heroHeader, .stickyHeader { background: rgba(10, 14, 11, .66); backdrop-filter: blur(14px); }
   .navBar, .stickyHeader .navBar { padding: 0 20px; }
   .navLeft { gap: 0; }
   .menuButton { width: 28px; height: 40px; }
@@ -356,10 +358,11 @@
   .languages { position: absolute; right: 20px; font-size: 12px; }
   .logoLink, .stickyHeader .logoLink { top: -10px; width: 180px; height: 58px; }
   .tableButton { display: none; }
-  .heroContent { left: 8%; top: 49%; width: 84%; transform: translateY(-35%); }
-  .heroTitle { font-size: 48px; line-height: 48px; }
-  .heroCaption { margin-top: 14px; font-size: 18px; line-height: 1.5; }
-  .heroLocationButton { min-height: 48px; margin-top: 23px; padding: 0 20px; font-size: 10px; }
+  .heroContent { left: 24px; top: auto; bottom: 104px; width: calc(100% - 48px); transform: none; text-align: left; }
+  .heroTitle { font-size: clamp(51px, 15vw, 64px); line-height: .83; letter-spacing: -.035em; }
+  .heroTitle span:first-child { margin-bottom: 8px; }
+  .heroCaption { margin-top: 19px; font-size: 12px; line-height: 1.5; letter-spacing: .13em; }
+  .heroLocationButton { min-height: 50px; margin-top: 25px; padding: 0 20px; border-color: rgba(255,255,255,.55); background: rgba(10,9,7,.38); font-size: 9px; }
   .hoursFooter { bottom: 24px; font-size: 12px; }
   .hoursFooter svg { width: 14px; height: 14px; }
   .menuPanel { padding: 22px 22px 28px; }
@@ -406,8 +409,9 @@
   .navBar, .stickyHeader .navBar { padding-right: 14px; padding-left: 14px; }
   .languages { right: 14px; }
   .logoLink, .stickyHeader .logoLink { top: -4px; width: 154px; height: 52px; }
-  .heroTitle { font-size: clamp(40px, 12.5vw, 48px); line-height: .98; }
-  .heroCaption { font-size: 16px; }
+  .heroContent { left: 20px; width: calc(100% - 40px); }
+  .heroTitle { font-size: clamp(48px, 15vw, 58px); line-height: .84; }
+  .heroCaption { font-size: 10px; }
   .heroLocationButton { padding-right: 16px; padding-left: 16px; }
   .menuPanel { padding-right: 16px; padding-left: 16px; }
   .drawerClose { right: 14px; }

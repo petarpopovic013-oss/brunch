@@ -112,7 +112,7 @@
 
 @media (max-width: 767px) {
   .footer {
-    height: 654px;
+    height: 760px;
     background-attachment: scroll;
     background-position: center calc(50% + var(--mobile-parallax-y, 0px));
     background-size: auto 120%;
@@ -120,25 +120,31 @@
   }
 
   .footerShade {
-    background: rgba(0, 0, 0, 0.57);
+    background: linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,.83));
   }
 
   .footerContent {
-    width: min(328px, calc(100% - 40px));
+    width: calc(100% - 48px);
+    text-align: left;
   }
 
   .footerEyebrow {
     margin-bottom: 16px;
-    font-size: 11px;
+    color: #ef8a46;
+    font-size: 10px;
+    letter-spacing: .16em;
   }
 
   .footerTitle {
-    font-size: 38px;
-    line-height: 38px;
+    max-width: 330px;
+    font-size: clamp(50px, 14vw, 62px);
+    line-height: .88;
   }
 
   .details {
-    margin-top: 20px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.25);
     font-size: 13px;
     line-height: 21px;
   }
@@ -149,14 +155,16 @@
   }
 
   .mapsButton {
-    width: 204px;
-    height: 42px;
-    margin-top: 21px;
-    font-size: 12px;
+    width: 100%;
+    height: 52px;
+    margin-top: 28px;
+    font-size: 10px;
+    letter-spacing: .12em;
   }
 
   .socials {
-    margin-top: 29px;
+    margin-top: 30px;
+    justify-content: flex-start;
     gap: 20px;
   }
 
@@ -166,7 +174,7 @@
   }
 
   .copyright {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 10px;
   }
 }

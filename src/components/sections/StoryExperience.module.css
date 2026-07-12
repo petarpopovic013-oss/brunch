@@ -201,38 +201,44 @@
 @media (max-width: 767px) {
   .story {
     width: 100%;
-    height: 699px;
+    height: 890px;
   }
 
   .storyInner {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 30px 31px 52px;
+    padding: 68px 24px 72px;
   }
 
   .imagePair {
-    display: grid;
+    position: relative;
+    display: block;
     flex: 0 0 auto;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(100%, 480px);
+    width: 100%;
+    height: 388px;
   }
 
   .imageFrame {
-    width: 100%;
-    height: 218px;
+    position: absolute;
+    width: 82%;
+    height: 350px;
   }
+
+  .imageFrame:first-child { top: 0; left: 0; }
+  .imageFrame:last-child { right: 0; bottom: 0; width: 43%; height: 184px; border: 8px solid #0e0d0a; }
 
   .copy {
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    max-width: 328px;
+    max-width: 360px;
     margin: 0;
-    padding-top: 12px;
+    padding-top: 42px;
+    text-align: left;
   }
 
   .eyebrow {
@@ -241,15 +247,15 @@
   }
 
   .copy h2 {
-    margin-bottom: 14px;
-    font-size: 48px;
-    line-height: 48px;
+    margin-bottom: 18px;
+    font-size: 60px;
+    line-height: .86;
   }
 
   .description {
-    margin-bottom: 13px;
-    font-size: 14px;
-    line-height: 23.2px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .link {
@@ -257,7 +263,7 @@
   }
 
   .experience {
-    height: 257px;
+    height: 360px;
     background-attachment: scroll;
     background-position: center calc(50% + var(--mobile-parallax-y, 0px));
     background-size: auto 120%;
@@ -265,14 +271,19 @@
   }
 
   .experienceArt {
-    width: min(330px, calc(100vw - 40px));
-    font-size: clamp(40px, 12vw, 47px);
+    width: min(350px, calc(100vw - 40px));
+    font-size: clamp(50px, 14vw, 62px);
+    text-align: left;
   }
 }
 
 @media (max-width: 380px) {
-  .storyInner { padding: 24px 20px 44px; }
-  .copy h2 { font-size: 44px; line-height: 44px; }
+  .story { height: 850px; }
+  .storyInner { padding: 56px 20px 60px; }
+  .imagePair { height: 360px; }
+  .imageFrame { height: 324px; }
+  .copy { padding-top: 34px; }
+  .copy h2 { font-size: 54px; line-height: .88; }
   .description { font-size: 13px; line-height: 21px; }
 }
 
