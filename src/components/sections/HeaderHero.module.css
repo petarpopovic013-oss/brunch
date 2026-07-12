@@ -1,0 +1,426 @@
+.hero {
+  position: relative;
+  min-height: max(100vh, 702px);
+  overflow: hidden;
+  color: #fff;
+  background: #15100c url("/images/brunch/hero-guests.webp") center 46% / cover no-repeat;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+.header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  font-family: var(--font-jost), Arial, sans-serif;
+  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+  z-index: 90;
+}
+
+.heroHeader {
+  position: absolute;
+  height: 101px;
+  background: rgba(0, 0, 0, 0.48);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+.stickyHeader {
+  position: fixed;
+  height: 80px;
+  background: rgba(12, 11, 9, 0.96);
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.2);
+}
+.headerHidden { opacity: 0; visibility: hidden; transform: translateY(-100%); pointer-events: none; }
+
+.contactBar {
+  height: 56px;
+  padding: 0 6.25vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  line-height: 1;
+}
+.contactBar > div { display: flex; gap: 30px; }
+.contactBar a { display: inline-flex; align-items: center; gap: 10px; opacity: 0.92; transition: color 0.2s; }
+.contactBar svg { width: 15px; height: 15px; }
+.contactBar a:hover { color: #dd5903; }
+
+.navBar {
+  position: relative;
+  height: 101px;
+  padding: 0 6.25vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stickyHeader .navBar { height: 80px; }
+.navLeft { display: flex; align-items: center; gap: 28px; }
+.menuButton, .drawerClose, .modalClose {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+.menuButton { width: 40px; height: 40px; }
+.menuButton svg { width: 30px; height: 30px; stroke-width: 1; }
+.languages { font-size: 13px; letter-spacing: 0.025em; white-space: nowrap; }
+.languages a { transition: color .2s; }
+.languages a:hover { color: #dd5903; }
+
+.logoLink {
+  position: absolute;
+  left: 50%;
+  top: -13px;
+  width: 230px;
+  height: 70px;
+  transform: translateX(-50%);
+}
+.logoLink img { width: 100%; max-width: none; height: auto; }
+.stickyHeader .logoLink { top: -12px; width: 195px; height: 58px; }
+
+.tableButton, .submitButton {
+  border: 1px solid rgba(255,255,255,.7);
+  color: #fff;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background-color .2s;
+}
+.tableButton { width: 155px; height: 42px; display: grid; place-items: center; }
+.tableButton:hover { border-color: #dd5903; color: #dd5903; }
+
+.heroContent {
+  position: absolute;
+  z-index: 2;
+  left: 8.33%;
+  top: 50%;
+  width: 83.34%;
+  transform: translateY(-41%);
+  text-align: center;
+}
+.heroTitle {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 98px;
+  font-weight: 400;
+  line-height: 98px;
+}
+.heroTitle span { display: block; }
+.heroTitle em { font-weight: 400; }
+.heroTitle strong { color: #dd5903; font-weight: 600; }
+.heroCaption {
+  margin: 16px 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39.8px;
+  text-transform: uppercase;
+}
+.heroLocationButton {
+  display: inline-flex;
+  min-height: 50px;
+  margin-top: 28px;
+  padding: 0 24px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,.78);
+  color: #fff;
+  background: rgba(10,9,7,.24);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  transition: background-color .2s, border-color .2s, transform .2s;
+}
+.heroLocationButton svg { width: 16px; height: 16px; }
+.heroLocationButton:hover { border-color: #dd5903; background: #dd5903; transform: translateY(-2px); }
+.hoursFooter {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 47px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  white-space: nowrap;
+}
+.hoursFooter svg { width: 18px; height: 18px; }
+.mutedLanguage { opacity: .48; }
+
+.pageScrim {
+  position: fixed;
+  inset: 0;
+  z-index: 130;
+  visibility: hidden;
+  background: rgba(0,0,0,.88);
+  opacity: 0;
+  transition: opacity .35s, visibility .35s;
+}
+.scrimVisible { visibility: visible; opacity: 1; }
+.menuPanel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  padding: 34px clamp(32px, 6.25vw, 90px) 38px;
+  overflow-y: auto;
+  color: #eee;
+  background: #0e0d0a;
+  transform: translateY(-100%);
+  transition: transform .55s cubic-bezier(.76,0,.24,1);
+}
+.menuOpen { transform: translateY(0); }
+.drawerClose { position: absolute; z-index: 2; top: 30px; right: clamp(28px, 5vw, 72px); width: 46px; height: 46px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; transition: color .2s, border-color .2s, transform .2s; }
+.drawerClose:hover { color: #e9782f; border-color: #e9782f; transform: rotate(90deg); }
+.drawerClose svg, .modalClose svg { width: 28px; height: 28px; stroke-width: 1.5; }
+.drawerBrand { display: flex; height: 60px; align-items: center; gap: 24px; }
+.drawerBrand img { width: 150px; height: auto; }
+.drawerBrand p { margin: 0; padding-left: 24px; border-left: 1px solid rgba(255,255,255,.2); color: #8e8c87; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.drawerLayout { display: grid; max-width: 1260px; min-height: calc(100svh - 214px); margin: 20px auto 0; grid-template-columns: 1fr minmax(380px, .78fr); align-items: center; gap: clamp(60px, 9vw, 150px); }
+.drawerEyebrow { margin: 0 0 20px; color: #e9782f; font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.drawerNav { display: flex; flex-direction: column; align-items: flex-start; }
+.drawerNav a {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(36px, 4.1vw, 58px);
+  font-weight: 400;
+  line-height: .98;
+  transition: color .2s, transform .25s;
+}
+.drawerNav a + a { margin-top: 7px; }
+.drawerNav a span { width: 20px; color: #706e69; font-family: var(--font-jost), Arial, sans-serif; font-size: 9px; letter-spacing: .12em; }
+.drawerNav a:hover { color: #e9782f; transform: translateX(8px); }
+.drawerFeature { position: relative; height: min(59vh, 540px); min-height: 390px; overflow: hidden; }
+.drawerImage { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.82), rgba(0,0,0,.05) 68%), url("/images/brunch/story-moment.webp") center / cover; transition: transform .8s ease; }
+.drawerFeature:hover .drawerImage { transform: scale(1.025); }
+.drawerFeatureCopy { position: absolute; z-index: 1; inset: auto 38px 34px; }
+.drawerFeatureCopy p { margin: 0 0 10px; color: #e9782f; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.drawerFeatureCopy h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(40px, 4.2vw, 60px); font-weight: 400; line-height: .88; }
+.drawerFeatureCopy h2 em { color: #e9782f; font-weight: 500; }
+.drawerFeatureCopy button { display: inline-flex; margin-top: 24px; padding: 0 0 6px; align-items: center; gap: 9px; border: 0; border-bottom: 1px solid currentColor; color: #fff; background: transparent; cursor: pointer; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.drawerFeatureCopy button:hover { color: #e9782f; }
+.drawerFeatureCopy button svg { width: 15px; height: 15px; }
+.drawerFooter { display: flex; max-width: 1260px; margin: 10px auto 0; padding-top: 20px; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.13); }
+.drawerCities, .drawerContact { display: flex; align-items: center; gap: 28px; }
+.drawerCities span { color: #8e8c87; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.drawerContact a { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+.drawerContact a:hover { color: #e9782f; }
+.drawerContact svg { width: 14px; height: 14px; }
+
+.locationOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 160;
+  display: grid;
+  visibility: hidden;
+  padding: 32px;
+  place-items: center;
+  overflow-y: auto;
+  background: rgba(0,0,0,.82);
+  opacity: 0;
+  transition: opacity .28s, visibility .28s;
+}
+.locationOverlayVisible { visibility: visible; opacity: 1; }
+.locationPicker {
+  position: relative;
+  width: min(1120px, 100%);
+  max-height: calc(100svh - 64px);
+  padding: 52px clamp(28px, 5vw, 68px) 42px;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,.16);
+  color: #eee;
+  background: #12110e;
+  box-shadow: 0 30px 90px rgba(0,0,0,.52);
+}
+.locationClose { position: absolute; top: 20px; right: 22px; display: grid; width: 44px; height: 44px; padding: 0; place-items: center; border: 0; color: #fff; background: transparent; cursor: pointer; }
+.locationClose svg { width: 25px; height: 25px; }
+.pickerIntro { max-width: 590px; margin: 0 auto 38px; text-align: center; }
+.pickerEyebrow { margin: 0 0 10px; color: #e9782f; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.pickerIntro h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(44px, 5vw, 68px); font-weight: 500; line-height: 1; }
+.pickerIntro > p:last-child { margin: 14px 0 0; color: #b8b7b4; font-size: 15px; line-height: 1.55; }
+.cityGrid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 34px; }
+.cityGroup h3 { margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.17); color: #e9782f; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.locationList { display: grid; gap: 8px; }
+.locationChoice { display: grid; min-height: 70px; padding: 8px; grid-template-columns: 56px 1fr auto; align-items: center; gap: 13px; border: 1px solid transparent; background: rgba(255,255,255,.035); transition: border-color .2s, background-color .2s, transform .2s; }
+.locationChoice:hover, .locationChoice:focus-visible { border-color: rgba(221,89,3,.72); background: rgba(221,89,3,.08); transform: translateY(-1px); }
+.locationThumb { width: 56px; height: 52px; overflow: hidden; }
+.locationThumb img { width: 100%; height: 100%; object-fit: cover; }
+.locationCopy { display: flex; min-width: 0; flex-direction: column; line-height: 1.3; }
+.locationCopy strong { color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: 20px; font-weight: 500; }
+.locationCopy small { overflow: hidden; color: #9f9d98; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.locationArrow { padding-right: 5px; color: #e9782f; font-size: 16px; }
+.allLocationsLink { display: block; width: fit-content; margin: 30px auto 0; padding-bottom: 4px; border-bottom: 1px solid currentColor; font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.allLocationsLink:hover { color: #e9782f; }
+
+.reservationOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow-y: auto;
+  color: #fff;
+  background: rgba(0,0,0,.88);
+  animation: fadeIn .24s ease both;
+}
+.modalClose { position: fixed; top: 44px; right: 48px; z-index: 2; width: 40px; height: 40px; }
+.reservationPanel {
+  width: 700px;
+  min-height: 682px;
+  padding: 64px 50px 58px;
+  border: 1px solid rgba(255,255,255,.38);
+  background: rgba(0,0,0,.55);
+  text-align: center;
+}
+.eyebrow { margin: 0 0 17px; color: #dd5903; font-size: 13px; font-weight: 600; letter-spacing: .065em; text-transform: uppercase; }
+.reservationPanel h2 { margin: 0; font-family: var(--font-cormorant), Georgia, serif; font-size: 66px; font-weight: 600; line-height: 1; }
+.reservationForm { margin-top: 49px; }
+.formRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 21px; }
+.formRow + .formRow { margin-top: 48px; }
+.reservationForm label { display: block; min-width: 0; }
+.reservationForm input, .reservationForm select, .reservationForm textarea {
+  width: 100%;
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  border-radius: 0;
+  outline: 0;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.reservationForm select { appearance: auto; color-scheme: dark; }
+.reservationForm input[type="date"] { color-scheme: dark; }
+.reservationForm input::placeholder, .reservationForm textarea::placeholder { color: #fff; opacity: 1; }
+.reservationForm input:focus, .reservationForm select:focus, .reservationForm textarea:focus { border-bottom-color: #dd5903; }
+.requestField { margin-top: 60px; }
+.reservationForm textarea { min-height: 91px; resize: vertical; }
+.submitButton { width: 198px; height: 44px; margin-top: 29px; border-color: #dd5903; background: #dd5903; }
+.submitButton:hover { background: #f0670b; }
+.visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.menuButton:focus-visible, .drawerClose:focus-visible, .modalClose:focus-visible, .tableButton:focus-visible,
+.submitButton:focus-visible, .drawerNav a:focus-visible, .languages a:focus-visible,
+.heroLocationButton:focus-visible, .locationClose:focus-visible, .drawerFeatureCopy button:focus-visible {
+  outline: 2px solid #dd5903;
+  outline-offset: 4px;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 1024px) {
+  .hero { min-height: max(100vh, 640px); background-position: 44% center; }
+  .heroHeader { height: 80px; }
+  .contactBar { display: none; }
+  .navBar, .stickyHeader .navBar { height: 80px; padding: 0 26px; }
+  .logoLink, .stickyHeader .logoLink { top: -10px; width: 190px; height: 58px; }
+  .heroTitle { font-size: 66px; line-height: 66px; }
+  .heroContent { transform: translateY(-38%); }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .drawerLayout { grid-template-columns: minmax(260px, 1fr) minmax(320px, .9fr); gap: 36px; }
+  .drawerFeatureCopy { right: 26px; left: 26px; }
+  .cityGrid { grid-template-columns: 1fr 1fr; }
+  .cityGroup:first-child { grid-row: span 2; }
+  .locationPicker { padding-right: 38px; padding-left: 38px; }
+}
+
+@media (max-width: 767px) {
+  .hero { min-height: 640px; height: max(100svh, 640px); }
+  .navBar, .stickyHeader .navBar { padding: 0 20px; }
+  .navLeft { gap: 0; }
+  .menuButton { width: 28px; height: 40px; }
+  .menuButton svg { width: 25px; }
+  .languages { position: absolute; right: 20px; font-size: 12px; }
+  .logoLink, .stickyHeader .logoLink { top: -10px; width: 180px; height: 58px; }
+  .tableButton { display: none; }
+  .heroContent { left: 8%; top: 49%; width: 84%; transform: translateY(-35%); }
+  .heroTitle { font-size: 48px; line-height: 48px; }
+  .heroCaption { margin-top: 14px; font-size: 18px; line-height: 1.5; }
+  .heroLocationButton { min-height: 48px; margin-top: 23px; padding: 0 20px; font-size: 10px; }
+  .hoursFooter { bottom: 24px; font-size: 12px; }
+  .hoursFooter svg { width: 14px; height: 14px; }
+  .menuPanel { padding: 22px 22px 28px; }
+  .drawerClose { top: 20px; right: 20px; width: 42px; height: 42px; }
+  .drawerBrand { height: 46px; }
+  .drawerBrand img { width: 118px; }
+  .drawerBrand p { display: none; }
+  .drawerLayout { display: flex; min-height: 0; margin-top: 42px; flex-direction: column; align-items: stretch; gap: 38px; }
+  .drawerEyebrow { margin-bottom: 14px; }
+  .drawerNav a { gap: 14px; font-size: 34px; line-height: 1; }
+  .drawerNav a + a { margin-top: 7px; }
+  .drawerNav a span { width: 15px; font-size: 8px; }
+  .drawerFeature { height: 205px; min-height: 205px; }
+  .drawerImage { background-position: center 36%; }
+  .drawerFeatureCopy { inset: auto 22px 20px; }
+  .drawerFeatureCopy p { margin-bottom: 6px; font-size: 8px; }
+  .drawerFeatureCopy h2 { font-size: 36px; }
+  .drawerFeatureCopy button { position: absolute; right: 0; bottom: 3px; margin: 0; font-size: 8px; }
+  .drawerFooter { margin-top: 28px; padding-top: 18px; align-items: flex-start; }
+  .drawerCities { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .drawerCities span { font-size: 8px; }
+  .drawerContact { flex-direction: column; align-items: flex-end; gap: 6px; }
+  .drawerContact a { font-size: 9px; }
+  .reservationOverlay { align-items: flex-start; padding: 70px 20px 24px; }
+  .modalClose { top: 15px; right: 15px; }
+  .reservationPanel { min-height: 0; width: 100%; padding: 42px 24px 40px; }
+  .reservationPanel h2 { font-size: 47px; }
+  .reservationForm { margin-top: 35px; }
+  .formRow { grid-template-columns: 1fr; gap: 25px; }
+  .formRow + .formRow { margin-top: 25px; }
+  .requestField { margin-top: 30px; }
+  .locationOverlay { padding: 0; align-items: end; }
+  .locationPicker { width: 100%; max-height: 91svh; padding: 54px 20px 30px; border-right: 0; border-bottom: 0; border-left: 0; }
+  .locationClose { top: 10px; right: 12px; }
+  .pickerIntro { margin-bottom: 28px; padding: 0 18px; }
+  .pickerIntro h2 { font-size: 42px; }
+  .pickerIntro > p:last-child { margin-top: 10px; font-size: 13px; }
+  .cityGrid { grid-template-columns: 1fr; gap: 24px; }
+  .locationChoice { min-height: 68px; }
+  .allLocationsLink { margin-top: 26px; font-size: 10px; }
+}
+
+@media (max-width: 390px) {
+  .navBar, .stickyHeader .navBar { padding-right: 14px; padding-left: 14px; }
+  .languages { right: 14px; }
+  .logoLink, .stickyHeader .logoLink { top: -4px; width: 154px; height: 52px; }
+  .heroTitle { font-size: clamp(40px, 12.5vw, 48px); line-height: .98; }
+  .heroCaption { font-size: 16px; }
+  .heroLocationButton { padding-right: 16px; padding-left: 16px; }
+  .menuPanel { padding-right: 16px; padding-left: 16px; }
+  .drawerClose { right: 14px; }
+  .drawerNav a { font-size: 31px; }
+  .drawerFeatureCopy button { display: none; }
+  .drawerFooter { gap: 16px; }
+  .drawerContact a { font-size: 8px; }
+  .locationPicker { padding-right: 14px; padding-left: 14px; }
+  .pickerIntro { padding-right: 12px; padding-left: 12px; }
+  .pickerIntro h2 { font-size: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header, .pageScrim, .menuPanel, .locationOverlay, .locationChoice, .heroLocationButton { transition: none; }
+  .reservationOverlay { animation: none; }
+}

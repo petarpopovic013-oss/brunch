@@ -1,0 +1,183 @@
+.footerEyebrow {
+  margin: 0 0 17px;
+  color: #dd5903;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+
+.footerTitle {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 400;
+}
+
+.footer {
+  position: relative;
+  height: 724px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: url("/images/brunch/footer-masinac.png") center 54% / cover fixed no-repeat;
+}
+
+.footerShade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.footerContent {
+  position: relative;
+  z-index: 1;
+  width: min(900px, calc(100% - 40px));
+  text-align: center;
+}
+
+.footerEyebrow {
+  margin-bottom: 17px;
+  color: #fff;
+}
+
+.footerTitle {
+  font-size: 66px;
+  line-height: 66px;
+}
+
+.details {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.details p,
+.details address {
+  margin: 0 0 12px;
+}
+
+.details address {
+  font-style: normal;
+}
+
+.mapsButton {
+  width: 248px;
+  height: 45px;
+  margin: 23px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #dd5903;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+}
+
+.mapsButton:hover,
+.mapsButton:focus-visible {
+  background: #b94800;
+}
+
+.socials {
+  margin-top: 31px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.socials a {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.socials svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+.copyright {
+  margin: 27px 0 0;
+  font-size: 12px;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: 654px;
+    background-attachment: scroll;
+    background-position: center calc(50% + var(--mobile-parallax-y, 0px));
+    background-size: auto 120%;
+    will-change: background-position;
+  }
+
+  .footerShade {
+    background: rgba(0, 0, 0, 0.57);
+  }
+
+  .footerContent {
+    width: min(328px, calc(100% - 40px));
+  }
+
+  .footerEyebrow {
+    margin-bottom: 16px;
+    font-size: 11px;
+  }
+
+  .footerTitle {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .details {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .details p,
+  .details address {
+    margin-bottom: 11px;
+  }
+
+  .mapsButton {
+    width: 204px;
+    height: 42px;
+    margin-top: 21px;
+    font-size: 12px;
+  }
+
+  .socials {
+    margin-top: 29px;
+    gap: 20px;
+  }
+
+  .socials a {
+    width: 14px;
+    height: 14px;
+  }
+
+  .copyright {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mapsButton {
+    transition: none;
+  }
+
+  .footer {
+    background-attachment: scroll;
+    background-position: center;
+  }
+}

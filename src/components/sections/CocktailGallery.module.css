@@ -1,0 +1,220 @@
+.gallery {
+  position: relative;
+  width: calc(100% - 180px);
+  max-width: 1260px;
+  height: 631px;
+  margin: 0 auto;
+  padding: 120px 0 70px;
+  overflow: visible;
+  background: #0e0d0a;
+}
+
+.viewport {
+  width: 1200px;
+  max-width: calc(100% - 60px);
+  height: 391px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.viewport:active {
+  cursor: grabbing;
+}
+
+.track {
+  --card-width: 252px;
+  --card-gap: 64px;
+  display: flex;
+  align-items: center;
+  gap: var(--card-gap);
+  height: 100%;
+  transform: translate3d(calc(var(--position) * (var(--card-width) + var(--card-gap)) * -1), 0, 0);
+  transition: transform 650ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.track.noTransition {
+  transition: none;
+}
+
+.card {
+  flex: 0 0 var(--card-width);
+  width: var(--card-width);
+  margin: 0;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 391px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #a4a3a0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 200ms ease;
+}
+
+.arrow span,
+.arrow span::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+.arrow span {
+  top: 22px;
+  width: 42px;
+  height: 1px;
+  background: currentColor;
+}
+
+.arrow span::after {
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+}
+
+.previous {
+  right: calc(100% + 7px);
+}
+
+.previous span {
+  right: 0;
+}
+
+.previous span::after {
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.next {
+  left: calc(100% + 7px);
+}
+
+.next span {
+  left: 0;
+}
+
+.next span::after {
+  right: 0;
+  transform: rotate(135deg);
+}
+
+.arrow:hover,
+.arrow:focus-visible {
+  color: #fff;
+}
+
+.arrow:focus-visible,
+.dots button:focus-visible {
+  outline: 1px solid #dd5903;
+  outline-offset: 4px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.dots button {
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #575653;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.dots button.activeDot {
+  background: #fff;
+  transform: scale(1.15);
+}
+
+@media (max-width: 1350px) and (min-width: 768px) {
+  .viewport {
+    width: calc(100% - 60px);
+  }
+
+  .track {
+    --card-width: calc((100vw - 426px) / 4);
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    width: min(328px, calc(100vw - 40px));
+    height: 675px;
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
+  .viewport {
+    width: 100%;
+    max-width: none;
+    height: 491px;
+  }
+
+  .track {
+    --card-width: min(328px, calc(100vw - 40px));
+    --card-gap: 0px;
+    align-items: stretch;
+    height: 491px;
+  }
+
+  .card {
+    height: 491px;
+  }
+
+  .card img {
+    height: 491px;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .dots {
+    bottom: 59px;
+    gap: 9px;
+  }
+
+  .dots button {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .dots button,
+  .arrow {
+    transition: none;
+  }
+}
