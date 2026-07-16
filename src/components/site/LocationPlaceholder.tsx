@@ -6,7 +6,7 @@ import { SiteHeader } from "./SiteHeader";
 import styles from "./LocationPlaceholder.module.css";
 
 export function LocationPlaceholder({ location }: { location: BrunchLocation }) {
-  const readerUrl = `${location.menuPdf}#view=FitH&toolbar=1&navpanes=0`;
+  const readerUrl = `${location.menuPdf}#view=FitH&toolbar=0&navpanes=0&scrollbar=0`;
   const mapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${location.name}, ${location.address}, ${location.city}`)}&output=embed`;
   const galleryImages = location.gallery;
 
