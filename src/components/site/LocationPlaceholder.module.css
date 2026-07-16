@@ -40,7 +40,9 @@
   font-weight: 500;
   letter-spacing: -.04em;
   line-height: .85;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 .content p {
@@ -693,9 +695,60 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .info {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 44px;
+  }
+
+  .info > div:nth-child(2) {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .info > div:last-child {
+    padding-top: 38px;
+    grid-column: 1 / -1;
+    border-top: 1px solid #ccc5ba;
+  }
+}
+
+@media (max-width: 900px) {
+  .story {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .storyBody {
+    max-width: 680px;
+  }
+
+  .galleryIntro,
+  .menuIntro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .galleryIntro .kicker {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+
+  .galleryIntro p,
+  .menuCopy {
+    max-width: 620px;
+  }
+}
+
 @media (max-width: 760px) {
   .hero {
-    min-height: 760px;
+    min-height: max(100svh, 680px);
+  }
+
+  .content {
+    padding-top: 140px;
+    padding-bottom: 72px;
   }
 
   .content h1 {
@@ -759,11 +812,11 @@
   .galleryItem:first-child,
   .galleryItem:not(:first-child) {
     width: 100%;
-    height: 340px;
+    height: clamp(300px, 90vw, 360px);
   }
 
   .galleryItem:first-child {
-    height: 480px;
+    height: clamp(400px, 125vw, 480px);
   }
 
   .galleryItem:nth-child(3) {
@@ -798,7 +851,7 @@
 
   .mapFrame,
   .mapFrame iframe {
-    min-height: 480px;
+    min-height: 440px;
   }
 
   .menuSection {
@@ -843,8 +896,8 @@
   }
 
   .readerViewport {
-    height: 72svh;
-    min-height: 520px;
+    height: clamp(520px, 72svh, 760px);
+    min-height: 0;
   }
 
   .menuNote {
@@ -865,8 +918,63 @@
     border-bottom: 1px solid #ccc5ba;
   }
 
+  .info > div:nth-child(2),
+  .info > div:last-child {
+    padding-top: 0;
+    grid-column: auto;
+    border-top: 0;
+  }
+
   .hours p {
     grid-template-columns: 1fr auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .content > span {
+    letter-spacing: .14em;
+  }
+
+  .content h1 {
+    font-size: clamp(46px, 16vw, 62px);
+  }
+
+  .story,
+  .info {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .storyBody > p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .storyBody ul {
+    gap: 7px;
+  }
+
+  .storyBody li {
+    padding: 8px 10px;
+    letter-spacing: .09em;
+  }
+
+  .galleryItem figcaption {
+    align-items: flex-start;
+    line-height: 1.4;
+  }
+
+  .mapCopy address {
+    font-size: 14px;
+  }
+
+  .hours p {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .hours strong {
+    color: #3f3932;
   }
 }
 
@@ -874,7 +982,6 @@
   .content { width: calc(100% - 32px); }
   .content p { font-size: 15px; }
   .actions a { width: 100%; min-width: 0; }
-  .info { padding-right: 20px; padding-left: 20px; }
   .readerActions { flex-direction: column; }
   .readerActions a { width: 100%; }
   .mapCopy h2 .mapLocation { font-size: 18px; }

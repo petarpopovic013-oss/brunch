@@ -17,7 +17,8 @@
 
 .footer {
   position: relative;
-  height: 724px;
+  min-height: 724px;
+  padding: 80px 0;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -112,7 +113,8 @@
 
 @media (max-width: 767px) {
   .footer {
-    height: 760px;
+    min-height: 720px;
+    padding: 72px 0;
     background-attachment: scroll;
     background-position: center calc(50% + var(--mobile-parallax-y, 0px));
     background-size: auto 120%;
@@ -176,6 +178,12 @@
   .copyright {
     margin-top: 30px;
     font-size: 10px;
+  }
+}
+
+@media (max-width: 1024px), (pointer: coarse) {
+  .footer {
+    background-attachment: scroll;
   }
 }
 

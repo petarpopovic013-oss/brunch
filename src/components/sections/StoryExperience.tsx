@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./StoryExperience.module.css";
 
 export function StoryExperience() {
@@ -7,10 +8,10 @@ export function StoryExperience() {
         <div className={styles.storyInner}>
           <div className={styles.imagePair}>
             <div className={styles.imageFrame}>
-              <img src="/images/brunch/story-moment.webp" alt="Gošća u toploj atmosferi Brunch restorana" />
+              <Image src="/images/brunch/story-moment.webp" alt="Gošća u toploj atmosferi Brunch restorana" fill sizes="(max-width: 767px) 82vw, 360px" />
             </div>
             <div className={styles.imageFrame}>
-              <img src="/images/brunch/story-plate.webp" alt="Brunch specijalitet i koktel" />
+              <Image src="/images/brunch/story-plate.webp" alt="Brunch specijalitet i koktel" fill sizes="(max-width: 767px) 43vw, 360px" />
             </div>
           </div>
 

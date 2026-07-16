@@ -2,7 +2,7 @@
   position: relative;
   width: calc(100% - 180px);
   max-width: 1260px;
-  height: 631px;
+  min-height: 631px;
   margin: 0 auto;
   padding: 120px 0 70px;
   overflow: visible;
@@ -46,6 +46,7 @@
   position: relative;
   flex: 0 0 var(--card-width);
   width: var(--card-width);
+  height: 391px;
   margin: 0;
   overflow: hidden;
 }
@@ -54,8 +55,7 @@
 
 .card img {
   width: 100%;
-  height: auto;
-  max-height: 391px;
+  height: 100%;
   object-fit: cover;
   pointer-events: none;
 }
@@ -161,12 +161,18 @@
 }
 
 @media (max-width: 1350px) and (min-width: 768px) {
+  .gallery {
+    width: calc(100% - 96px);
+  }
+
   .viewport {
-    width: calc(100% - 60px);
+    width: calc(100% - 48px);
+    max-width: none;
   }
 
   .track {
-    --card-width: calc((100vw - 426px) / 4);
+    --card-width: clamp(180px, 23vw, 252px);
+    --card-gap: clamp(24px, 4vw, 48px);
   }
 }
 
@@ -174,7 +180,7 @@
   .gallery {
     width: 100%;
     max-width: none;
-    height: 760px;
+    min-height: 760px;
     padding: 74px 0 66px;
     overflow: hidden;
   }
@@ -222,13 +228,37 @@
   }
 
   .dots button {
-    width: 4px;
-    height: 4px;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+  }
+
+  .dots button::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #575653;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .dots button.activeDot {
+    background: transparent;
+    transform: none;
+  }
+
+  .dots button.activeDot::after {
+    background: #fff;
+    transform: translate(-50%, -50%) scale(1.25);
   }
 }
 
 @media (max-width: 380px) {
-  .gallery { height: 720px; }
+  .gallery { min-height: 720px; }
   .mobileIntro { width: calc(100% - 40px); margin-right: 20px; margin-left: 20px; }
   .viewport, .track, .card, .card img { height: 405px; }
   .track { --card-width: calc(100vw - 52px); padding-left: 20px; }

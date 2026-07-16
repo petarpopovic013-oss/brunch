@@ -18,12 +18,12 @@ export function SiteFooter() {
         </div>
         <div>
           <span className={styles.label}>Gradovi</span>
-          {cities.map((city) => <Link key={city} href={`/#${city.toLowerCase().replaceAll(" ", "-")}`}>{city}</Link>)}
+          {cities.map((city) => <Link key={city} href="/#lokacije">{city}</Link>)}
         </div>
         <div>
           <span className={styles.label}>Informacije</span>
           <Link href="/#lokacije">Sve lokacije</Link>
-          <Link href="/#prica">Naša priča</Link>
+          <Link href="/#about">Naša priča</Link>
         </div>
         <div>
           <span className={styles.label}>Pratite nas</span>

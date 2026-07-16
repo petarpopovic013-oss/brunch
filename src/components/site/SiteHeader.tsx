@@ -12,7 +12,7 @@ export function SiteHeader({ inner = false }: { inner?: boolean }) {
       </Link>
 
       <nav className={styles.desktopNav} aria-label="Glavna navigacija">
-        <Link href={`${prefix}#prica`}>Naša priča</Link>
+        <Link href={`${prefix}#about`}>Naša priča</Link>
         <Link href={`${prefix}#lokacije`}>Lokacije</Link>
         <Link href={`${prefix}#kontakt`}>Kontakt</Link>
       </nav>
@@ -28,7 +28,7 @@ export function SiteHeader({ inner = false }: { inner?: boolean }) {
         </summary>
         <nav aria-label="Mobilna navigacija">
           <Link href="/">Početna</Link>
-          <Link href={`${prefix}#prica`}>Naša priča</Link>
+          <Link href={`${prefix}#about`}>Naša priča</Link>
           <Link href={`${prefix}#lokacije`}>Lokacije</Link>
           <Link href={`${prefix}#kontakt`}>Kontakt</Link>
         </nav>

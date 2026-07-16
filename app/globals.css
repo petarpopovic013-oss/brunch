@@ -8,7 +8,7 @@
   --orange: #dd5903;
   --muted: #b8b7b4;
   --container: 1260px;
-  --side-space: 6.25vw;
+  --side-space: clamp(24px, 6.25vw, 100px);
 }
 
 @theme inline {
@@ -28,6 +28,8 @@ html {
   scroll-padding-top: 88px;
   background: var(--background);
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -50,6 +52,7 @@ button,
 input,
 select,
 textarea {
+  min-width: 0;
   font: inherit;
 }
 
@@ -75,6 +78,11 @@ summary {
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+iframe,
+svg {
   max-width: 100%;
 }
 
@@ -113,7 +121,7 @@ img {
 
 @media (max-width: 767px) {
   :root {
-    --side-space: 8vw;
+    --side-space: clamp(20px, 6.4vw, 32px);
   }
 
   body {

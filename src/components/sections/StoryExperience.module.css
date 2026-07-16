@@ -1,7 +1,7 @@
 .story {
   width: calc(100% - 180px);
   max-width: 1260px;
-  height: 720px;
+  min-height: 720px;
   margin: 0 auto;
   background: #0e0d0a;
   overflow: hidden;
@@ -13,7 +13,7 @@
   grid-template-columns: 360px 1fr 360px;
   align-items: center;
   column-gap: 60px;
-  height: 100%;
+  min-height: 720px;
   padding: 120px 30px;
 }
 
@@ -22,6 +22,7 @@
 }
 
 .imageFrame {
+  position: relative;
   width: 360px;
   height: 480px;
   overflow: hidden;
@@ -201,13 +202,13 @@
 @media (max-width: 767px) {
   .story {
     width: 100%;
-    height: 890px;
+    min-height: 890px;
   }
 
   .storyInner {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 890px;
     padding: 68px 24px 72px;
   }
 
@@ -277,8 +278,14 @@
   }
 }
 
+@media (max-width: 1024px), (pointer: coarse) {
+  .experience {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 380px) {
-  .story { height: 850px; }
+  .story { min-height: 850px; }
   .storyInner { padding: 56px 20px 60px; }
   .imagePair { height: 360px; }
   .imageFrame { height: 324px; }

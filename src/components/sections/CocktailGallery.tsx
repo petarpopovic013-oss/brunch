@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import styles from "./CocktailGallery.module.css";
 
 const cocktails = [
@@ -93,7 +94,13 @@ export function CocktailGallery() {
         >
           {renderedSlides.map((cocktail, index) => (
             <figure className={styles.card} key={`${cocktail.src}-${index}`} aria-hidden={index >= cocktails.length}>
-              <img src={cocktail.src} alt={index < cocktails.length ? cocktail.alt : ""} draggable={false} />
+              <Image
+                src={cocktail.src}
+                alt={index < cocktails.length ? cocktail.alt : ""}
+                fill
+                sizes="(max-width: 767px) calc(100vw - 52px), (max-width: 1350px) 24vw, 252px"
+                draggable={false}
+              />
               {index < cocktails.length && <figcaption><span>{String(index + 1).padStart(2, "0")}</span> Food · Coffee · Good mood</figcaption>}
             </figure>
           ))}

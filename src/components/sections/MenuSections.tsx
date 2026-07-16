@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { locations } from "@/src/data/locations";
 import styles from "./MenuSections.module.css";
 
@@ -31,7 +32,13 @@ export function MenuSections() {
         <div className={styles.cards}>
           {locations.map((location, index) => (
             <Link className={styles.card} href={`/lokacije/${location.slug}/`} key={location.slug}>
-              <img className={styles.cardImage} src={location.image} alt={location.imageAlt} />
+              <Image
+                className={styles.cardImage}
+                src={location.image}
+                alt={location.imageAlt}
+                fill
+                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 42vw"
+              />
               <span className={styles.cardShade} />
               <span className={styles.cardNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
               <span className={styles.cardContent}>

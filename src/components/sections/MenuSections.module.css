@@ -259,6 +259,23 @@
   .card:last-child { grid-column: 4 / span 6; }
 }
 
+@media (min-width: 768px) and (max-width: 920px) {
+  .cardsIntro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .introAside > p {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 1024px), (pointer: coarse) {
+  .banner {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 420px) {
   .cardsSection { padding-right: 20px; padding-left: 20px; }
   .cardsIntro h2 { font-size: clamp(39px, 12vw, 46px); }

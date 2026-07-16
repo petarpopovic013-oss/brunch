@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: max(100vh, 702px);
+  min-height: max(100svh, 702px);
   overflow: hidden;
   color: #fff;
   background: #15100c url("/images/brunch/hero-guests.webp") center 46% / cover no-repeat;
@@ -330,12 +330,12 @@
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 1024px) {
-  .hero { min-height: max(100vh, 640px); background-position: 44% center; }
+  .hero { min-height: max(100svh, 640px); background-position: 44% center; }
   .heroHeader { height: 80px; }
   .contactBar { display: none; }
   .navBar, .stickyHeader .navBar { height: 80px; padding: 0 26px; }
   .logoLink, .stickyHeader .logoLink { top: -10px; width: 190px; height: 58px; }
-  .heroTitle { font-size: 66px; line-height: 66px; }
+  .heroTitle { font-size: clamp(60px, 8vw, 76px); line-height: .92; }
   .heroContent { transform: translateY(-38%); }
 }
 
@@ -348,7 +348,7 @@
 }
 
 @media (max-width: 767px) {
-  .hero { min-height: 700px; height: max(100svh, 700px); background-position: 57% center; }
+  .hero { min-height: max(100svh, 650px); background-position: 57% center; }
   .heroShade { background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(0,0,0,.04) 34%, rgba(0,0,0,.78) 100%); }
   .heroHeader, .stickyHeader { background: rgba(10, 14, 11, .66); backdrop-filter: blur(14px); }
   .navBar, .stickyHeader .navBar { padding: 0 20px; }
@@ -381,7 +381,7 @@
   .drawerFeatureCopy p { margin-bottom: 6px; font-size: 8px; }
   .drawerFeatureCopy h2 { font-size: 36px; }
   .drawerFeatureCopy button { position: absolute; right: 0; bottom: 3px; margin: 0; font-size: 8px; }
-  .drawerFooter { margin-top: 28px; padding-top: 18px; align-items: flex-start; }
+  .drawerFooter { margin-top: 28px; padding-top: 18px; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
   .drawerCities { flex-direction: column; align-items: flex-start; gap: 4px; }
   .drawerCities span { font-size: 8px; }
   .drawerContact { flex-direction: column; align-items: flex-end; gap: 6px; }
@@ -422,6 +422,18 @@
   .locationPicker { padding-right: 14px; padding-left: 14px; }
   .pickerIntro { padding-right: 12px; padding-left: 12px; }
   .pickerIntro h2 { font-size: 38px; }
+  .locationChoice { min-height: 76px; grid-template-columns: 58px minmax(0, 1fr) auto; gap: 11px; }
+  .locationThumb { width: 58px; height: 58px; }
+  .locationCopy strong { font-size: 22px; }
+  .locationCopy small { font-size: 11px; }
+}
+
+@media (max-height: 620px) and (min-width: 768px) {
+  .hero { min-height: 620px; }
+  .heroContent { transform: translateY(-30%); }
+  .hoursFooter { bottom: 24px; }
+  .drawerLayout { min-height: 0; align-items: start; }
+  .drawerFeature { height: 360px; min-height: 320px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

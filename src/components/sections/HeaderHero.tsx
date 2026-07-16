@@ -97,7 +97,7 @@ export function HeaderHero() {
           </button>
 
           <div className={styles.drawerBrand}>
-            <img src="/images/brunch/logo-white.webp" alt="Brunch Lounge" />
+            <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={192} height={108} sizes="150px" />
             <p>Food · Coffee · Good Mood</p>
           </div>
 
@@ -181,7 +181,7 @@ function Header({ compact, hidden, onMenu, onLocations }: { compact: boolean; hi
           <div className={styles.languages}><span>SR</span><span> – </span><span className={styles.mutedLanguage}>EN</span></div>
         </div>
         <a href="#home" className={styles.logoLink} aria-label="Brunch početna">
-          <img src="/images/brunch/logo-white.webp" alt="Brunch Lounge" />
+          <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} priority sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
         <button className={styles.tableButton} type="button" onClick={onLocations}>Pronađi lokal</button>
       </div>
