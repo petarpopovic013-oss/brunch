@@ -5,6 +5,7 @@ export type BrunchLocation = {
   shortName: string;
   city: "Novi Sad" | "Beograd" | "Nova Pazova";
   area: string;
+  areaLocative: string;
   image: string;
   imageAlt: string;
   heroImage: string;
@@ -32,6 +33,7 @@ export const locations: BrunchLocation[] = [
     shortName: "Mašinac",
     city: "Novi Sad",
     area: "Univerzitetski kampus",
+    areaLocative: "univerzitetskom kampusu",
     image: "/images/brunch/masinac.webp",
     imageAlt: "Karakterističan zeleni enterijer lokala Brunch Mašinac",
     heroImage: "/images/locations/brunch-masinac-novi-sad/hero.jpg",
@@ -63,6 +65,7 @@ export const locations: BrunchLocation[] = [
     shortName: "Mercator Novi Sad",
     city: "Novi Sad",
     area: "Mercator Novi Sad",
+    areaLocative: "Mercatoru u Novom Sadu",
     image: "/images/brunch/mercator-ns.webp",
     imageAlt: "Svetao enterijer Brunch Lounge lokala u Mercator centru",
     heroImage: "/images/locations/brunch-lounge-mercator-novi-sad/hero.jpg",
@@ -90,6 +93,7 @@ export const locations: BrunchLocation[] = [
     shortName: "TC BIG",
     city: "Novi Sad",
     area: "BIG Novi Sad",
+    areaLocative: "BIG-u u Novom Sadu",
     image: "/images/brunch/big-ns.webp",
     imageAlt: "Prostrani enterijer Brunch restorana u TC BIG Novi Sad",
     heroImage: "/images/locations/brunch-tc-big-novi-sad/hero.jpg",
@@ -121,6 +125,7 @@ export const locations: BrunchLocation[] = [
     shortName: "BIG Fashion",
     city: "Novi Sad",
     area: "BIG Fashion Novi Sad",
+    areaLocative: "BIG Fashion-u u Novom Sadu",
     image: "/images/brunch/big-fashion-ns.webp",
     imageAlt: "Gošće uz piće u Brunch BIG Fashion restoranu",
     heroImage: "/images/locations/brunch-big-fashion-novi-sad/hero.jpg",
@@ -150,6 +155,7 @@ export const locations: BrunchLocation[] = [
     shortName: "TC BIG",
     city: "Nova Pazova",
     area: "BIG Nova Pazova",
+    areaLocative: "BIG-u u Novoj Pazovi",
     image: "/images/brunch/big-nova-pazova.webp",
     imageAlt: "Brunch sto sa ručkom i koktelom u Novoj Pazovi",
     heroImage: "/images/locations/brunch-big-nova-pazova/hero.jpg",
@@ -179,6 +185,7 @@ export const locations: BrunchLocation[] = [
     shortName: "Mercator Beograd",
     city: "Beograd",
     area: "Mercator Beograd",
+    areaLocative: "Mercator Centru u Beogradu",
     image: "/images/brunch/mercator-bg.webp",
     imageAlt: "Servirano jelo u Brunch Mercator restoranu u Beogradu",
     heroImage: "/images/locations/brunch-mercator-beograd/hero.jpg",
@@ -206,6 +213,7 @@ export const locations: BrunchLocation[] = [
     shortName: "BEO Shopping Center",
     city: "Beograd",
     area: "BEO Shopping Center",
+    areaLocative: "BEO Shopping Centru u Beogradu",
     image: "/images/brunch/beo.webp",
     imageAlt: "Brunch burger poslužen u BEO Shopping Center lokalu",
     heroImage: "/images/locations/brunch-beo-shopping-centar/hero.jpg",

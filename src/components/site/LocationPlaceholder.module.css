@@ -480,21 +480,6 @@
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 13px;
-}
-
-.readerMark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 auto;
-  border: 1px solid rgba(239, 139, 71, .65);
-  color: #ef8b47;
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: 27px;
-  font-weight: 600;
-  line-height: 1;
-  place-items: center;
 }
 
 .readerIdentity div {
