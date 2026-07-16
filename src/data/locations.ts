@@ -33,7 +33,7 @@ export const locations: BrunchLocation[] = [
     shortName: "Mašinac",
     city: "Novi Sad",
     area: "Univerzitetski kampus",
-    areaLocative: "univerzitetskom kampusu",
+    areaLocative: "Univerzitetskom Kampusu",
     image: "/images/brunch/masinac.webp",
     imageAlt: "Karakterističan zeleni enterijer lokala Brunch Mašinac",
     heroImage: "/images/locations/brunch-masinac-novi-sad/hero.jpg",

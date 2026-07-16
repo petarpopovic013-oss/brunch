@@ -276,14 +276,14 @@
 .mapSection {
   display: grid;
   min-height: 640px;
-  grid-template-columns: minmax(350px, .75fr) minmax(0, 1.25fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   background: #ede9e1;
   color: #28231c;
 }
 
 .mapCopy {
   display: flex;
-  padding: clamp(70px, 8vw, 125px) clamp(36px, 6.25vw, 100px);
+  padding: clamp(70px, 8vw, 125px) clamp(36px, 4vw, 72px);
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
@@ -302,10 +302,15 @@
   line-height: .86;
 }
 
-.mapCopy h2 em {
+.mapCopy h2 .mapLocation {
+  display: block;
   color: #887b6d;
+  font-size: clamp(25px, 2.7vw, 42px);
   font-weight: 400;
-  overflow-wrap: anywhere;
+  letter-spacing: -.025em;
+  line-height: 1.02;
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .mapCopy address {
@@ -668,6 +673,26 @@
   font-size: 11px;
 }
 
+@media (max-width: 960px) {
+  .mapSection {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .mapCopy {
+    padding: 80px clamp(32px, 7vw, 68px) 72px;
+  }
+
+  .mapCopy h2 .mapLocation {
+    font-size: clamp(28px, 5vw, 42px);
+  }
+
+  .mapFrame,
+  .mapFrame iframe {
+    min-height: 520px;
+  }
+}
+
 @media (max-width: 760px) {
   .hero {
     min-height: 760px;
@@ -767,6 +792,10 @@
     font-size: clamp(49px, 14vw, 67px);
   }
 
+  .mapCopy h2 .mapLocation {
+    font-size: clamp(20px, 6.2vw, 28px);
+  }
+
   .mapFrame,
   .mapFrame iframe {
     min-height: 480px;
@@ -848,4 +877,5 @@
   .info { padding-right: 20px; padding-left: 20px; }
   .readerActions { flex-direction: column; }
   .readerActions a { width: 100%; }
+  .mapCopy h2 .mapLocation { font-size: 18px; }
 }

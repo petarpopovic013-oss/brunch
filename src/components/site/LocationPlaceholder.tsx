@@ -65,7 +65,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
       <section className={styles.mapSection} aria-labelledby="map-title">
         <div className={styles.mapCopy}>
           <span className={styles.kicker}>Pronađite nas</span>
-          <h2 id="map-title">Vidimo se u<br /><em>{location.areaLocative}.</em></h2>
+          <h2 id="map-title">Vidimo se u<br /><em className={styles.mapLocation}>{location.areaLocative}.</em></h2>
           <address>{location.address}<br />{location.postalCode} {location.city}, Srbija</address>
           <a href={location.mapsUrl} target="_blank" rel="noreferrer">
             Pokreni navigaciju <span aria-hidden="true">↗</span>
