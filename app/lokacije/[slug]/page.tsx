@@ -19,7 +19,12 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   return {
     title: `${location.name} | Brunch ${location.city}`,
-    description: `Posetite ${location.name} na lokaciji ${location.area}. Kontakt, radno vreme i informacije o Brunch lokalu u gradu ${location.city}.`,
+    description: `${location.heroCopy} Pogledajte jelovnik, adresu, radno vreme i kontakt.`,
+    openGraph: {
+      title: `${location.name} | Brunch ${location.city}`,
+      description: location.heroCopy,
+      images: [{ url: location.heroImage }],
+    },
   };
 }
 
@@ -29,5 +34,32 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
   if (!location) notFound();
 
-  return <LocationPlaceholder location={location} />;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: location.name,
+    description: location.description,
+    telephone: location.phoneHref.replace("tel:", ""),
+    ...(location.email ? { email: location.email } : {}),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: location.address,
+      postalCode: location.postalCode,
+      addressLocality: location.city,
+      addressCountry: "RS",
+    },
+    hasMap: location.mapsUrl,
+    servesCuisine: ["Internacionalna", "Mediteranska", "Italijanska"],
+    priceRange: "RSD",
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replaceAll("<", "\\u003c") }}
+      />
+      <LocationPlaceholder location={location} />
+    </>
+  );
 }

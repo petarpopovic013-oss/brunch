@@ -45,7 +45,7 @@ Prva verzija sajta koristi srpski jezik, latinicu. Arhitektura ne treba da bloki
 - Zasebna statična stranica za svaku lokaciju.
 - Zajednički Brunch header, navigacija, footer i vizuelni sistem.
 - Fotografije i dekorativni banner na svakoj lokacijskoj stranici.
-- Strukturiran HTML meni za svaku lokaciju.
+- Zaseban PDF jelovnik za svaku lokaciju, prikazan u ugrađenom PDF readeru.
 - Kontakt, radno vreme, telefon i Google Maps link.
 - Ravnopravni CTA elementi „Pogledaj meni” i „Pozovi lokal”.
 - Responsive prikaz za desktop, tablet i mobilne uređaje.
@@ -137,26 +137,34 @@ Sve lokacije koriste isti dizajn sistem i osnovni raspored. Svaka lokacija ima s
 
 3. **Galerija**
    - Nekoliko fotografija enterijera, hrane, pića i atmosfere.
-   - Responsive carousel ili uređena fotografska mreža.
+   - Asimetrična responsive fotografska mreža sa dominantnom fotografijom konkretnog lokala.
+   - Fotografije i opisi se prilagođavaju karakteru svake lokacije.
    - Fotografije imaju smislen alt tekst.
 
 4. **Dekorativni banner**
    - Široka fotografija ili dekorativna grafika.
    - Kratka poruka lokala ili brenda.
 
-5. **HTML meni**
-   - Meni je deo stranice, ne PDF dokument.
-   - Korisnik dolazi do njega putem anchor linka sa CTA dugmeta.
-   - Stavke su grupisane u jasno imenovane kategorije.
+5. **Google mapa**
+   - Interaktivni Google Maps prikaz sa tačnom adresom lokala nalazi se neposredno iznad jelovnika.
+   - Sekcija ima direktnu akciju za pokretanje navigacije u Google Maps aplikaciji.
+   - Mapa se učitava odloženo kako ne bi usporila prvi prikaz stranice.
 
-6. **Kontakt sekcija**
+6. **PDF jelovnik**
+   - Svaka lokacija koristi sopstveni PDF dokument; jedan PDF ne sme biti deljen između lokacija sa različitom ponudom.
+   - Jelovnik je prikazan unutar stilizovanog PDF readera na stranici lokacije.
+   - Korisnik dolazi do readera putem anchor linka sa CTA dugmeta.
+   - Reader ima jasne akcije za otvaranje PDF-a preko celog ekrana i preuzimanje dokumenta.
+   - Ako browser ne podržava ugrađeni PDF prikaz, mora postojati direktan link ka dokumentu.
+
+7. **Kontakt sekcija**
    - Puna adresa.
    - Telefon sa `tel:` linkom.
    - Radno vreme po danima ili grupama dana.
    - Google Maps link.
    - Opcioni Instagram ili drugi lokalni društveni profil.
 
-7. **Footer**
+8. **Footer**
    - Zajednički Brunch footer.
    - Link ka svim lokacijama.
 
@@ -164,34 +172,18 @@ Sve lokacije koriste isti dizajn sistem i osnovni raspored. Svaka lokacija ima s
 
 „Pogledaj meni” i „Pozovi lokal” imaju isti vizuelni prioritet. Google Maps je sekundarni CTA i nalazi se u kontakt sekciji. Rezervaciona forma nije deo prve verzije.
 
-## 8. Model HTML menija
+## 8. Model PDF jelovnika
 
-Svaka lokacija ima meni upisan kao statičan, semantički HTML sadržaj. Minimalna struktura jedne kategorije je:
-
-```ts
-interface MenuCategory {
-  id: string;
-  title: string;
-  description?: string;
-  items: MenuItem[];
-}
-
-interface MenuItem {
-  name: string;
-  description?: string;
-  price: string;
-  badges?: string[];
-}
-```
+Svaka lokacija u modelu podataka ima obaveznu `menuPdf` putanju ka svom dokumentu u `public/menus/` folderu. Nazivi fajlova pišu se malim slovima, bez razmaka i dijakritike.
 
 Pravila prikaza:
 
-- Kategorija ima jedinstveni `id` radi anchor navigacije.
-- Stavka obavezno ima naziv i cenu.
-- Opis i oznake, poput „vegan”, „novo” ili „ljuto”, nisu obavezni.
-- Cena se čuva kao tekst kako bi podržala formate poput `490 RSD`, `od 350 RSD` ili više veličina.
-- Meni mora ostati čitljiv bez JavaScript-a.
-- Na mobilnom prikazu naziv i cena ne smeju da se preklapaju.
+- PDF se učitava lokalno i sajt ne zavisi od eksternog servisa.
+- Reader se učitava odloženo (`loading="lazy"`) kako ne bi usporio hero i prvi prikaz stranice.
+- Desktop reader prikazuje dokument unutar stranice sa browser kontrolama za stranice, zumiranje i štampu.
+- Na telefonu su uvek vidljive akcije „Otvori ceo ekran” i „Preuzmi PDF”.
+- Direktan URL PDF-a mora raditi i nakon statičkog exporta na cPanel hostingu.
+- PDF treba optimizovati za web pre objave kad god izvorni dokument nepotrebno prelazi razumnu veličinu za mobilno preuzimanje.
 
 ## 9. Upravljanje sadržajem
 
@@ -213,7 +205,7 @@ Za svaku novu lokaciju moraju biti dostavljeni:
 - Google Maps URL.
 - Glavna fotografija i galerija.
 - Kratak opis lokala.
-- Kompletan meni sa kategorijama, opisima i cenama.
+- Finalni PDF jelovnik namenjen toj lokaciji.
 - Društvene mreže, ako se razlikuju od centralnih profila.
 - SEO naslov i opis ili informacije iz kojih se mogu napisati.
 
@@ -312,7 +304,7 @@ Interaktivne funkcije, poput mobilnog menija i galerije, rade kao Client Compone
 
 ### Asseti
 
-- Slike, logotipi i fontovi čuvaju se lokalno u `public/` folderu.
+- Slike, logotipi, fontovi i PDF jelovnici čuvaju se lokalno u `public/` folderu.
 - Fotografije se pre unosa optimizuju u odgovarajuće WEBP/JPG dimenzije.
 - Putanje ne treba da koriste razmake ili specijalne znakove u novim fajlovima.
 - Static export ne sme zavisiti od udaljenog WordPress sajta ili drugih asset hostova.
@@ -347,7 +339,7 @@ Interaktivne funkcije, poput mobilnog menija i galerije, rade kao Client Compone
 ### Faza 4 — Sistem lokacijskih stranica
 
 - Izraditi zajedničke komponente za hero, galeriju, banner, meni i kontakt.
-- Kreirati zasebnu statičnu stranicu za svaku poznatu lokaciju.
+- Kreirati zasebnu statičnu stranicu za svaku poznatu lokaciju i povezati njen PDF jelovnik.
 - Uneti jedinstvene podatke i sadržaj svakog objekta.
 
 **Isporuka:** kompletan skup lokacijskih stranica.
@@ -383,7 +375,7 @@ Projekat je spreman za objavu kada su ispunjeni sledeći uslovi:
 
 - Landing prikazuje sve poznate gradove i lokacije.
 - Svaka kartica vodi na ispravnu lokacijsku stranicu.
-- Svaka lokacija ima fotografije, banner, HTML meni, kontakt i radno vreme.
+- Svaka lokacija ima personalizovanu galeriju, interaktivnu mapu, sopstveni PDF jelovnik, kontakt i radno vreme.
 - „Pogledaj meni” vodi do menija, a „Pozovi lokal” koristi ispravan `tel:` URL.
 - Google Maps link vodi do tačnog objekta.
 - Sve stranice koriste konzistentan Brunch dizajn sistem.
@@ -406,7 +398,7 @@ Projekat je spreman za objavu kada su ispunjeni sledeći uslovi:
 ### Kontakt i meni
 
 - Aktivirati „Pozovi lokal” na mobilnom uređaju.
-- Otvoriti „Pogledaj meni” i proveriti sve kategorije, stavke i cene.
+- Otvoriti „Pogledaj meni” i proveriti da odgovarajući PDF radi u readeru, preko celog ekrana i kao preuzimanje.
 - Proveriti adresu, radno vreme i Google Maps URL svake lokacije.
 
 ### Responsive prikaz
@@ -427,7 +419,7 @@ Projekat je spreman za objavu kada su ispunjeni sledeći uslovi:
 | Rizik ili zavisnost | Uticaj | Ublažavanje |
 | --- | --- | --- |
 | Nepotpun spisak lokacija | Ne mogu se završiti sve rute i navigacija | Zaključati content inventory pre Faze 4 |
-| Neujednačeni meniji | Različit kvalitet lokacijskih stranica | Koristiti jedinstven format kategorija i stavki |
+| Veliki PDF jelovnici | Sporo otvaranje na mobilnoj mreži | Lazy-load readera i optimizacija PDF fajlova pre produkcije |
 | Velike fotografije | Spor mobilni prikaz | Optimizovati dimenzije i kompresiju pre unosa |
 | Promena URL-a nakon objave | Gubitak SEO vrednosti | Zaključati slugove pre produkcije |
 | cPanel konfiguracija | Nested rute mogu raditi drugačije | Koristiti trailing slash i testirati finalni `out/` paket |
@@ -440,7 +432,7 @@ Projekat je spreman za objavu kada su ispunjeni sledeći uslovi:
 - Srpska latinica je jedini jezik prve verzije.
 - Svaka lokacija ima sopstvenu eksplicitnu React stranicu.
 - Sve lokacije koriste isti osnovni dizajn sistem i raspored.
-- Meni se unosi kao HTML sadržaj, ne kao PDF ili galerija slika.
+- Svaka lokacija ima sopstveni lokalno hostovan PDF jelovnik.
 - Telefon i meni su glavne konverzione akcije.
 - Hosting je standardni cPanel koji može da servira statičke HTML, CSS i JavaScript fajlove.
 - Produkcijski domen biće prosleđen kroz build-time `SITE_URL` pre finalnog exporta.

@@ -6,9 +6,7 @@ import Link from "next/link";
 import {
   ClockIcon,
   CloseIcon,
-  MailIcon,
   MenuIcon,
-  PhoneIcon,
   PinIcon,
 } from "@/src/components/icons";
 import { cities, locations } from "@/src/data/locations";
@@ -79,7 +77,7 @@ export function HeaderHero() {
 
         <div className={styles.hoursFooter}>
           <ClockIcon />
-          <span>Svaki dan: 08:00 — 23:00</span>
+          <span>7 lokacija · 3 grada</span>
         </div>
       </section>
 
@@ -128,8 +126,7 @@ export function HeaderHero() {
           <div className={styles.drawerFooter}>
             <div className={styles.drawerCities}>{cities.map((city) => <span key={city}>{city}</span>)}</div>
             <div className={styles.drawerContact}>
-              <a href="tel:+381601234500"><PhoneIcon /><span>+381 60 123 45 00</span></a>
-              <a href="mailto:zdravo@brunch.rs"><MailIcon /><span>zdravo@brunch.rs</span></a>
+              <a href="https://www.instagram.com/brunch.rs/" target="_blank" rel="noreferrer"><span>Instagram · @brunch.rs</span></a>
             </div>
           </div>
         </aside>

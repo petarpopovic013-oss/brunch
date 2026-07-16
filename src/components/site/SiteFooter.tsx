@@ -21,14 +21,13 @@ export function SiteFooter() {
           {cities.map((city) => <Link key={city} href={`/#${city.toLowerCase().replaceAll(" ", "-")}`}>{city}</Link>)}
         </div>
         <div>
-          <span className={styles.label}>Kontakt brenda</span>
-          <a href="tel:+381601234500">+381 60 123 45 00</a>
-          <a href="mailto:zdravo@brunch.rs">zdravo@brunch.rs</a>
+          <span className={styles.label}>Informacije</span>
+          <Link href="/#lokacije">Sve lokacije</Link>
+          <Link href="/#prica">Naša priča</Link>
         </div>
         <div>
           <span className={styles.label}>Pratite nas</span>
-          <a href="#" aria-label="Brunch Instagram profil">Instagram</a>
-          <a href="#" aria-label="Brunch Facebook profil">Facebook</a>
+          <a href="https://www.instagram.com/brunch.rs/" target="_blank" rel="noreferrer" aria-label="Brunch Instagram profil">Instagram · @brunch.rs</a>
         </div>
       </div>
 

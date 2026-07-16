@@ -256,18 +256,18 @@
 .pickerIntro { max-width: 590px; margin: 0 auto 38px; text-align: center; }
 .pickerEyebrow { margin: 0 0 10px; color: #e9782f; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .pickerIntro h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(44px, 5vw, 68px); font-weight: 500; line-height: 1; }
-.pickerIntro > p:last-child { margin: 14px 0 0; color: #b8b7b4; font-size: 15px; line-height: 1.55; }
+.pickerIntro > p:last-child { margin: 14px 0 0; color: #c5c2bc; font-size: 16px; line-height: 1.55; }
 .cityGrid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 34px; }
-.cityGroup h3 { margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.17); color: #e9782f; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
-.locationList { display: grid; gap: 8px; }
-.locationChoice { display: grid; min-height: 70px; padding: 8px; grid-template-columns: 56px 1fr auto; align-items: center; gap: 13px; border: 1px solid transparent; background: rgba(255,255,255,.035); transition: border-color .2s, background-color .2s, transform .2s; }
+.cityGroup h3 { margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.17); color: #e9782f; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.locationList { display: grid; gap: 10px; }
+.locationChoice { display: grid; min-height: 84px; padding: 9px; grid-template-columns: 68px 1fr auto; align-items: center; gap: 15px; border: 1px solid transparent; background: rgba(255,255,255,.035); transition: border-color .2s, background-color .2s, transform .2s; }
 .locationChoice:hover, .locationChoice:focus-visible { border-color: rgba(221,89,3,.72); background: rgba(221,89,3,.08); transform: translateY(-1px); }
-.locationThumb { width: 56px; height: 52px; overflow: hidden; }
+.locationThumb { width: 68px; height: 64px; overflow: hidden; }
 .locationThumb img { width: 100%; height: 100%; object-fit: cover; }
-.locationCopy { display: flex; min-width: 0; flex-direction: column; line-height: 1.3; }
-.locationCopy strong { color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: 20px; font-weight: 500; }
-.locationCopy small { overflow: hidden; color: #9f9d98; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
-.locationArrow { padding-right: 5px; color: #e9782f; font-size: 16px; }
+.locationCopy { display: flex; min-width: 0; flex-direction: column; line-height: 1.18; }
+.locationCopy strong { color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: 25px; font-weight: 500; text-wrap: balance; }
+.locationCopy small { margin-top: 5px; overflow: hidden; color: #aaa7a1; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.locationArrow { padding-right: 6px; color: #e9782f; font-size: 19px; }
 .allLocationsLink { display: block; width: fit-content; margin: 30px auto 0; padding-bottom: 4px; border-bottom: 1px solid currentColor; font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
 .allLocationsLink:hover { color: #e9782f; }
 
@@ -399,9 +399,9 @@
   .locationClose { top: 10px; right: 12px; }
   .pickerIntro { margin-bottom: 28px; padding: 0 18px; }
   .pickerIntro h2 { font-size: 42px; }
-  .pickerIntro > p:last-child { margin-top: 10px; font-size: 13px; }
+  .pickerIntro > p:last-child { margin-top: 10px; font-size: 14px; }
   .cityGrid { grid-template-columns: 1fr; gap: 24px; }
-  .locationChoice { min-height: 68px; }
+  .locationChoice { min-height: 82px; }
   .allLocationsLink { margin-top: 26px; font-size: 10px; }
 }
 

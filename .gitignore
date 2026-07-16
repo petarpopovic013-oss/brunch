@@ -20,6 +20,9 @@
 # production
 /build
 
+# local source PDFs (optimized web copies live in /public/menus)
+/Brunch Jelovnici/
+
 # misc
 .DS_Store
 *.pem
