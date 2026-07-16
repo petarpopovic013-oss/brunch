@@ -45,7 +45,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
         <div className={styles.galleryIntro}>
           <span className={styles.kicker}>Atmosfera lokala</span>
           <h2 id="gallery-title">Trenuci koji<br /><em>ostaju za stolom.</em></h2>
-          <p>{location.heroCopy}</p>
+          <p>{location.galleryCopy}</p>
         </div>
         <div className={styles.galleryGrid}>
           {galleryImages.map((image, index) => (
@@ -89,7 +89,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
             <h2 id="menu-title">Izaberi nešto<br /><em>po svom ukusu.</em></h2>
           </div>
           <div className={styles.menuCopy}>
-            <p>Prelistajte kompletan meni lokala {location.shortName}. Za najbolji prikaz na telefonu, otvorite jelovnik preko celog ekrana.</p>
+            <p>Pogledajte kompletan jelovnik za {location.shortName}. Na telefonu ga možete otvoriti preko celog ekrana ili preuzeti kao PDF.</p>
             <Link href="/#lokacije" className={styles.backLink}>← Sve Brunch lokacije</Link>
           </div>
         </div>
