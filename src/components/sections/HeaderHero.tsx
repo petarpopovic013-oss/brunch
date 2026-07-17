@@ -68,7 +68,7 @@ export function HeaderHero() {
             <span><em>Dobro došli</em> u</span>
             <span><strong>Brunch</strong> Lounge</span>
           </h1>
-          <p className={styles.heroCaption}>Food . Coffee . Good Mood</p>
+          <p className={styles.heroCaption}>Breakfast is a meal but brunch is a culture!</p>
           <button className={styles.heroLocationButton} type="button" onClick={openLocations}>
             <PinIcon />
             <span>Izaberi svoj lokal</span>

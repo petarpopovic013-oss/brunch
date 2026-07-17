@@ -2,12 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const jost = localFont({
-  src: "../public/assets/fonts/jost.woff2",
-  variable: "--font-jost",
-  display: "swap",
-});
-
 const cormorant = localFont({
   src: [
     { path: "../public/assets/fonts/cormorant-garamond-variable.ttf", weight: "300 700", style: "normal" },
@@ -38,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sr-Latn" className={`${jost.variable} ${cormorant.variable}`}>
+    <html lang="sr-Latn" className={cormorant.variable}>
       <body>{children}</body>
     </html>
   );

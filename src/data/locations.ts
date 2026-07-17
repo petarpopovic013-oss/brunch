@@ -244,7 +244,7 @@ export const locations: BrunchLocation[] = [
   },
 ];
 
-export const cities = ["Novi Sad", "Beograd", "Nova Pazova"] as const;
+export const cities = ["Beograd", "Novi Sad", "Nova Pazova"] as const;
 
 export function getLocation(slug: string) {
   return locations.find((location) => location.slug === slug);
