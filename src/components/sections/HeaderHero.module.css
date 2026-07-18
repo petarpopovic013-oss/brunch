@@ -131,9 +131,9 @@
 }
 .heroLocationButton {
   display: inline-flex;
-  min-height: 50px;
+  min-height: 60px;
   margin-top: 28px;
-  padding: 0 24px;
+  padding: 0 32px;
   align-items: center;
   gap: 10px;
   border: 1px solid rgba(255,255,255,.78);
@@ -141,7 +141,7 @@
   background: rgba(10,9,7,.24);
   backdrop-filter: blur(8px);
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: .11em;
   text-transform: uppercase;
@@ -362,7 +362,7 @@
   .heroTitle { font-size: clamp(51px, 15vw, 64px); line-height: .83; letter-spacing: -.035em; }
   .heroTitle span:first-child { margin-bottom: 8px; }
   .heroCaption { margin-top: 19px; font-size: 12px; line-height: 1.5; letter-spacing: .13em; }
-  .heroLocationButton { min-height: 50px; margin-top: 25px; padding: 0 20px; border-color: rgba(255,255,255,.55); background: rgba(10,9,7,.38); font-size: 9px; }
+  .heroLocationButton { min-height: 56px; margin-top: 25px; padding: 0 24px; border-color: rgba(255,255,255,.55); background: rgba(10,9,7,.38); font-size: 10px; }
   .hoursFooter { bottom: 24px; font-size: 12px; }
   .hoursFooter svg { width: 14px; height: 14px; }
   .menuPanel { padding: 22px 22px 28px; }
