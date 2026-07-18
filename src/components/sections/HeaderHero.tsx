@@ -60,8 +60,8 @@ export function HeaderHero() {
     <>
       <section className={styles.hero} id="home" aria-label="Brunch Srbija">
         <div className={styles.heroShade} />
-        <Header compact={false} hidden={sticky} onMenu={() => setMenuOpen(true)} onLocations={openLocations} />
-        <Header compact hidden={!sticky} onMenu={() => setMenuOpen(true)} onLocations={openLocations} />
+        <Header compact={false} hidden={sticky} onMenu={() => setMenuOpen(true)} />
+        <Header compact hidden={!sticky} onMenu={() => setMenuOpen(true)} />
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
@@ -172,18 +172,19 @@ export function HeaderHero() {
   );
 }
 
-function Header({ compact, hidden, onMenu, onLocations }: { compact: boolean; hidden: boolean; onMenu: () => void; onLocations: () => void }) {
+function Header({ compact, hidden, onMenu }: { compact: boolean; hidden: boolean; onMenu: () => void }) {
   return (
     <header className={`${styles.header} ${compact ? styles.stickyHeader : styles.heroHeader} ${hidden ? styles.headerHidden : ""}`}>
       <div className={styles.navBar}>
-        <div className={styles.navLeft}>
-          <button className={styles.menuButton} onClick={onMenu} aria-label="Otvori navigaciju"><MenuIcon /></button>
-          <div className={styles.languages}><span>SR</span><span> – </span><span className={styles.mutedLanguage}>EN</span></div>
-        </div>
         <a href="#home" className={styles.logoLink} aria-label="Brunch početna">
           <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} priority sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
-        <button className={styles.tableButton} type="button" onClick={onLocations}>Pronađi lokal</button>
+        <div className={styles.headerActions}>
+          <div className={styles.languages} aria-label="Izbor jezika">
+            <span aria-current="true">SR</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>EN</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>RU</span>
+          </div>
+          <button className={styles.menuButton} onClick={onMenu} aria-label="Otvori navigaciju"><MenuIcon /></button>
+        </div>
       </div>
     </header>
   );

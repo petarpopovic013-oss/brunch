@@ -24,6 +24,7 @@ export type BrunchLocation = {
   hours: Array<{ days: string; time: string }>;
   features: string[];
   gallery: Array<{ src: string; alt: string; caption: string }>;
+  logo?: { src: string; alt: string };
 };
 
 export const locations: BrunchLocation[] = [
@@ -39,6 +40,10 @@ export const locations: BrunchLocation[] = [
     imageAlt: "Karakterističan zeleni enterijer lokala Brunch Mašinac",
     heroImage: "/images/locations/brunch-masinac-novi-sad/hero.jpg",
     heroImageAlt: "Ulaz i bašta lokala Brunch Mašinac u univerzitetskom kampusu",
+    logo: {
+      src: "/images/Logo/brunch-masinac-white (1).png",
+      alt: "Brunch Mašinac",
+    },
     menuPdf: "/menus/brunch-masinac.pdf",
     heroCopy: "Doručak, kafa i ručak tik uz novosadski univerzitetski kampus.",
     description: "Na Trgu Dositeja Obradovića, neposredno uz Fakultet tehničkih nauka, Brunch Mašinac je praktično mesto za jutarnju kafu, doručak pre obaveza ili opušten ručak. Zelena bašta i topao enterijer daju mu prepoznatljiv karakter i tokom mirnih jutara i u vreme studentske gužve.",

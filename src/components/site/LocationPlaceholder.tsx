@@ -15,7 +15,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
       <section className={styles.hero}>
         <Image src={location.heroImage} alt={location.heroImageAlt} fill priority sizes="100vw" />
         <div className={styles.shade} />
-        <SiteHeader inner />
+        <SiteHeader inner logo={location.logo} />
         <div className={styles.content}>
           <span>{location.city} · {location.area}</span>
           <h1>{location.shortName}</h1>
@@ -151,7 +151,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter logo={location.logo} />
     </main>
   );
 }

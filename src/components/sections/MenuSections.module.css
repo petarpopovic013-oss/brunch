@@ -41,7 +41,7 @@
 }
 
 .cardsSection {
-  padding: 132px max(30px, var(--side-space)) 150px;
+  padding: 132px 0 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,7 @@
     #0e0d0a;
 }
 .cardsIntro {
-  width: min(1260px, 100%);
+  width: min(1200px, calc(100% - 240px));
   margin: 0 auto 76px;
   padding-bottom: 58px;
   display: grid;
@@ -67,7 +67,7 @@
 .cityList span { padding: 8px 12px; border: 1px solid rgba(255,255,255,.16); color: #d1cec8; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 
 .cards {
-  width: min(1260px, 100%);
+  width: min(1200px, calc(100% - 240px));
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 24px;
@@ -204,7 +204,7 @@
     padding: 86px 24px 104px;
     align-items: flex-start;
   }
-  .cardsIntro { margin-bottom: 46px; padding-bottom: 40px; grid-template-columns: 1fr; gap: 30px; }
+  .cardsIntro { width: 100%; margin-bottom: 46px; padding-bottom: 40px; grid-template-columns: 1fr; gap: 30px; }
   .cardsIntro h2 { font-size: 52px; line-height: .88; }
   .introAside > p { max-width: 330px; font-size: 14px; line-height: 1.65; }
   .cityList { margin-top: 20px; }
@@ -247,7 +247,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .cardsSection { padding-right: 40px; padding-left: 40px; }
   .cardsIntro { gap: clamp(36px, 6vw, 72px); }
   .cards {
     gap: 20px;
@@ -257,6 +256,13 @@
   .card:nth-child(n + 3):nth-child(-n + 5) { height: 400px; grid-column: span 6; }
 
   .card:last-child { grid-column: 4 / span 6; }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .cardsIntro,
+  .cards {
+    width: calc(100% - clamp(40px, 8vw, 96px));
+  }
 }
 
 @media (min-width: 768px) and (max-width: 920px) {
@@ -277,10 +283,13 @@
 }
 
 @media (max-width: 420px) {
-  .cardsSection { padding-right: 20px; padding-left: 20px; }
   .cardsIntro h2 { font-size: clamp(39px, 12vw, 46px); }
   .card { min-height: 0; }
   .cityList span { padding-right: 9px; padding-left: 9px; }
+}
+
+@media (max-width: 380px) {
+  .cardsSection { padding-right: 20px; padding-left: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

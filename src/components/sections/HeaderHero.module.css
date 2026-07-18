@@ -54,14 +54,17 @@
 
 .navBar {
   position: relative;
+  width: calc(100% - 180px);
+  max-width: 1260px;
   height: 101px;
-  padding: 0 6.25vw;
+  margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .stickyHeader .navBar { height: 80px; }
-.navLeft { display: flex; align-items: center; gap: 28px; }
+.headerActions { display: flex; align-items: center; gap: 20px; }
 .menuButton, .drawerClose, .modalClose {
   display: grid;
   place-items: center;
@@ -71,24 +74,29 @@
   background: transparent;
   cursor: pointer;
 }
-.menuButton { width: 40px; height: 40px; }
+.menuButton { display: none; width: 40px; height: 40px; }
 .menuButton svg { width: 30px; height: 30px; stroke-width: 1; }
 .languages { font-size: 13px; letter-spacing: 0.025em; white-space: nowrap; }
-.languages a { transition: color .2s; }
-.languages a:hover { color: #dd5903; }
 
 .logoLink {
-  position: absolute;
-  left: 50%;
-  top: -13px;
+  position: relative;
+  display: block;
   width: 230px;
-  height: 70px;
-  transform: translateX(-50%);
+  height: 100%;
+  overflow: hidden;
 }
-.logoLink img { width: 100%; max-width: none; height: auto; }
-.stickyHeader .logoLink { top: -12px; width: 195px; height: 58px; }
+.logoLink img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  transform: translateY(-50%);
+}
+.stickyHeader .logoLink { width: 195px; height: 100%; }
 
-.tableButton, .submitButton {
+.submitButton {
   border: 1px solid rgba(255,255,255,.7);
   color: #fff;
   background: transparent;
@@ -99,8 +107,6 @@
   cursor: pointer;
   transition: color .2s, border-color .2s, background-color .2s;
 }
-.tableButton { width: 155px; height: 42px; display: grid; place-items: center; }
-.tableButton:hover { border-color: #dd5903; color: #dd5903; }
 
 .heroContent {
   position: absolute;
@@ -321,20 +327,29 @@
 .submitButton:hover { background: #f0670b; }
 .visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-.menuButton:focus-visible, .drawerClose:focus-visible, .modalClose:focus-visible, .tableButton:focus-visible,
-.submitButton:focus-visible, .drawerNav a:focus-visible, .languages a:focus-visible,
+.menuButton:focus-visible, .drawerClose:focus-visible, .modalClose:focus-visible,
+.submitButton:focus-visible, .drawerNav a:focus-visible,
 .heroLocationButton:focus-visible, .locationClose:focus-visible, .drawerFeatureCopy button:focus-visible {
   outline: 2px solid #dd5903;
   outline-offset: 4px;
 }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+@media (max-width: 1100px) {
+  .navBar,
+  .stickyHeader .navBar {
+    width: 100%;
+    padding-right: clamp(20px, 4vw, 48px);
+    padding-left: clamp(20px, 4vw, 48px);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero { min-height: max(100svh, 640px); background-position: 44% center; }
   .heroHeader { height: 80px; }
   .contactBar { display: none; }
-  .navBar, .stickyHeader .navBar { height: 80px; padding: 0 26px; }
-  .logoLink, .stickyHeader .logoLink { top: -10px; width: 190px; height: 58px; }
+  .navBar, .stickyHeader .navBar { height: 80px; }
+  .logoLink, .stickyHeader .logoLink { width: 190px; height: 100%; }
   .heroTitle { font-size: clamp(60px, 8vw, 76px); line-height: .92; }
   .heroContent { transform: translateY(-38%); }
 }
@@ -351,13 +366,12 @@
   .hero { min-height: max(100svh, 650px); background-position: 57% center; }
   .heroShade { background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(0,0,0,.04) 34%, rgba(0,0,0,.78) 100%); }
   .heroHeader, .stickyHeader { background: rgba(10, 14, 11, .66); backdrop-filter: blur(14px); }
-  .navBar, .stickyHeader .navBar { padding: 0 20px; }
-  .navLeft { gap: 0; }
-  .menuButton { width: 28px; height: 40px; }
+  .navBar, .stickyHeader .navBar { padding-right: 24px; padding-left: 24px; }
+  .headerActions { gap: 12px; }
+  .menuButton { display: grid; width: 28px; height: 40px; }
   .menuButton svg { width: 25px; }
-  .languages { position: absolute; right: 20px; font-size: 12px; }
-  .logoLink, .stickyHeader .logoLink { top: -10px; width: 180px; height: 58px; }
-  .tableButton { display: none; }
+  .languages { font-size: 11px; }
+  .logoLink, .stickyHeader .logoLink { width: 180px; height: 100%; }
   .heroContent { left: 24px; top: auto; bottom: 104px; width: calc(100% - 48px); transform: none; text-align: left; }
   .heroTitle { font-size: clamp(51px, 15vw, 64px); line-height: .83; letter-spacing: -.035em; }
   .heroTitle span:first-child { margin-bottom: 8px; }
@@ -405,10 +419,11 @@
   .allLocationsLink { margin-top: 26px; font-size: 10px; }
 }
 
-@media (max-width: 390px) {
-  .navBar, .stickyHeader .navBar { padding-right: 14px; padding-left: 14px; }
-  .languages { right: 14px; }
-  .logoLink, .stickyHeader .logoLink { top: -4px; width: 154px; height: 52px; }
+@media (max-width: 380px) {
+  .navBar, .stickyHeader .navBar { padding-right: 20px; padding-left: 20px; }
+  .headerActions { gap: 8px; }
+  .languages { font-size: 10px; }
+  .logoLink, .stickyHeader .logoLink { width: 154px; height: 100%; }
   .heroContent { left: 20px; width: calc(100% - 40px); }
   .heroTitle { font-size: clamp(48px, 15vw, 58px); line-height: .84; }
   .heroCaption { font-size: 10px; }

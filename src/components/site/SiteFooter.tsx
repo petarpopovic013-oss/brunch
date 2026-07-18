@@ -3,7 +3,13 @@ import Link from "next/link";
 import { cities } from "@/src/data/locations";
 import styles from "./SiteFooter.module.css";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  logo?: { src: string; alt: string };
+};
+
+export function SiteFooter({ logo }: SiteFooterProps) {
+  const brandLogo = logo ?? { src: "/images/brunch/logo-white.webp", alt: "Brunch Lounge" };
+
   return (
     <footer className={styles.footer} id="kontakt">
       <div className={styles.topline}>
@@ -13,7 +19,7 @@ export function SiteFooter() {
 
       <div className={styles.grid}>
         <div className={styles.brand}>
-          <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={192} height={108} />
+          <Image src={brandLogo.src} alt={brandLogo.alt} width={1920} height={1080} />
           <p>Od prve jutarnje kafe do večere koja se pretvori u izlazak.</p>
         </div>
         <div>
