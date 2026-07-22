@@ -20,8 +20,15 @@ const navItems = [
   { label: "Kontakt", href: "#contact" },
 ];
 
+const heroImages = [
+  "/images/hero1.JPG",
+  "/images/hero2.JPG",
+  "/images/hero3.png",
+];
+
 export function HeaderHero() {
   const [sticky, setSticky] = useState(false);
+  const [activeHeroImage, setActiveHeroImage] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const menuCloseRef = useRef<HTMLButtonElement>(null);
@@ -32,6 +39,16 @@ export function HeaderHero() {
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
     return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const interval = window.setInterval(() => {
+      setActiveHeroImage((current) => (current + 1) % heroImages.length);
+    }, 10_000);
+
+    return () => window.clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -59,6 +76,22 @@ export function HeaderHero() {
   return (
     <>
       <section className={styles.hero} id="home" aria-label="Brunch Srbija">
+        <div className={styles.heroSlides} aria-hidden="true">
+          {heroImages.map((src, index) => (
+            <div
+              className={`${styles.heroSlide} ${index === activeHeroImage ? styles.heroSlideActive : ""}`}
+              key={src}
+            >
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="100vw"
+                preload={index === 0}
+              />
+            </div>
+          ))}
+        </div>
         <div className={styles.heroShade} />
         <Header compact={false} hidden={sticky} onMenu={() => setMenuOpen(true)} />
         <Header compact hidden={!sticky} onMenu={() => setMenuOpen(true)} />

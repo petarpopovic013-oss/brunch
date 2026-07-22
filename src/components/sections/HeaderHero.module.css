@@ -3,12 +3,38 @@
   min-height: max(100svh, 702px);
   overflow: hidden;
   color: #fff;
-  background: #15100c url("/images/brunch/hero-guests.webp") center 46% / cover no-repeat;
+  background: #15100c;
+}
+
+.heroSlides,
+.heroSlide {
+  position: absolute;
+  inset: 0;
+}
+
+.heroSlide {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.heroSlide img {
+  object-fit: cover;
+  object-position: center 46%;
+  transform: scale(1.14);
+}
+
+.heroSlideActive {
+  opacity: 1;
+}
+
+.heroSlideActive img {
+  animation: heroZoom 5s ease-out forwards;
 }
 
 .heroShade {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.18);
   pointer-events: none;
 }
@@ -124,6 +150,8 @@
   font-size: 98px;
   font-weight: 400;
   line-height: 98px;
+  -webkit-text-stroke: .45px rgba(0, 0, 0, .82);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .48);
 }
 .heroTitle span { display: block; }
 .heroTitle em { font-weight: 400; }
@@ -133,6 +161,8 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 39.8px;
+  -webkit-text-stroke: .35px rgba(0, 0, 0, .8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .55);
   text-transform: uppercase;
 }
 .heroLocationButton {
@@ -334,6 +364,7 @@
   outline-offset: 4px;
 }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes heroZoom { from { transform: scale(1.001); } to { transform: scale(1.14); } }
 
 @media (max-width: 1100px) {
   .navBar,
@@ -452,6 +483,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .header, .pageScrim, .menuPanel, .locationOverlay, .locationChoice, .heroLocationButton { transition: none; }
+  .header, .pageScrim, .menuPanel, .locationOverlay, .locationChoice, .heroLocationButton, .heroSlide { transition: none; }
+  .heroSlideActive img,
   .reservationOverlay { animation: none; }
 }
