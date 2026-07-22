@@ -13,7 +13,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
   return (
     <main>
       <section className={styles.hero}>
-        <Image src={location.heroImage} alt={location.heroImageAlt} fill priority sizes="100vw" />
+        <Image src={location.heroImage} alt={location.heroImageAlt} fill loading="eager" sizes="100vw" />
         <div className={styles.shade} />
         <SiteHeader inner logo={location.logo} />
         <div className={styles.content}>
@@ -31,7 +31,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
         <div className={styles.storyHeading}>
           <span className={styles.storyNumber} aria-hidden="true">{location.locationNumber}</span>
           <span className={styles.kicker}>Upoznajte lokaciju</span>
-          <h2 id="location-story-title">Svaki Brunch ima<br /><em>svoj ritam.</em></h2>
+          <h2 id="location-story-title">Svaki Brunch ima<br />{" "}<em>svoj ritam.</em></h2>
         </div>
         <div className={styles.storyBody}>
           <p>{location.description}</p>
@@ -44,7 +44,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
       <section className={styles.gallerySection} aria-labelledby="gallery-title">
         <div className={styles.galleryIntro}>
           <span className={styles.kicker}>Atmosfera lokala</span>
-          <h2 id="gallery-title">Trenuci koji<br /><em>ostaju za stolom.</em></h2>
+          <h2 id="gallery-title">Trenuci koji<br />{" "}<em>ostaju za stolom.</em></h2>
           <p>{location.galleryCopy}</p>
         </div>
         <div className={styles.galleryGrid}>
@@ -65,7 +65,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
       <section className={styles.mapSection} aria-labelledby="map-title">
         <div className={styles.mapCopy}>
           <span className={styles.kicker}>Pronađite nas</span>
-          <h2 id="map-title">Vidimo se u<br /><em className={styles.mapLocation}>{location.areaLocative}.</em></h2>
+          <h2 id="map-title">Vidimo se u<br />{" "}<em className={styles.mapLocation}>{location.areaLocative}.</em></h2>
           <address>{location.address}<br />{location.postalCode} {location.city}, Srbija</address>
           <a href={location.mapsUrl} target="_blank" rel="noreferrer">
             Pokreni navigaciju <span aria-hidden="true">↗</span>
@@ -86,7 +86,7 @@ export function LocationPlaceholder({ location }: { location: BrunchLocation }) 
         <div className={styles.menuIntro}>
           <div>
             <span className={styles.kicker}>Brunch jelovnik</span>
-            <h2 id="menu-title">Izaberi nešto<br /><em>po svom ukusu.</em></h2>
+            <h2 id="menu-title">Izaberi nešto<br />{" "}<em>po svom ukusu.</em></h2>
           </div>
           <div className={styles.menuCopy}>
             <p>Pogledajte kompletan jelovnik za {location.shortName}. Na telefonu ga možete otvoriti preko celog ekrana ili preuzeti kao PDF.</p>

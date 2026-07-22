@@ -250,7 +250,7 @@
   .copy h2 {
     margin-bottom: 18px;
     font-size: 60px;
-    line-height: .86;
+    line-height: .94;
   }
 
   .description {
@@ -274,6 +274,7 @@
   .experienceArt {
     width: min(350px, calc(100vw - 40px));
     font-size: clamp(50px, 14vw, 62px);
+    line-height: .9;
     text-align: left;
   }
 }
@@ -290,7 +291,7 @@
   .imagePair { height: 360px; }
   .imageFrame { height: 324px; }
   .copy { padding-top: 34px; }
-  .copy h2 { font-size: 54px; line-height: .88; }
+  .copy h2 { font-size: 54px; line-height: .95; }
   .description { font-size: 13px; line-height: 21px; }
 }
 

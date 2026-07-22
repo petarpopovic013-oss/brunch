@@ -150,7 +150,7 @@ export function HeaderHero() {
               <div className={styles.drawerImage} />
               <div className={styles.drawerFeatureCopy}>
                 <p>7 lokacija · 3 grada</p>
-                <h2>Pronađi svoj<br /><em>Brunch.</em></h2>
+                <h2>Pronađi svoj<br />{" "}<em>Brunch.</em></h2>
                 <button type="button" onClick={openLocations}><PinIcon /> Izaberi lokal</button>
               </div>
             </aside>
@@ -210,7 +210,7 @@ function Header({ compact, hidden, onMenu }: { compact: boolean; hidden: boolean
     <header className={`${styles.header} ${compact ? styles.stickyHeader : styles.heroHeader} ${hidden ? styles.headerHidden : ""}`}>
       <div className={styles.navBar}>
         <a href="#home" className={styles.logoLink} aria-label="Brunch početna">
-          <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} priority sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
+          <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} loading="eager" sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
         <div className={styles.headerActions}>
           <div className={styles.languages} aria-label="Izbor jezika">

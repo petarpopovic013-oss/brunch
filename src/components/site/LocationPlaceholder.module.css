@@ -771,6 +771,7 @@
 
   .content h1 {
     font-size: clamp(50px, 18vw, 73px);
+    line-height: .92;
   }
 
   .actions {
@@ -787,6 +788,7 @@
 
   .story h2 {
     font-size: clamp(52px, 16vw, 74px);
+    line-height: .94;
   }
 
   .story h2 br {
@@ -814,6 +816,7 @@
 
   .galleryIntro h2 {
     font-size: clamp(50px, 15vw, 70px);
+    line-height: .94;
   }
 
   .galleryIntro h2 br {
@@ -861,10 +864,14 @@
   .mapCopy h2 {
     max-width: 460px;
     font-size: clamp(49px, 14vw, 67px);
+    line-height: .94;
   }
 
   .mapCopy h2 .mapLocation {
     font-size: clamp(20px, 6.2vw, 28px);
+    line-height: 1.16;
+    white-space: normal;
+    text-wrap: balance;
   }
 
   .mapFrame,
@@ -885,6 +892,7 @@
 
   .menuIntro h2 {
     font-size: clamp(52px, 16vw, 74px);
+    line-height: .94;
   }
 
   .menuIntro h2 br {
@@ -928,6 +936,10 @@
     padding-bottom: 70px;
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .info h2 {
+    line-height: 1.06;
   }
 
   .info > div {

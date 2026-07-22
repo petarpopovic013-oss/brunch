@@ -140,7 +140,7 @@
   .footerTitle {
     max-width: 330px;
     font-size: clamp(50px, 14vw, 62px);
-    line-height: .88;
+    line-height: .95;
   }
 
   .details {

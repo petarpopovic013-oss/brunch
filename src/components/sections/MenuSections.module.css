@@ -196,7 +196,7 @@
   .bannerTitle {
     max-width: 320px;
     font-size: 58px;
-    line-height: .86;
+    line-height: .94;
   }
 
   .cardsSection {
@@ -205,7 +205,7 @@
     align-items: flex-start;
   }
   .cardsIntro { width: 100%; margin-bottom: 46px; padding-bottom: 40px; grid-template-columns: 1fr; gap: 30px; }
-  .cardsIntro h2 { font-size: 52px; line-height: .88; }
+  .cardsIntro h2 { font-size: 52px; line-height: .96; }
   .introAside > p { max-width: 330px; font-size: 14px; line-height: 1.65; }
   .cityList { margin-top: 20px; }
 
@@ -234,7 +234,7 @@
 
   .cardTitle {
     font-size: 43px;
-    line-height: .9;
+    line-height: .96;
   }
 
   .cardCity { font-size: 11px; }

@@ -18,7 +18,7 @@ export function MenuSections() {
         <div className={styles.cardsIntro}>
           <div className={styles.introHeading}>
             <p className={styles.cardsEyebrow}>Odaberi atmosferu</p>
-            <h2 id="locations-list-title">Sedam lokala,<br /><em>jedan Brunch osećaj.</em></h2>
+            <h2 id="locations-list-title">Sedam lokala,<br />{" "}<em>jedan Brunch osećaj.</em></h2>
           </div>
           <div className={styles.introAside}>
             <p>Svaki lokal ima svoj karakter. Pronađi onaj koji ti je najbliži ili otkrij novo omiljeno mesto.</p>

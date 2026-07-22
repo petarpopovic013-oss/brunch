@@ -187,7 +187,7 @@
 
   .mobileIntro { display: block; width: calc(100% - 48px); margin: 0 24px 34px; }
   .mobileIntro p { margin: 0 0 12px; color: #e9782f; font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
-  .mobileIntro h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(44px, 13vw, 56px); font-weight: 500; letter-spacing: -.03em; line-height: .88; }
+  .mobileIntro h2 { margin: 0; color: #fff; font-family: var(--font-cormorant), Georgia, serif; font-size: clamp(44px, 13vw, 56px); font-weight: 500; letter-spacing: -.03em; line-height: .96; }
   .mobileIntro h2 em { color: #e9782f; font-weight: 400; }
 
   .viewport {
@@ -229,8 +229,8 @@
 
   .dots button {
     position: relative;
-    width: 26px;
-    height: 26px;
+    width: 44px;
+    height: 44px;
     background: transparent;
   }
 

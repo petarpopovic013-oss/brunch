@@ -14,7 +14,7 @@ export function SiteHeader({ inner = false, logo }: SiteHeaderProps) {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} href="/" aria-label="Brunch početna stranica">
-        <Image src={brandLogo.src} alt={brandLogo.alt} width={1920} height={1080} priority />
+        <Image src={brandLogo.src} alt={brandLogo.alt} width={1920} height={1080} loading="eager" />
       </Link>
 
       <nav className={styles.desktopNav} aria-label="Glavna navigacija">

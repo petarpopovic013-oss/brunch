@@ -70,7 +70,7 @@ export function CocktailGallery() {
     <section className={styles.gallery} id="atmosfera" aria-label="Brunch atmosfera">
       <header className={styles.mobileIntro}>
         <p>Brunch atmosfera</p>
-        <h2>Trenuci koje<br /><em>nosimo sa sobom.</em></h2>
+        <h2>Trenuci koje<br />{" "}<em>nosimo sa sobom.</em></h2>
       </header>
       <button className={`${styles.arrow} ${styles.previous}`} type="button" onClick={previous} aria-label="Prethodna fotografija">
         <span aria-hidden="true" />
