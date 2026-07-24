@@ -1,43 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
+import { localizedPath, type Locale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "./SiteHeader.module.css";
 
 type SiteHeaderProps = {
-  inner?: boolean;
+  locale: Locale;
+  dictionary: Dictionary;
+  pagePath: string;
   logo?: { src: string; alt: string };
 };
 
-export function SiteHeader({ inner = false, logo }: SiteHeaderProps) {
-  const prefix = inner ? "/" : "";
+export function SiteHeader({ locale, dictionary, pagePath, logo }: SiteHeaderProps) {
+  const copy = dictionary.siteHeader;
+  const homePath = localizedPath(locale, "/");
   const brandLogo = logo ?? { src: "/images/brunch/logo-white.webp", alt: "Brunch Lounge" };
 
   return (
     <header className={styles.header}>
-      <Link className={styles.logo} href="/" aria-label="Brunch početna stranica">
+      <Link className={styles.logo} href={homePath} aria-label={copy.homeAria}>
         <Image src={brandLogo.src} alt={brandLogo.alt} width={1920} height={1080} loading="eager" />
       </Link>
 
-      <nav className={styles.desktopNav} aria-label="Glavna navigacija">
-        <Link href={`${prefix}#about`}>Naša priča</Link>
-        <Link href={`${prefix}#lokacije`}>Lokacije</Link>
-        <Link href={`${prefix}#kontakt`}>Kontakt</Link>
+      <nav className={styles.desktopNav} aria-label={copy.mainNavigation}>
+        <Link href={`${homePath}#about`}>{copy.story}</Link>
+        <Link href={`${homePath}#lokacije`}>{copy.locations}</Link>
+        <Link href={`${homePath}#contact`}>{copy.contact}</Link>
       </nav>
 
       <div className={styles.headerActions}>
-        <div className={styles.languages} aria-label="Izbor jezika">
-          <span aria-current="true">SR</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>EN</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>RU</span>
-        </div>
+        <LanguageSwitcher
+          locale={locale}
+          pathname={pagePath}
+          label={dictionary.common.languagePicker}
+          className={styles.languages}
+          mutedClassName={styles.mutedLanguage}
+        />
 
         <details className={styles.mobileMenu}>
-          <summary aria-label="Otvori navigaciju">
+          <summary aria-label={copy.openNavigation}>
             <span />
             <span />
           </summary>
-          <nav aria-label="Mobilna navigacija">
-            <Link href="/">Početna</Link>
-            <Link href={`${prefix}#about`}>Naša priča</Link>
-            <Link href={`${prefix}#lokacije`}>Lokacije</Link>
-            <Link href={`${prefix}#kontakt`}>Kontakt</Link>
+          <nav aria-label={copy.mobileNavigation}>
+            <Link href={homePath}>{copy.home}</Link>
+            <Link href={`${homePath}#about`}>{copy.story}</Link>
+            <Link href={`${homePath}#lokacije`}>{copy.locations}</Link>
+            <Link href={`${homePath}#contact`}>{copy.contact}</Link>
           </nav>
         </details>
       </div>

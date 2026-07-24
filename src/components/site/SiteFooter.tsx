@@ -1,44 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cities } from "@/src/data/locations";
+import { ArrowUpRightIcon } from "@/src/components/icons";
+import type { CityId } from "@/src/data/locations";
+import { localizedPath, type Locale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
 import styles from "./SiteFooter.module.css";
 
 type SiteFooterProps = {
+  locale: Locale;
+  dictionary: Dictionary;
+  cities: Array<{ id: CityId; label: string }>;
   logo?: { src: string; alt: string };
 };
 
-export function SiteFooter({ logo }: SiteFooterProps) {
+export function SiteFooter({ locale, dictionary, cities, logo }: SiteFooterProps) {
+  const copy = dictionary.siteFooter;
+  const homePath = localizedPath(locale, "/");
   const brandLogo = logo ?? { src: "/images/brunch/logo-white.webp", alt: "Brunch Lounge" };
 
   return (
     <footer className={styles.footer} id="kontakt">
       <div className={styles.topline}>
-        <p>Jedan sto. Mnogo dobrih priča.</p>
-        <Link href="/#lokacije">Izaberi svoju lokaciju <span aria-hidden="true">↗</span></Link>
+        <p>{copy.title}</p>
+        <Link href={`${homePath}#lokacije`}>{copy.chooseLocation} <span><ArrowUpRightIcon /></span></Link>
       </div>
 
       <div className={styles.grid}>
         <div className={styles.brand}>
           <Image src={brandLogo.src} alt={brandLogo.alt} width={1920} height={1080} />
-          <p>Od prve jutarnje kafe do večere koja se pretvori u izlazak.</p>
+          <p>{copy.brandCopy}</p>
         </div>
         <div>
-          <span className={styles.label}>Gradovi</span>
-          {cities.map((city) => <Link key={city} href="/#lokacije">{city}</Link>)}
+          <span className={styles.label}>{copy.cities}</span>
+          {cities.map((city) => <Link key={city.id} href={`${homePath}#lokacije`}>{city.label}</Link>)}
         </div>
         <div>
-          <span className={styles.label}>Informacije</span>
-          <Link href="/#lokacije">Sve lokacije</Link>
-          <Link href="/#about">Naša priča</Link>
+          <span className={styles.label}>{copy.information}</span>
+          <Link href={`${homePath}#lokacije`}>{copy.allLocations}</Link>
+          <Link href={`${homePath}#about`}>{copy.story}</Link>
         </div>
         <div>
-          <span className={styles.label}>Pratite nas</span>
-          <a href="https://www.instagram.com/brunch.rs/" target="_blank" rel="noreferrer" aria-label="Brunch Instagram profil">Instagram · @brunch.rs</a>
+          <span className={styles.label}>{copy.followUs}</span>
+          <a href="https://www.instagram.com/brunch.rs/" target="_blank" rel="noreferrer" aria-label={dictionary.common.instagramProfile}>Instagram · @brunch.rs</a>
         </div>
       </div>
 
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} Brunch. Sva prava zadržana.</span>
+        <span>© {new Date().getFullYear()} Brunch. {dictionary.common.copyright}</span>
         <span>Good food · Good mood · All day</span>
       </div>
     </footer>

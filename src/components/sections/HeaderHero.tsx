@@ -4,31 +4,55 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowUpRightIcon,
   ClockIcon,
   CloseIcon,
   MenuIcon,
   PinIcon,
 } from "@/src/components/icons";
-import { cities, locations } from "@/src/data/locations";
+import { LanguageSwitcher } from "@/src/components/site/LanguageSwitcher";
+import type { BrunchLocation, CityId } from "@/src/data/locations";
+import { locationPath, type Locale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
 import styles from "./HeaderHero.module.css";
 
-const navItems = [
-  { label: "Početna", href: "#home" },
-  { label: "Naša priča", href: "#about" },
-  { label: "Atmosfera", href: "#atmosfera" },
-  { label: "Lokacije", href: "#lokacije" },
-  { label: "Kontakt", href: "#contact" },
-];
-
 const heroImages = [
-  "/images/hero1.JPG",
-  "/images/hero2.JPG",
-  "/images/hero3.png",
+  {
+    desktop: "/images/hero1-desktop.webp",
+    mobile: "/images/hero1-mobile.webp",
+  },
+  {
+    desktop: "/images/hero2-desktop.webp",
+    mobile: "/images/hero2-mobile.webp",
+  },
+  {
+    desktop: "/images/hero3-desktop.webp",
+    mobile: "/images/hero3-mobile.webp",
+  },
 ];
 
-export function HeaderHero() {
+const HERO_SLIDE_DURATION_MS = 6_000;
+
+type HeaderHeroProps = {
+  locale: Locale;
+  dictionary: Dictionary;
+  locations: BrunchLocation[];
+  cities: Array<{ id: CityId; label: string }>;
+};
+
+export function HeaderHero({ locale, dictionary, locations, cities }: HeaderHeroProps) {
+  const copy = dictionary.hero;
+  const navItems = [
+    { label: copy.nav.home, href: "#home" },
+    { label: copy.nav.story, href: "#about" },
+    { label: copy.nav.atmosphere, href: "#atmosfera" },
+    { label: copy.nav.locations, href: "#lokacije" },
+    { label: copy.nav.contact, href: "#contact" },
+  ];
   const [sticky, setSticky] = useState(false);
   const [activeHeroImage, setActiveHeroImage] = useState(0);
+  const [primaryHeroLoaded, setPrimaryHeroLoaded] = useState(false);
+  const [carouselReady, setCarouselReady] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const menuCloseRef = useRef<HTMLButtonElement>(null);
@@ -42,14 +66,33 @@ export function HeaderHero() {
   }, []);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const confirmInitialLoad = () => setPrimaryHeroLoaded(true);
+
+    if (document.readyState === "complete") {
+      confirmInitialLoad();
+      return;
+    }
+
+    window.addEventListener("load", confirmInitialLoad, { once: true });
+    return () => window.removeEventListener("load", confirmInitialLoad);
+  }, []);
+
+  useEffect(() => {
+    if (!carouselReady || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const interval = window.setInterval(() => {
       setActiveHeroImage((current) => (current + 1) % heroImages.length);
-    }, 10_000);
+    }, HERO_SLIDE_DURATION_MS);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [carouselReady]);
+
+  useEffect(() => {
+    if (!primaryHeroLoaded || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const timeout = window.setTimeout(() => setCarouselReady(true), 800);
+    return () => window.clearTimeout(timeout);
+  }, [primaryHeroLoaded]);
 
   useEffect(() => {
     if (!menuOpen && !locationsOpen) return;
@@ -75,42 +118,51 @@ export function HeaderHero() {
 
   return (
     <>
-      <section className={styles.hero} id="home" aria-label="Brunch Srbija">
+      <section className={styles.hero} id="home" aria-label={copy.ariaLabel}>
         <div className={styles.heroSlides} aria-hidden="true">
-          {heroImages.map((src, index) => (
-            <div
-              className={`${styles.heroSlide} ${index === activeHeroImage ? styles.heroSlideActive : ""}`}
-              key={src}
-            >
-              <Image
-                src={src}
-                alt=""
-                fill
-                sizes="100vw"
-                preload={index === 0}
-              />
-            </div>
-          ))}
+          {heroImages.map((image, index) => {
+            if (index > 0 && !carouselReady) return null;
+
+            return (
+              <div
+                className={`${styles.heroSlide} ${index === activeHeroImage ? styles.heroSlideActive : ""}`}
+                key={image.desktop}
+              >
+                <picture>
+                  <source media="(max-width: 767px)" srcSet={image.mobile} />
+                  <Image
+                    src={image.desktop}
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "auto"}
+                    onLoad={index === 0 ? () => setPrimaryHeroLoaded(true) : undefined}
+                  />
+                </picture>
+              </div>
+            );
+          })}
         </div>
         <div className={styles.heroShade} />
-        <Header compact={false} hidden={sticky} onMenu={() => setMenuOpen(true)} />
-        <Header compact hidden={!sticky} onMenu={() => setMenuOpen(true)} />
+        <Header locale={locale} dictionary={dictionary} compact={false} hidden={sticky} onMenu={() => setMenuOpen(true)} />
+        <Header locale={locale} dictionary={dictionary} compact hidden={!sticky} onMenu={() => setMenuOpen(true)} />
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            <span><em>Dobro došli</em> u</span>
+            <span><em>{copy.welcome}</em> {copy.preposition}</span>
             <span><strong>Brunch</strong> Lounge</span>
           </h1>
-          <p className={styles.heroCaption}>Breakfast is a meal but brunch is a culture!</p>
+          <p className={styles.heroCaption}>{copy.caption}</p>
           <button className={styles.heroLocationButton} type="button" onClick={openLocations}>
             <PinIcon />
-            <span>Izaberite Brunch Lounge lokaciju</span>
+            <span>{copy.chooseLocation}</span>
           </button>
         </div>
 
         <div className={styles.hoursFooter}>
           <ClockIcon />
-          <span>7 lokacija · 3 grada</span>
+          <span>{copy.locationCount}</span>
         </div>
       </section>
 
@@ -123,9 +175,9 @@ export function HeaderHero() {
           className={`${styles.menuPanel} ${menuOpen ? styles.menuOpen : ""}`}
           role="dialog"
           aria-modal="true"
-          aria-label="Navigacija"
+          aria-label={copy.navigation}
         >
-          <button ref={menuCloseRef} className={styles.drawerClose} onClick={() => setMenuOpen(false)} aria-label="Zatvori navigaciju">
+          <button ref={menuCloseRef} className={styles.drawerClose} onClick={() => setMenuOpen(false)} aria-label={copy.closeNavigation}>
             <CloseIcon />
           </button>
 
@@ -136,8 +188,8 @@ export function HeaderHero() {
 
           <div className={styles.drawerLayout}>
             <div className={styles.drawerMain}>
-              <p className={styles.drawerEyebrow}>Navigacija</p>
-              <nav className={styles.drawerNav} aria-label="Glavna navigacija">
+              <p className={styles.drawerEyebrow}>{copy.drawerEyebrow}</p>
+              <nav className={styles.drawerNav} aria-label={copy.navigation}>
                 {navItems.map((item, index) => (
                   <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
                     <span>0{index + 1}</span>{item.label}
@@ -146,18 +198,18 @@ export function HeaderHero() {
               </nav>
             </div>
 
-            <aside className={styles.drawerFeature} aria-label="Brunch lokacije">
+            <aside className={styles.drawerFeature} aria-label={copy.locationsAria}>
               <div className={styles.drawerImage} />
               <div className={styles.drawerFeatureCopy}>
-                <p>7 lokacija · 3 grada</p>
-                <h2>Pronađi svoj<br />{" "}<em>Brunch.</em></h2>
-                <button type="button" onClick={openLocations}><PinIcon /> Izaberi lokal</button>
+                <p>{copy.locationCount}</p>
+                <h2>{copy.drawerTitle}<br />{" "}<em>Brunch.</em></h2>
+                <button type="button" onClick={openLocations}><PinIcon /> {copy.chooseVenue}</button>
               </div>
             </aside>
           </div>
 
           <div className={styles.drawerFooter}>
-            <div className={styles.drawerCities}>{cities.map((city) => <span key={city}>{city}</span>)}</div>
+            <div className={styles.drawerCities}>{cities.map((city) => <span key={city.id}>{city.label}</span>)}</div>
             <div className={styles.drawerContact}>
               <a href="https://www.instagram.com/brunch.rs/" target="_blank" rel="noreferrer"><span>Instagram · @brunch.rs</span></a>
             </div>
@@ -171,52 +223,74 @@ export function HeaderHero() {
         aria-hidden={!locationsOpen}
       >
         <section className={styles.locationPicker} role="dialog" aria-modal="true" aria-labelledby="location-picker-title">
-          <button ref={locationsCloseRef} className={styles.locationClose} type="button" onClick={() => setLocationsOpen(false)} aria-label="Zatvori izbor lokacije">
+          <button ref={locationsCloseRef} className={styles.locationClose} type="button" onClick={() => setLocationsOpen(false)} aria-label={copy.closeLocationPicker}>
             <CloseIcon />
           </button>
           <div className={styles.pickerIntro}>
-            <p className={styles.pickerEyebrow}>7 lokacija · 3 grada</p>
-            <h2 id="location-picker-title">Gde se danas vidimo?</h2>
-            <p>Izaberi najbliži Brunch i odmah otvori detalje, meni i kontakt.</p>
+            <p className={styles.pickerEyebrow}>{copy.locationCount}</p>
+            <h2 id="location-picker-title">{copy.pickerTitle}</h2>
+            <p>{copy.pickerDescription}</p>
           </div>
           <div className={styles.cityGrid}>
             {cities.map((city) => (
-              <section className={styles.cityGroup} key={city}>
-                <h3>{city}</h3>
+              <section className={styles.cityGroup} key={city.id}>
+                <h3>{city.label}</h3>
                 <div className={styles.locationList}>
-                  {locations.filter((location) => location.city === city).map((location) => (
-                    <Link className={styles.locationChoice} href={`/lokacije/${location.slug}/`} key={location.slug} onClick={() => setLocationsOpen(false)}>
+                  {locations.filter((location) => location.cityId === city.id).map((location) => (
+                    <Link
+                      className={styles.locationChoice}
+                      href={locationPath(locale, location.slug)}
+                      prefetch={false}
+                      key={location.slug}
+                      onClick={() => setLocationsOpen(false)}
+                    >
                       <span className={styles.locationThumb}><Image src={location.image} alt="" width={112} height={104} /></span>
                       <span className={styles.locationCopy}>
                         <strong>{location.shortName}</strong>
                         <small>{location.area}</small>
                       </span>
-                      <span className={styles.locationArrow} aria-hidden="true">↗</span>
+                      <span className={styles.locationArrow}><ArrowUpRightIcon /></span>
                     </Link>
                   ))}
                 </div>
               </section>
             ))}
           </div>
-          <a className={styles.allLocationsLink} href="#lokacije" onClick={() => setLocationsOpen(false)}>Pogledaj sve fotografije lokala</a>
+          <a className={styles.allLocationsLink} href="#lokacije" onClick={() => setLocationsOpen(false)}>{copy.allLocationPhotos}</a>
         </section>
       </div>
     </>
   );
 }
 
-function Header({ compact, hidden, onMenu }: { compact: boolean; hidden: boolean; onMenu: () => void }) {
+function Header({
+  locale,
+  dictionary,
+  compact,
+  hidden,
+  onMenu,
+}: {
+  locale: Locale;
+  dictionary: Dictionary;
+  compact: boolean;
+  hidden: boolean;
+  onMenu: () => void;
+}) {
   return (
     <header className={`${styles.header} ${compact ? styles.stickyHeader : styles.heroHeader} ${hidden ? styles.headerHidden : ""}`}>
       <div className={styles.navBar}>
-        <a href="#home" className={styles.logoLink} aria-label="Brunch početna">
+        <a href="#home" className={styles.logoLink} aria-label={dictionary.hero.homeAria}>
           <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} loading="eager" sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
         <div className={styles.headerActions}>
-          <div className={styles.languages} aria-label="Izbor jezika">
-            <span aria-current="true">SR</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>EN</span><span aria-hidden="true"> – </span><span className={styles.mutedLanguage}>RU</span>
-          </div>
-          <button className={styles.menuButton} onClick={onMenu} aria-label="Otvori navigaciju"><MenuIcon /></button>
+          <LanguageSwitcher
+            locale={locale}
+            pathname="/"
+            label={dictionary.common.languagePicker}
+            className={styles.languages}
+            mutedClassName={styles.mutedLanguage}
+          />
+          <button className={styles.menuButton} onClick={onMenu} aria-label={dictionary.hero.openNavigation}><MenuIcon /></button>
         </div>
       </div>
     </header>

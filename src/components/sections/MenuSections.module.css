@@ -64,7 +64,30 @@
 .cardsIntro h2 em { color: #e9782f; font-weight: 400; }
 .introAside > p { max-width: 410px; margin: 0; color: #aaa8a3; font-size: 15px; line-height: 1.7; }
 .cityList { display: flex; margin-top: 28px; flex-wrap: wrap; gap: 8px; }
-.cityList span { padding: 8px 12px; border: 1px solid rgba(255,255,255,.16); color: #d1cec8; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.cityButton {
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.16);
+  color: #d1cec8;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+.allButton { padding-right: 9px; padding-left: 9px; }
+.cityButton:hover { border-color: rgba(233,120,47,.72); color: #fff; }
+.cityButton.activeCity {
+  border-color: #e9782f;
+  color: #fff;
+  background: #e9782f;
+}
+.cityButton:focus-visible {
+  outline: 2px solid #e9782f;
+  outline-offset: 3px;
+}
 
 .cards {
   width: min(1200px, calc(100% - 240px));
@@ -173,6 +196,18 @@
 .card:focus-visible {
   outline: 2px solid #dd5903;
   outline-offset: 4px;
+}
+
+@media (min-width: 1200px) {
+  .filteredCards .card,
+  .filteredCards .card:nth-child(n + 3):nth-child(-n + 5) {
+    height: 470px;
+    grid-column: span 6;
+  }
+
+  .filteredCards .card:only-child {
+    grid-column: 4 / span 6;
+  }
 }
 
 @media (max-width: 767px) {
@@ -285,7 +320,8 @@
 @media (max-width: 420px) {
   .cardsIntro h2 { font-size: clamp(39px, 12vw, 46px); }
   .card { min-height: 0; }
-  .cityList span { padding-right: 9px; padding-left: 9px; }
+  .cityButton { padding-right: 9px; padding-left: 9px; }
+  .allButton { padding-right: 8px; padding-left: 8px; }
 }
 
 @media (max-width: 380px) {

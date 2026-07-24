@@ -25,3 +25,6 @@ export function MailIcon(props: IconProps) {
 export function ChevronIcon(props: IconProps) {
   return <svg viewBox="0 0 24 24" aria-hidden="true" {...base} {...props}><path d="m9 5 7 7-7 7"/></svg>;
 }
+export function ArrowUpRightIcon(props: IconProps) {
+  return <svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" {...base} {...props}><path d="M7 17 17 7M7 7h10v10"/></svg>;
+}

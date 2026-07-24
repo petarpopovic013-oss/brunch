@@ -23,7 +23,7 @@
   display: grid;
   place-items: center;
   color: #fff;
-  background: url("/images/brunch/footer-masinac.png") center 54% / cover fixed no-repeat;
+  background: url("/images/brunch/footer-masinac.webp") center 54% / cover fixed no-repeat;
 }
 
 .footerShade {

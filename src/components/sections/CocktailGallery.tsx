@@ -2,18 +2,21 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import type { Dictionary } from "@/src/i18n/dictionaries";
 import styles from "./CocktailGallery.module.css";
 
-const cocktails = [
-  { src: "/images/brunch/masinac.webp", alt: "Zeleni enterijer Brunch Mašinca" },
-  { src: "/images/brunch/story-moment.webp", alt: "Dobar trenutak za Brunch stolom" },
-  { src: "/images/brunch/story-plate.webp", alt: "Brunch specijalitet i koktel" },
-  { src: "/images/brunch/big-ns.webp", alt: "Enterijer Brunch TC BIG Novi Sad" },
-  { src: "/images/brunch/mercator-bg.webp", alt: "Jelo u Brunch Mercator Beograd restoranu" },
-  { src: "/images/brunch/beo.webp", alt: "Burger i piće u Brunch BEO lokalu" },
+const cocktailSources = [
+  "/images/brunch/masinac.webp",
+  "/images/brunch/story-moment.webp",
+  "/images/brunch/story-plate.webp",
+  "/images/brunch/big-ns.webp",
+  "/images/brunch/mercator-bg.webp",
+  "/images/brunch/beo.webp",
 ] as const;
 
-export function CocktailGallery() {
+export function CocktailGallery({ dictionary }: { dictionary: Dictionary }) {
+  const copy = dictionary.gallery;
+  const cocktails = cocktailSources.map((src, index) => ({ src, alt: copy.imageAlts[index] }));
   const [position, setPosition] = useState(0);
   const [animated, setAnimated] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -26,7 +29,7 @@ export function CocktailGallery() {
 
   const previous = useCallback(() => {
     setAnimated(true);
-    setPosition((value) => (value === 0 ? cocktails.length - 1 : value - 1));
+    setPosition((value) => (value === 0 ? cocktailSources.length - 1 : value - 1));
   }, []);
 
   useEffect(() => {
@@ -49,7 +52,7 @@ export function CocktailGallery() {
   };
 
   const onTransitionEnd = () => {
-    if (position < cocktails.length) return;
+    if (position < cocktailSources.length) return;
     setAnimated(false);
     setPosition(0);
   };
@@ -63,16 +66,16 @@ export function CocktailGallery() {
     else previous();
   };
 
-  const activeSlide = position % cocktails.length;
+  const activeSlide = position % cocktailSources.length;
   const renderedSlides = [...cocktails, ...cocktails];
 
   return (
-    <section className={styles.gallery} id="atmosfera" aria-label="Brunch atmosfera">
+    <section className={styles.gallery} id="atmosfera" aria-label={copy.ariaLabel}>
       <header className={styles.mobileIntro}>
-        <p>Brunch atmosfera</p>
-        <h2>Trenuci koje<br />{" "}<em>nosimo sa sobom.</em></h2>
+        <p>{copy.eyebrow}</p>
+        <h2>{copy.titleFirst}<br />{" "}<em>{copy.titleEmphasis}</em></h2>
       </header>
-      <button className={`${styles.arrow} ${styles.previous}`} type="button" onClick={previous} aria-label="Prethodna fotografija">
+      <button className={`${styles.arrow} ${styles.previous}`} type="button" onClick={previous} aria-label={copy.previous}>
         <span aria-hidden="true" />
       </button>
 
@@ -101,24 +104,24 @@ export function CocktailGallery() {
                 sizes="(max-width: 767px) calc(100vw - 52px), (max-width: 1350px) 24vw, 252px"
                 draggable={false}
               />
-              {index < cocktails.length && <figcaption><span>{String(index + 1).padStart(2, "0")}</span> Food · Coffee · Good mood</figcaption>}
+              {index < cocktails.length && <figcaption><span>{String(index + 1).padStart(2, "0")}</span> {copy.caption}</figcaption>}
             </figure>
           ))}
         </div>
       </div>
 
-      <button className={`${styles.arrow} ${styles.next}`} type="button" onClick={next} aria-label="Sledeća fotografija">
+      <button className={`${styles.arrow} ${styles.next}`} type="button" onClick={next} aria-label={copy.next}>
         <span aria-hidden="true" />
       </button>
 
-      <div className={styles.dots} aria-label="Izaberi fotografiju">
+      <div className={styles.dots} aria-label={copy.pickerLabel}>
         {cocktails.map((cocktail, index) => (
           <button
             className={index === activeSlide ? styles.activeDot : ""}
             type="button"
             key={cocktail.src}
             onClick={() => selectSlide(index)}
-            aria-label={`Prikaži fotografiju ${index + 1}`}
+            aria-label={`${copy.showImage} ${index + 1}`}
             aria-current={index === activeSlide ? "true" : undefined}
           />
         ))}

@@ -1,9 +1,15 @@
+import type { Locale } from "@/src/i18n/config";
+import { cityLabels, locationTranslations } from "@/src/i18n/locationTranslations";
+
+export type CityId = "beograd" | "novi-sad" | "nova-pazova";
+
 export type BrunchLocation = {
   slug: string;
   locationNumber: string;
   name: string;
   shortName: string;
-  city: "Novi Sad" | "Beograd" | "Nova Pazova";
+  cityId: CityId;
+  city: string;
   area: string;
   areaLocative: string;
   image: string;
@@ -33,6 +39,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "01",
     name: "Brunch Mašinac",
     shortName: "Mašinac",
+    cityId: "novi-sad",
     city: "Novi Sad",
     area: "Trg Dositeja Obradovića 6",
     areaLocative: "Univerzitetskom Kampusu",
@@ -70,6 +77,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "02",
     name: "Brunch Lounge Mercator Novi Sad",
     shortName: "Mercator Novi Sad",
+    cityId: "novi-sad",
     city: "Novi Sad",
     area: "Bulevar oslobođenja 102",
     areaLocative: "Mercatoru u Novom Sadu",
@@ -99,6 +107,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "03",
     name: "Brunch TC BIG",
     shortName: "TC BIG",
+    cityId: "novi-sad",
     city: "Novi Sad",
     area: "Sentandrejski put 11",
     areaLocative: "BIG-u u Novom Sadu",
@@ -132,6 +141,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "04",
     name: "Brunch BIG Fashion",
     shortName: "BIG Fashion",
+    cityId: "novi-sad",
     city: "Novi Sad",
     area: "Bulevar oslobođenja 119",
     areaLocative: "BIG Fashion-u u Novom Sadu",
@@ -163,6 +173,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "05",
     name: "Brunch TC BIG Nova Pazova",
     shortName: "TC BIG",
+    cityId: "nova-pazova",
     city: "Nova Pazova",
     area: "Vojački put 1A",
     areaLocative: "BIG-u u Novoj Pazovi",
@@ -194,6 +205,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "06",
     name: "Brunch Mercator Beograd",
     shortName: "Mercator Beograd",
+    cityId: "beograd",
     city: "Beograd",
     area: "Bulevar umetnosti 4",
     areaLocative: "Mercator Centru u Beogradu",
@@ -223,6 +235,7 @@ export const locations: BrunchLocation[] = [
     locationNumber: "07",
     name: "Brunch BEO Shopping Center",
     shortName: "BEO Shopping Center",
+    cityId: "beograd",
     city: "Beograd",
     area: "Vojislava Ilića 141",
     areaLocative: "BEO Shopping Centru u Beogradu",
@@ -249,8 +262,34 @@ export const locations: BrunchLocation[] = [
   },
 ];
 
-export const cities = ["Beograd", "Novi Sad", "Nova Pazova"] as const;
+const cityOrder: CityId[] = ["beograd", "novi-sad", "nova-pazova"];
 
-export function getLocation(slug: string) {
-  return locations.find((location) => location.slug === slug);
+export function getCities(locale: Locale) {
+  return cityOrder.map((id) => ({ id, label: cityLabels[locale][id] }));
+}
+
+export function getLocations(locale: Locale): BrunchLocation[] {
+  if (locale === "sr") return locations;
+
+  return locations.map((location) => {
+    const translation = locationTranslations[locale][location.slug];
+
+    return {
+      ...location,
+      ...translation,
+      hours: location.hours.map((entry, index) => ({
+        ...entry,
+        days: translation.hoursDays[index],
+        time: translation.hoursTimes?.[index] ?? entry.time,
+      })),
+      gallery: location.gallery.map((image, index) => ({
+        ...image,
+        ...translation.gallery[index],
+      })),
+    };
+  });
+}
+
+export function getLocation(slug: string, locale: Locale = "sr") {
+  return getLocations(locale).find((location) => location.slug === slug);
 }
