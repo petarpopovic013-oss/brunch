@@ -325,12 +325,13 @@
 .mapCopy h2 .mapLocation {
   display: block;
   color: #887b6d;
-  font-size: clamp(25px, 2.7vw, 42px);
+  font-size: inherit;
   font-weight: 400;
   letter-spacing: -.025em;
   line-height: 1.02;
   overflow-wrap: normal;
-  white-space: nowrap;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .mapCopy address {
@@ -736,10 +737,6 @@
     padding: 80px clamp(32px, 7vw, 68px) 72px;
   }
 
-  .mapCopy h2 .mapLocation {
-    font-size: clamp(28px, 5vw, 42px);
-  }
-
   .mapFrame,
   .mapFrame iframe {
     min-height: 520px;
@@ -901,10 +898,7 @@
   }
 
   .mapCopy h2 .mapLocation {
-    font-size: clamp(20px, 6.2vw, 28px);
     line-height: 1.16;
-    white-space: normal;
-    text-wrap: balance;
   }
 
   .mapFrame,
@@ -1044,5 +1038,4 @@
   .actions a { width: 100%; min-width: 0; }
   .readerHint { max-width: 120px; }
   .readerPreviewCta { min-width: min(270px, calc(100vw - 70px)); }
-  .mapCopy h2 .mapLocation { font-size: 18px; }
 }

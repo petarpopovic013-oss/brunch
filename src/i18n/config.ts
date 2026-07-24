@@ -41,5 +41,6 @@ export function localeAlternates(pathname = "/") {
     "sr-Latn": localizedPath("sr", pathname),
     en: localizedPath("en", pathname),
     ru: localizedPath("ru", pathname),
+    "x-default": localizedPath("sr", pathname),
   };
 }

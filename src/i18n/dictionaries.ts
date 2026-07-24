@@ -6,6 +6,7 @@ export type Dictionary = {
     siteDescription: string;
     homeTitle: string;
     homeDescription: string;
+    locationTitleSuffix: string;
     locationDescriptionSuffix: string;
     cuisines: string[];
   };
@@ -13,6 +14,7 @@ export type Dictionary = {
     languagePicker: string;
     socialMedia: string;
     instagramProfile: string;
+    facebookProfile: string;
     copyright: string;
   };
   hero: {
@@ -140,17 +142,19 @@ export type Dictionary = {
 
 const sr: Dictionary = {
   metadata: {
-    siteName: "Brunch Srbija",
-    siteDescription: "Brunch restorani u Novom Sadu, Beogradu i Novoj Pazovi.",
-    homeTitle: "Brunch Srbija | Restorani za svaki deo dana",
-    homeDescription: "Pronađite svoj Brunch restoran u Novom Sadu, Beogradu ili Novoj Pazovi. Dobra hrana, omiljena kafa i atmosfera kojoj se vraćate.",
-    locationDescriptionSuffix: "Pogledajte jelovnik, adresu, radno vreme i kontakt.",
+    siteName: "Brunch Lounge",
+    siteDescription: "Brunch Lounge restorani u Novom Sadu, Beogradu i Novoj Pazovi.",
+    homeTitle: "Brunch Lounge restorani | Novi Sad, Beograd i Nova Pazova",
+    homeDescription: "Sedam Brunch Lounge restorana u Novom Sadu, Beogradu i Novoj Pazovi. Pronađite adresu, radno vreme, kontakt i jelovnik svog lokala.",
+    locationTitleSuffix: "Meni i radno vreme",
+    locationDescriptionSuffix: "Meni i kontakt:",
     cuisines: ["Internacionalna", "Mediteranska", "Italijanska"],
   },
   common: {
     languagePicker: "Izbor jezika",
     socialMedia: "Društvene mreže",
     instagramProfile: "Brunch Instagram profil",
+    facebookProfile: "Brunch Facebook profil",
     copyright: "Sva prava zadržana.",
   },
   hero: {
@@ -279,17 +283,19 @@ const sr: Dictionary = {
 
 const en: Dictionary = {
   metadata: {
-    siteName: "Brunch Serbia",
-    siteDescription: "Brunch restaurants in Novi Sad, Belgrade and Nova Pazova.",
-    homeTitle: "Brunch Serbia | Restaurants for every part of the day",
-    homeDescription: "Find your Brunch restaurant in Novi Sad, Belgrade or Nova Pazova. Great food, favourite coffee and an atmosphere worth returning to.",
-    locationDescriptionSuffix: "Explore the menu, address, opening hours and contact details.",
+    siteName: "Brunch Lounge",
+    siteDescription: "Brunch Lounge restaurants in Novi Sad, Belgrade and Nova Pazova.",
+    homeTitle: "Brunch Lounge Restaurants | Novi Sad, Belgrade & Nova Pazova",
+    homeDescription: "Explore seven Brunch Lounge restaurants in Novi Sad, Belgrade and Nova Pazova. Find each venue’s menu, address, opening hours and contact details.",
+    locationTitleSuffix: "Menu & Opening Hours",
+    locationDescriptionSuffix: "Menu and contact details:",
     cuisines: ["International", "Mediterranean", "Italian"],
   },
   common: {
     languagePicker: "Choose language",
     socialMedia: "Social media",
     instagramProfile: "Brunch Instagram profile",
+    facebookProfile: "Brunch Facebook profile",
     copyright: "All rights reserved.",
   },
   hero: {
@@ -418,17 +424,19 @@ const en: Dictionary = {
 
 const ru: Dictionary = {
   metadata: {
-    siteName: "Brunch Сербия",
-    siteDescription: "Рестораны Brunch в Нови-Саде, Белграде и Нова-Пазове.",
-    homeTitle: "Brunch Сербия | Рестораны на весь день",
-    homeDescription: "Найдите свой ресторан Brunch в Нови-Саде, Белграде или Нова-Пазове. Отличная еда, любимый кофе и атмосфера, в которую хочется возвращаться.",
-    locationDescriptionSuffix: "Посмотрите меню, адрес, часы работы и контактную информацию.",
+    siteName: "Brunch Lounge",
+    siteDescription: "Рестораны Brunch Lounge в Нови-Саде, Белграде и Нова-Пазове.",
+    homeTitle: "Рестораны Brunch Lounge | Нови-Сад, Белград и Нова-Пазова",
+    homeDescription: "Семь ресторанов Brunch Lounge в Нови-Саде, Белграде и Нова-Пазове. Меню, адреса, часы работы, телефоны и маршруты до каждого ресторана.",
+    locationTitleSuffix: "Меню и часы работы",
+    locationDescriptionSuffix: "Меню и контакты:",
     cuisines: ["Международная", "Средиземноморская", "Итальянская"],
   },
   common: {
     languagePicker: "Выбор языка",
     socialMedia: "Социальные сети",
     instagramProfile: "Профиль Brunch в Instagram",
+    facebookProfile: "Профиль Brunch в Facebook",
     copyright: "Все права защищены.",
   },
   hero: {

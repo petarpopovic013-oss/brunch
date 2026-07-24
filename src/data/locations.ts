@@ -3,6 +3,12 @@ import { cityLabels, locationTranslations } from "@/src/i18n/locationTranslation
 
 export type CityId = "beograd" | "novi-sad" | "nova-pazova";
 
+export type OpeningHoursEntry = {
+  days: string[];
+  opens: string;
+  closes: string;
+};
+
 export type BrunchLocation = {
   slug: string;
   locationNumber: string;
@@ -28,6 +34,7 @@ export type BrunchLocation = {
   email?: string;
   emailHref?: string;
   hours: Array<{ days: string; time: string }>;
+  openingHours: OpeningHoursEntry[];
   features: string[];
   gallery: Array<{ src: string; alt: string; caption: string }>;
   logo?: { src: string; alt: string };
@@ -65,6 +72,10 @@ export const locations: BrunchLocation[] = [
       { days: "Subota", time: "08:00 — 15:00" },
       { days: "Nedelja", time: "Ne radi" },
     ],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:30", closes: "18:00" },
+      { days: ["Saturday"], opens: "08:00", closes: "15:00" },
+    ],
     features: ["Trg Dositeja Obradovića 6", "Kafa i doručak", "Bašta uz kampus"],
     gallery: [
       { src: "/images/locations/brunch-masinac-novi-sad/gallery-01.jpg", alt: "Gosti u zelenoj bašti lokala Brunch Mašinac", caption: "Bašta u srcu kampusa" },
@@ -95,6 +106,9 @@ export const locations: BrunchLocation[] = [
     phone: "+381 21 636 91 11",
     phoneHref: "tel:+381216369111",
     hours: [{ days: "Ponedeljak — nedelja", time: "08:00 — 21:30" }],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "08:00", closes: "21:30" },
+    ],
     features: ["Bulevar oslobođenja 102", "Mediteranska kuhinja", "Galerija sa pogledom"],
     gallery: [
       { src: "/images/locations/brunch-lounge-mercator-novi-sad/gallery-01.jpg", alt: "Bar i dugačak zajednički sto u Brunch Lounge Mercator Novi Sad", caption: "Otvoren prostor za svaki deo dana" },
@@ -129,6 +143,11 @@ export const locations: BrunchLocation[] = [
       { days: "Petak — subota", time: "08:00 — 23:00" },
       { days: "Nedelja", time: "08:00 — 22:00" },
     ],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "08:00", closes: "22:00" },
+      { days: ["Friday", "Saturday"], opens: "08:00", closes: "23:00" },
+      { days: ["Sunday"], opens: "08:00", closes: "22:00" },
+    ],
     features: ["Sentandrejski put 11", "Porodični ručak", "Petak i subota do 23h"],
     gallery: [
       { src: "/images/locations/brunch-tc-big-novi-sad/gallery-01.jpg", alt: "Servirano jelo i vino u Brunch TC BIG Novi Sad", caption: "Celodnevna ponuda" },
@@ -161,6 +180,9 @@ export const locations: BrunchLocation[] = [
     email: "sasabiljetina86@gmail.com",
     emailHref: "mailto:sasabiljetina86@gmail.com",
     hours: [{ days: "Ponedeljak — nedelja", time: "08:00 — 22:00" }],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "08:00", closes: "22:00" },
+    ],
     features: ["Bulevar oslobođenja 119", "Celodnevni meni", "Pogled na grad"],
     gallery: [
       { src: "/images/locations/brunch-big-fashion-novi-sad/gallery-01.jpg", alt: "Gošća u Brunch BIG Fashion Novi Sad", caption: "Dobra atmosfera tokom celog dana" },
@@ -193,6 +215,9 @@ export const locations: BrunchLocation[] = [
     email: "modenarestorani@gmail.com",
     emailHref: "mailto:modenarestorani@gmail.com",
     hours: [{ days: "Ponedeljak — nedelja", time: "08:00 — 22:00" }],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "08:00", closes: "22:00" },
+    ],
     features: ["Dečija igraonica", "Prostor za proslave", "Besplatan parking"],
     gallery: [
       { src: "/images/locations/brunch-big-nova-pazova/gallery-01.jpg", alt: "Crveni koktel u Brunch TC BIG Nova Pazova", caption: "Osveženje za svaki deo dana" },
@@ -223,6 +248,9 @@ export const locations: BrunchLocation[] = [
     phone: "+381 11 423 52 69",
     phoneHref: "tel:+381114235269",
     hours: [{ days: "Ponedeljak — nedelja", time: "09:00 — 22:00" }],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "09:00", closes: "22:00" },
+    ],
     features: ["Bulevar umetnosti 4", "Novi Beograd · Blok 31", "Poslovni ručak"],
     gallery: [
       { src: "/images/locations/brunch-mercator-beograd/gallery-01.jpg", alt: "Crveno vino u Brunch Mercator Beograd", caption: "Pauza u srcu Novog Beograda" },
@@ -253,6 +281,9 @@ export const locations: BrunchLocation[] = [
     phone: "+381 11 453 50 25",
     phoneHref: "tel:+381114535025",
     hours: [{ days: "Ponedeljak — nedelja", time: "10:00 — 22:00" }],
+    openingHours: [
+      { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "10:00", closes: "22:00" },
+    ],
     features: ["Vojislava Ilića 141", "Domaća i internacionalna jela", "Pauza tokom kupovine"],
     gallery: [
       { src: "/images/locations/brunch-beo-shopping-centar/gallery-01.jpg", alt: "Dve gošće za stolom u Brunch BEO Shopping Center", caption: "Pauza koja traje duže" },
