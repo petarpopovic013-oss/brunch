@@ -90,12 +90,28 @@
   height: 101px;
   margin: 0 auto;
   padding: 0 30px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
 }
 .stickyHeader .navBar { height: 80px; }
-.headerActions { display: flex; align-items: center; gap: 20px; }
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 3vw, 54px);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.desktopNav a {
+  transition: color .18s ease;
+}
+.desktopNav a:hover,
+.desktopNav a:focus-visible {
+  color: #dd5903;
+}
+.headerActions { display: flex; justify-self: end; align-items: center; gap: 20px; }
 .menuButton, .drawerClose, .modalClose {
   display: grid;
   place-items: center;
@@ -376,7 +392,11 @@
     width: 100%;
     padding-right: clamp(20px, 4vw, 48px);
     padding-left: clamp(20px, 4vw, 48px);
+    grid-template-columns: 1fr auto;
   }
+
+  .desktopNav { display: none; }
+  .menuButton { display: grid; }
 }
 
 @media (max-width: 1024px) {

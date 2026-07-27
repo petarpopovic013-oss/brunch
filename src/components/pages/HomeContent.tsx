@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { CocktailGallery } from "@/src/components/sections/CocktailGallery";
-import { EventsFooter } from "@/src/components/sections/EventsFooter";
 import { HeaderHero } from "@/src/components/sections/HeaderHero";
 import { MenuSections } from "@/src/components/sections/MenuSections";
 import { StoryExperience } from "@/src/components/sections/StoryExperience";
 import { MobileParallax } from "@/src/components/site/MobileParallax";
+import { SiteFooter } from "@/src/components/site/SiteFooter";
 import { getCities, getLocations } from "@/src/data/locations";
 import { localeAlternates, localeMeta, localizedPath, type Locale } from "@/src/i18n/config";
 import { getDictionary } from "@/src/i18n/dictionaries";
@@ -101,21 +101,21 @@ export function HomeContent({ locale }: { locale: Locale }) {
   };
 
   return (
-    <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replaceAll("<", "\\u003c") }}
-      />
-      <MobileParallax />
-      <HeaderHero locale={locale} dictionary={dictionary} locations={locations} cities={cities} />
-      <div id="about">
-        <StoryExperience dictionary={dictionary} />
-      </div>
-      <CocktailGallery dictionary={dictionary} />
-      <MenuSections locale={locale} dictionary={dictionary} locations={locations} cities={cities} />
-      <div id="contact">
-        <EventsFooter dictionary={dictionary} cityNames={cities.map((city) => city.label)} />
-      </div>
-    </main>
+    <>
+      <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replaceAll("<", "\\u003c") }}
+        />
+        <MobileParallax />
+        <HeaderHero locale={locale} dictionary={dictionary} locations={locations} cities={cities} />
+        <div id="about">
+          <StoryExperience dictionary={dictionary} />
+        </div>
+        <CocktailGallery dictionary={dictionary} />
+        <MenuSections locale={locale} dictionary={dictionary} locations={locations} cities={cities} />
+      </main>
+      <SiteFooter locale={locale} dictionary={dictionary} cities={cities} />
+    </>
   );
 }

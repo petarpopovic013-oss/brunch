@@ -27,7 +27,8 @@ export function LocationPlaceholder({
   const galleryImages = location.gallery;
 
   return (
-    <main>
+    <>
+      <main>
       <section className={styles.hero}>
         <Image src={location.heroImage} alt={location.heroImageAlt} fill loading="eager" sizes="100vw" />
         <div className={styles.shade} />
@@ -172,7 +173,8 @@ export function LocationPlaceholder({
         </div>
       </section>
 
-      <SiteFooter locale={locale} dictionary={dictionary} cities={cities} logo={location.logo} />
-    </main>
+      </main>
+      <SiteFooter locale={locale} dictionary={dictionary} cities={cities} />
+    </>
   );
 }

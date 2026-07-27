@@ -1,8 +1,18 @@
 .switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.desktopSwitcher {
   display: flex;
   align-items: center;
   gap: 6px;
-  line-height: 1;
+}
+
+.mobileSwitcher {
+  display: none;
 }
 
 .flagButton {
@@ -73,11 +83,61 @@
   border: 0;
 }
 
-@media (max-width: 380px) {
-  .switcher {
-    gap: 3px;
+@media (max-width: 767px) {
+  .desktopSwitcher {
+    display: none;
   }
 
+  .mobileSwitcher {
+    position: relative;
+    display: block;
+  }
+
+  .mobileSwitcher > summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobileSwitcher > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobileSwitcher[open] > summary {
+    border-color: rgba(255, 255, 255, 0.42);
+    background: rgba(15, 13, 10, 0.88);
+  }
+
+  .mobileMenu {
+    position: absolute;
+    z-index: 60;
+    top: calc(100% + 8px);
+    left: 50%;
+    display: grid;
+    padding: 5px;
+    gap: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 7px;
+    background: rgba(20, 18, 14, 0.96);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+    transform: translateX(-50%);
+    backdrop-filter: blur(12px);
+  }
+
+  .mobileMenu .link {
+    opacity: 1;
+  }
+
+  .mobileMenu .link .flag {
+    filter: none;
+  }
+
+  .mobileMenu .link:hover,
+  .mobileMenu .link:focus-visible {
+    background: rgba(221, 89, 3, 0.16);
+  }
+}
+
+@media (max-width: 380px) {
   .flagButton {
     width: 24px;
     height: 20px;
@@ -88,5 +148,10 @@
   .flag {
     width: 18px;
     height: 13.5px;
+  }
+
+  .mobileMenu {
+    top: calc(100% + 6px);
+    padding: 4px;
   }
 }

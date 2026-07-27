@@ -66,8 +66,27 @@
 
 .mutedLanguage { opacity: 0.48; }
 
-.mobileMenu {
+.menuButton {
   display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  place-items: center;
+}
+
+.menuButton svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1;
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
 }
 
 @media (max-width: 1100px) {
@@ -88,58 +107,16 @@
     display: none;
   }
 
-  .mobileMenu {
-    display: block;
-    justify-self: auto;
-  }
-
-  .mobileMenu summary {
+  .menuButton {
     display: grid;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    list-style: none;
-    place-content: center;
-    gap: 7px;
-  }
-
-  .mobileMenu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobileMenu summary span {
-    display: block;
-    width: 25px;
-    height: 1px;
-    background: #fff;
-  }
-
-  .mobileMenu nav {
-    position: fixed;
-    z-index: 40;
-    top: 84px;
-    right: 0;
-    display: flex;
-    width: min(52vw, 390px);
-    min-height: calc(100svh - 84px);
-    max-height: calc(100svh - 84px);
-    padding: 48px 34px;
-    flex-direction: column;
-    gap: 25px;
-    overflow-y: auto;
-    background: #15130f;
-    box-shadow: -24px 30px 60px rgba(0, 0, 0, 0.35);
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-size: 32px;
+    justify-self: auto;
   }
 }
 
 @media (max-width: 760px) {
   .header { padding-right: 24px; padding-left: 24px; }
-
-  .mobileMenu nav {
-    width: min(82vw, 350px);
-  }
+  .menuButton { width: 44px; height: 44px; }
+  .menuButton svg { width: 25px; }
 }
 
 @media (max-width: 380px) {
@@ -147,5 +124,4 @@
   .logo { width: 154px; }
   .headerActions { gap: 8px; }
   .languages { font-size: 10px; }
-  .mobileMenu nav { width: 100vw; }
 }

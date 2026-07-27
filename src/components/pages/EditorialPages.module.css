@@ -1,0 +1,495 @@
+.hero {
+  position: relative;
+  display: grid;
+  min-height: min(860px, 100svh);
+  place-items: end start;
+  overflow: hidden;
+  background: #171510;
+}
+
+.hero > img,
+.postHeroImage img,
+.cardImage img,
+.aboutIntroImage img {
+  object-fit: cover;
+}
+
+.hero > img {
+  object-position: center 52%;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .76) 0%, rgba(0, 0, 0, .32) 55%, rgba(0, 0, 0, .12)),
+    linear-gradient(0deg, rgba(0, 0, 0, .46), transparent 55%);
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  width: min(850px, calc(100% - 2 * var(--side-space)));
+  margin: 0 var(--side-space) clamp(72px, 10vh, 118px);
+}
+
+.eyebrow,
+.cardCopy > p:first-of-type,
+.postHeaderCopy > p,
+.nextPost p,
+.editorialCta > p {
+  margin: 0 0 16px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1,
+.blogHeader h1,
+.postHeaderCopy h1,
+.editorialCta h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(58px, 8vw, 116px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: .88;
+  text-wrap: balance;
+}
+
+.heroCopy h1 {
+  font-size: clamp(52px, 6.2vw, 94px);
+  line-height: 1.02;
+}
+
+.heroCopy > p:last-child {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: #f0ede7;
+  font-size: clamp(17px, 1.7vw, 22px);
+  line-height: 1.55;
+}
+
+.aboutIntro {
+  display: grid;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 30px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+  align-items: start;
+  gap: clamp(50px, 8vw, 120px);
+}
+
+.aboutIntroImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.aboutIntro blockquote {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(38px, 4.4vw, 60px);
+  font-style: italic;
+  line-height: .95;
+}
+
+.aboutIntroCopy p {
+  margin: 28px 0 0;
+  color: #c6c2ba;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.aboutIntro blockquote::before {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--orange);
+  content: "“";
+  font-size: 120px;
+  line-height: .35;
+}
+
+.articleBody,
+.postContent {
+  width: min(920px, calc(100% - 2 * var(--side-space)));
+  margin: 0 auto;
+  padding: 40px 0 130px;
+}
+
+.storySection,
+.postContent > section {
+  display: grid;
+  padding: 68px 0;
+  grid-template-columns: 70px minmax(0, 1fr);
+  border-top: 1px solid #34312a;
+  gap: 18px;
+}
+
+.storySection > span {
+  padding-top: 8px;
+  color: var(--orange);
+  font-size: 11px;
+  letter-spacing: .14em;
+}
+
+.storySection h2,
+.postContent h2 {
+  margin: 0 0 24px;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 500;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.storySection p,
+.postContent p {
+  margin: 0 0 18px;
+  color: #c6c2ba;
+  font-size: 18px;
+  line-height: 1.78;
+}
+
+.inlineFigure {
+  margin: 38px 0 0;
+}
+
+.inlineFigure img,
+.postContent figure img {
+  width: 100%;
+  height: auto;
+}
+
+.editorialCta {
+  padding: 120px var(--side-space);
+  background: #dd5903;
+  text-align: center;
+}
+
+.editorialCta > p {
+  color: #2a160a;
+}
+
+.editorialCta h2 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.editorialCta a {
+  display: inline-block;
+  margin-top: 34px;
+  padding: 12px 0 8px;
+  border-bottom: 1px solid white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.blogHeader {
+  padding: 190px var(--side-space) 96px;
+  background: #15130f;
+  text-align: center;
+}
+
+.blogHeader h1 {
+  max-width: 980px;
+  margin: auto;
+}
+
+.blogGrid {
+  display: grid;
+  max-width: 1320px;
+  margin: auto;
+  padding: 80px 30px 140px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 84px 34px;
+}
+
+.blogCard,
+.featureCard {
+  min-width: 0;
+}
+
+.featureCard {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr);
+  align-items: center;
+  gap: 62px;
+}
+
+.cardImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #201e19;
+}
+
+.cardImage img {
+  transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.cardImage:hover img {
+  transform: scale(1.035);
+}
+
+.cardCopy {
+  position: relative;
+  padding: 34px 18px 0;
+}
+
+.featureCard .cardCopy {
+  padding: 0;
+}
+
+.cardCopy h2 {
+  max-width: 580px;
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 500;
+  line-height: .94;
+}
+
+.cardCopy h3 {
+  margin: 14px 0 0;
+  color: #e8e3da;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.excerpt {
+  max-width: 580px;
+  margin: 18px 0 0;
+  color: #9d9991;
+  font-size: 15px;
+  line-height: 1.65;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.textLink,
+.postHeaderCopy > a {
+  display: inline-block;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--orange);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.postHeader {
+  display: grid;
+  min-height: 820px;
+  padding: 150px var(--side-space) 70px;
+  grid-template-columns: minmax(360px, .82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(50px, 7vw, 110px);
+  background: #15130f;
+}
+
+.postHeaderCopy {
+  max-width: 650px;
+}
+
+.postHeaderCopy > a {
+  margin: 0 0 46px;
+  color: #d0cbc1;
+  border-color: #59554d;
+}
+
+.postHeaderCopy h1 {
+  font-size: clamp(58px, 7vw, 100px);
+}
+
+.postHeaderCopy h2 {
+  margin: 20px 0 0;
+  color: #ccc6bc;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.postHeroImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.postLead {
+  padding: 80px 0 72px;
+}
+
+.postLead p:first-child::first-letter {
+  float: left;
+  margin: .06em .13em 0 0;
+  color: var(--orange);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 5.2em;
+  line-height: .72;
+}
+
+.postContent > section {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.postContent figure {
+  margin: 52px 0 0;
+  grid-column: 1 / -1;
+}
+
+.postContent .portraitFigure {
+  width: min(100%, 680px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nextPost {
+  padding: 90px var(--side-space) 110px;
+  border-top: 1px solid #332f29;
+  background: #15130f;
+  text-align: center;
+}
+
+.nextPost a {
+  display: block;
+  max-width: 900px;
+  margin: auto;
+  color: #fff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: .9;
+  text-wrap: balance;
+}
+
+@media (max-width: 1000px) {
+  .featureCard {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .featureCard .cardCopy {
+    padding: 20px 18px 0;
+  }
+
+  .postHeader {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .postHeaderCopy {
+    padding-top: 36px;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .heroShade {
+    background: linear-gradient(0deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .12) 80%);
+  }
+
+  .heroCopy {
+    margin-bottom: 64px;
+  }
+
+  .heroCopy h1,
+  .blogHeader h1 {
+    font-size: clamp(52px, 15vw, 72px);
+  }
+
+  .aboutIntro {
+    padding: 72px 24px 92px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .aboutIntroImage {
+    aspect-ratio: 3 / 2;
+  }
+
+  .articleBody,
+  .postContent {
+    width: calc(100% - 48px);
+    padding-bottom: 90px;
+  }
+
+  .storySection,
+  .postContent > section {
+    padding: 50px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .storySection > span {
+    padding: 0;
+  }
+
+  .storySection p,
+  .postContent p {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .blogHeader {
+    padding-top: 150px;
+  }
+
+  .blogGrid {
+    padding: 54px 20px 100px;
+    grid-template-columns: 1fr;
+    gap: 68px;
+  }
+
+  .featureCard {
+    grid-column: auto;
+  }
+
+  .postHeader {
+    padding: 118px 24px 40px;
+    gap: 46px;
+  }
+
+  .postHeaderCopy > a {
+    margin-bottom: 34px;
+  }
+
+  .postHeaderCopy h1 {
+    font-size: clamp(52px, 15vw, 72px);
+  }
+
+  .postHeroImage {
+    aspect-ratio: 3 / 2;
+  }
+
+  .postContent figure {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .articleBody,
+  .postContent {
+    width: calc(100% - 40px);
+  }
+
+  .aboutIntro {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+}

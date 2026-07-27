@@ -23,12 +23,22 @@
 }
 
 .topline a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 9px;
   padding-bottom: 5px;
   border-bottom: 1px solid var(--orange);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topline a span {
+  display: inline-flex;
+  flex: 0 0 auto;
 }
 
 .grid {
@@ -48,7 +58,7 @@
 }
 
 .brand img {
-  width: 145px;
+  width: 188.5px;
   height: auto;
   margin-bottom: 24px;
 }
@@ -114,9 +124,23 @@
 
   .topline {
     margin-bottom: 54px;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 34px;
+    text-align: center;
+  }
+
+  .topline p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .brand {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .grid {
@@ -124,17 +148,15 @@
     gap: 42px 24px;
   }
 
-  .brand {
-    grid-column: 1 / -1;
-  }
-
   .grid > div:last-child {
     grid-column: auto;
   }
 
   .bottom {
+    align-items: center;
     flex-direction: column;
     gap: 8px;
+    text-align: center;
   }
 }
 

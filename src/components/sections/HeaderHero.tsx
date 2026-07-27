@@ -11,8 +11,9 @@ import {
   PinIcon,
 } from "@/src/components/icons";
 import { LanguageSwitcher } from "@/src/components/site/LanguageSwitcher";
+import { getEditorialCopy } from "@/src/data/editorial";
 import type { BrunchLocation, CityId } from "@/src/data/locations";
-import { locationPath, type Locale } from "@/src/i18n/config";
+import { localizedPath, locationPath, type Locale } from "@/src/i18n/config";
 import type { Dictionary } from "@/src/i18n/dictionaries";
 import styles from "./HeaderHero.module.css";
 
@@ -42,12 +43,12 @@ type HeaderHeroProps = {
 
 export function HeaderHero({ locale, dictionary, locations, cities }: HeaderHeroProps) {
   const copy = dictionary.hero;
+  const editorial = getEditorialCopy(locale);
   const navItems = [
     { label: copy.nav.home, href: "#home" },
-    { label: copy.nav.story, href: "#about" },
-    { label: copy.nav.atmosphere, href: "#atmosfera" },
+    { label: editorial.navAbout, href: localizedPath(locale, "/o-nama/") },
+    { label: editorial.navBlog, href: localizedPath(locale, "/blog/") },
     { label: copy.nav.locations, href: "#lokacije" },
-    { label: copy.nav.contact, href: "#contact" },
   ];
   const [sticky, setSticky] = useState(false);
   const [activeHeroImage, setActiveHeroImage] = useState(0);
@@ -276,12 +277,21 @@ function Header({
   hidden: boolean;
   onMenu: () => void;
 }) {
+  const editorial = getEditorialCopy(locale);
+  const homePath = localizedPath(locale, "/");
+
   return (
     <header className={`${styles.header} ${compact ? styles.stickyHeader : styles.heroHeader} ${hidden ? styles.headerHidden : ""}`}>
       <div className={styles.navBar}>
         <a href="#home" className={styles.logoLink} aria-label={dictionary.hero.homeAria}>
           <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} loading="eager" sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
+        <nav className={styles.desktopNav} aria-label={dictionary.siteHeader.mainNavigation}>
+          <Link href={localizedPath(locale, "/o-nama/")}>{editorial.navAbout}</Link>
+          <Link href={localizedPath(locale, "/blog/")}>{editorial.navBlog}</Link>
+          <a href={`${homePath}#lokacije`}>{dictionary.siteHeader.locations}</a>
+          <a href={`${homePath}#contact`}>{dictionary.siteHeader.contact}</a>
+        </nav>
         <div className={styles.headerActions}>
           <LanguageSwitcher
             locale={locale}

@@ -1,0 +1,579 @@
+{
+  "about": {
+    "title": "Brunch Lounge – mesto gde svaki deo dana ima svoj ukus",
+    "lead": "Brunch Lounge je mnogo više od restorana. To je mesto osmišljeno za ljude koji uživaju u dobroj hrani, kvalitetnoj kafi, prijatnom ambijentu i vremenu provedenom sa osobama koje su im važne. Nastao je iz želje da se na jednom mestu spoje različiti ukusi, savremena kultura obedovanja i opuštena atmosfera koja prati goste od jutarnjih časova do večernjeg izlaska.",
+    "intro": [
+      "Našu filozofiju najbolje opisuje jednostavna misao: doručak je obrok, ali brunch je kultura.",
+      "Ta kultura podrazumeva slobodu da sami odredite ritam svog dana. Ne morate da birate između obilnog doručka i laganog ručka, kratke kafe i višesatnog druženja, poslovnog sastanka i opuštenog razgovora. U Brunch Lounge restoranima svaki gost može da pronađe obrok, napitak i atmosferu koji odgovaraju njegovom trenutnom raspoloženju.",
+      "Ovde jutro može da počne polako, uz miris sveže pripremljene kafe i doručak u kojem se zaista uživa. Poslovni razgovor može spontano da se nastavi uz ručak, a kratko popodnevno viđanje sa prijateljima može da se pretvori u večernje druženje. U Brunch Lounge restoranima ne postoje strogo određeni trenuci za uživanje. Svaki deo dana može da postane prilika za dobar obrok, predah, razgovor ili susret koji ćete pamtiti."
+    ],
+    "sections": [
+      {
+        "heading": "Različite kuhinje, jedna zajednička ideja",
+        "paragraphs": [
+          "Ponuda Brunch Lounge restorana osmišljena je tako da prati različite navike, ukuse, raspoloženja i delove dana. Na našim jelovnicima susreću se mediteranska kuhinja, internacionalni specijaliteti, poznata domaća jela i savremene kulinarske kombinacije koje tradicionalnim ukusima daju novu energiju.",
+          "Želeli smo da stvorimo jelovnik koji gostima pruža slobodu izbora. Dan može da počne kvalitetnim doručkom, jajima pripremljenim na različite načine, svežim pecivima, sendvičima, laganim salatama ili hranljivim obrokom koji daje energiju za nastavak dana.",
+          "Za ručak ili večeru mogu se odabrati paste, pice, rižota, burgeri, salate, mesni specijaliteti i pažljivo pripremljena glavna jela. Posle obroka dolaze deserti, kafa, sveže ceđeni sokovi, osvežavajuća pića i kokteli zbog kojih se za stolom često ostaje malo duže nego što je prvobitno planirano.",
+          "Naša ideja nije da gostima ponudimo samo veliki broj jela. Važno nam je da svako jelo ima smisao, da sastojci budu pažljivo odabrani i da se ukusi međusobno dopunjuju. Trudimo se da poznata jela predstavimo na način koji je savremen, ali i dalje prijatan, razumljiv i blizak gostima.",
+          "Brunch Lounge je zato mesto za ljude koji vole bogat doručak, ali i za one koji će dan započeti samo kafom. Za goste koji žele lagan ručak, kao i za one koji traže konkretan i zasitan obrok. Za ljubitelje mediteranske kuhinje, domaćih ukusa, kvalitetne paste, dobro pripremljenog burgera, sveže salate, deserta ili koktela kojim se završava naporan dan.",
+          "Raznovrsnost ponude omogućava da za istim stolom svako pronađe nešto po svom ukusu. Dok jedna osoba bira laganiju salatu, druga može da uživa u pasti, pici, burgeru ili glavnom jelu. Upravo zbog toga Brunch Lounge odgovara različitim generacijama, navikama i prilikama."
+        ]
+      },
+      {
+        "heading": "Svaka lokacija ima svoj ritam",
+        "paragraphs": [
+          "Brunch Lounge danas okuplja goste na lokacijama u Beogradu, Novom Sadu, Novoj Pazovi, Bečeju i Petrovaradinu. Svaki grad, deo grada i lokal imaju svoju posebnu energiju, ali ih povezuje isti Brunch osećaj – dobra hrana, kvalitetna kafa, prijatna atmosfera i želja da se svaki gost oseća dobrodošlo.",
+          "U Beogradu smo deo brzog gradskog ritma, poslovnih susreta, pauza tokom kupovine, porodičnih ručkova i večernjih druženja. Naše beogradske lokacije odgovaraju ljudima koji žele da naprave predah između obaveza, održe poslovni sastanak u prijatnom ambijentu ili se okupe sa prijateljima i porodicom.",
+          "U Novom Sadu Brunch Lounge prati različita lica grada – od užurbanih gradskih zona i univerzitetskog okruženja do trgovačkih centara i mesta koja okupljaju ljude tokom čitavog dana. To su lokacije na kojima se susreću studenti, porodice, zaposleni, turisti i svi oni koji žele dobru hranu i prijatno vreme provedeno za stolom.",
+          "U Novoj Pazovi Brunch Lounge predstavlja prostrano i prijatno mesto pogodno za porodična okupljanja, proslave i duža druženja. Posebna pažnja posvećena je gostima koji dolaze sa decom, kao i svima koji žele da u opuštenom ambijentu provedu više vremena sa porodicom i prijateljima.",
+          "Bečej i Petrovaradin našoj priči donose posebnu lokalnu energiju, mirniji ritam i nove zajednice koje se okupljaju oko iste ideje – da dobar obrok bude povod za druženje, razgovor i uživanje.",
+          "Neke naše lokacije idealne su za jutarnju kafu i doručak pre početka obaveza. Druge su stvorene za poslovne sastanke, porodične ručkove, pauzu tokom kupovine ili opuštenu večeru. Pojedini Brunch Lounge restorani imaju prostrane bašte, dečije igraonice, veliki broj mesta za sedenje ili atmosferu koja se u večernjim satima prirodno pretvara u izlazak.",
+          "Upravo u toj različitosti nalazi se snaga Brunch Lounge koncepta. Svaki lokal ima sopstveni karakter i prilagođen je sredini u kojoj se nalazi, ali kvalitet hrane, pažnja prema gostima i osećaj dobrodošlice ostaju zajednički."
+        ]
+      },
+      {
+        "heading": "Više od restorana",
+        "paragraphs": [
+          "Verujemo da restoran ne čine samo enterijer, jelovnik i lepo serviran obrok. Restoran čine ljudi, razgovori, susreti i mali rituali koji se ponavljaju iz dana u dan.",
+          "Brunch je prva kafa pre važnog sastanka. Doručak sa prijateljem kojeg dugo niste videli. Porodični ručak tokom kojeg telefoni ostaju po strani. Kratak predah između obaveza. Desert koji se naručuje iako ste rekli da ovog puta nećete. Večera koja se spontano pretvara u izlazak.",
+          "To su trenuci zbog kojih želimo da svaki gost pronađe svoj omiljeni sto, svoje omiljeno jelo i svoje omiljeno vreme za dolazak.",
+          "Posebnu pažnju posvećujemo atmosferi. Enterijeri naših lokala su topli, savremeni i različiti, oblikovani tako da odgovaraju sredini u kojoj se nalaze. Zelenilo, otvoreni prostori, pažljivo birani detalji, udobna mesta za sedenje i prijatna energija stvaraju okruženje u kojem ljudi mogu da se opuste, razgovaraju i uživaju.",
+          "Bilo da dolazite sami, sa porodicom, decom, prijateljima ili poslovnim partnerima, naš cilj je da se osećate prijatno i dobrodošlo. Želimo da prostor bude dovoljno opušten za neformalno druženje, ali i dovoljno uređen i prijatan za važne razgovore, proslave i posebne trenutke.",
+          "Brunch Lounge je mesto na kojem možete da započnete dan, napravite pauzu, organizujete susret ili završite veče. To je prostor koji se menja zajedno sa ritmom gostiju, ali zadržava prepoznatljivu energiju tokom čitavog dana."
+        ]
+      },
+      {
+        "heading": "Kultura dobrog raspoloženja",
+        "paragraphs": [
+          "Brunch kultura za nas nije vezana samo za određeno vreme ili određeni obrok. Ona predstavlja način na koji provodimo vreme zajedno.",
+          "To je odluka da se dan makar na trenutak uspori. Da se kafa ne popije u prolazu. Da se ručak ne svede samo na potrebu, već da postane pravi predah. Da se razgovor ne prekine čim se tanjiri sklone. Da se dobri trenuci ne odlažu za neku posebnu priliku.",
+          "Zato Brunch Lounge spaja hranu, kafu i dobro raspoloženje tokom celog dana. Od ranog jutra, preko ručka i popodnevnog deserta, do večere i pića sa prijateljima, trudimo se da svaki dolazak ima onu poznatu, opuštenu energiju zbog koje poželite da ostanete još malo.",
+          "Naš cilj je jednostavan: da svaki Brunch Lounge bude mesto na kojem ćete dobro jesti, prijatno provesti vreme i poneti sa sobom više od ukusa jednog obroka.",
+          "Jer dobar obrok može da ulepša dan. Dobar sto može da okupi ljude. Prijatan razgovor može da promeni raspoloženje. A dobra atmosfera može običan trenutak da pretvori u uspomenu.",
+          "Dobro došli u Brunch Lounge – mesto za spora jutra, duge ručkove, mirne pauze, spontane večeri i sve dobre priče koje nastaju između."
+        ]
+      }
+    ],
+    "heroImage": "/images/editorial/NEM_4065.webp",
+    "heroAlt": "Svetao i prijatan enterijer Brunch Lounge restorana",
+    "inlineImages": [
+      {
+        "src": "/images/editorial/NEM_2442.webp",
+        "alt": "Izbor različitih Brunch Lounge jela za zajedničkim stolom"
+      },
+      {
+        "src": "/images/editorial/NEM_4105.webp",
+        "alt": "Topao kutak Brunch Lounge restorana"
+      }
+    ]
+  },
+  "posts": [
+    {
+      "slug": "dorucak-koji-menja-ritam",
+      "title": "DORUČAK KOJI MENJA RITAM",
+      "subtitle": "Zašto brunch postaje omiljeni deo dana",
+      "excerpt": "Nekada je doručak bio obrok koji se završava pre nego što grad zaista počne da živi. Ručak je imao svoje precizno vreme, večera je dolazila kasnije, a između tih termina ostajalo je malo prostora za spontanost. Savremeni način života promenio je ovu podelu, a brunch je postao odgovor na potrebu ljudi da jedu kvalitetno, ali bez žurbe i strogih pravila.",
+      "heroImage": "/images/editorial/NEM_2277.webp",
+      "inlineImage": "/images/editorial/NEM_2215.webp",
+      "imageAlt": "Brunch sto sa različitim jelima za doručak",
+      "inlineImageAlt": "Brunch doručak sa jajima i svežim začinskim biljem",
+      "intro": [
+        "Nekada je doručak bio obrok koji se završava pre nego što grad zaista počne da živi. Ručak je imao svoje precizno vreme, večera je dolazila kasnije, a između tih termina ostajalo je malo prostora za spontanost. Savremeni način života promenio je ovu podelu, a brunch je postao odgovor na potrebu ljudi da jedu kvalitetno, ali bez žurbe i strogih pravila.",
+        "Brunch nije samo kasni doručak niti rani ručak. To je način da deo dana posvetimo sebi, ljudima sa kojima smo i hrani u kojoj zaista uživamo.",
+        "U osnovi brunch kulture nalazi se jednostavna ideja – ne moramo svaki obrok da uklopimo u tačno određeno vreme. Nekada će doručak početi kasnije, nekada će se pretvoriti u ručak, a nekada će se uz kafu i razgovor produžiti sve do popodneva."
+      ],
+      "sections": [
+        {
+          "heading": "Obrok koji se prilagođava gostu",
+          "paragraphs": [
+            "Najveća prednost brunch koncepta jeste njegova fleksibilnost. Nekome je idealan brunch bogat doručak sa jajima, pecivom i kafom. Drugi će odabrati sendvič, salatu, pastu ili konkretno glavno jelo. Za nekoga se brunch završava sveže ceđenim sokom, dok će ga drugi produžiti desertom ili koktelom.",
+            "Ne postoji jedan tačan izbor, jer brunch nije zamišljen kao obrok koji gosta ograničava. Njegova suština je upravo u tome da prati raspoloženje, apetit i dnevni ritam.",
+            "To je posebno važno vikendom, kada želimo da spavamo malo duže, sastanemo se sa prijateljima i ne gledamo neprestano na sat. Međutim, brunch kultura odavno nije rezervisana samo za subotu i nedelju. Ona se sve češće uklapa i u radnu nedelju – kao poslovni sastanak, pauza između obaveza ili način da se naporan dan započne kvalitetnije.",
+            "Ljudi danas često imaju različito organizovane dane. Neko radi od ranog jutra, neko počinje kasnije, neko ima sastanke na različitim lokacijama, dok neko želi da napravi dužu pauzu između obaveza. Brunch koncept odgovara upravo takvom životnom ritmu jer gostu ostavlja slobodu da sam odluči kada mu je pravo vreme za obrok."
+          ]
+        },
+        {
+          "heading": "Zašto je atmosfera jednako važna",
+          "paragraphs": [
+            "Hrana jeste osnova svakog dobrog brunch iskustva, ali nije jedini razlog zbog kojeg se gosti vraćaju. Važni su udoban prostor, prijatna muzika, miris kafe, svetlost, enterijer i osećaj da za stolom ne morate da žurite.",
+            "Ljudi danas ne biraju restoran samo prema jelovniku. Biraju mesto na kojem mogu da razgovaraju, rade, odmore se ili provedu vreme sa porodicom. Žele prostor koji odgovara različitim prilikama i u kojem se prijatno osećaju u svakom delu dana.",
+            "Zbog toga dobri brunch restorani prirodno spajaju više uloga. Ujutru su mesto za prvu kafu i doručak, tokom dana prostor za ručak i poslovne sastanke, a uveče ambijent za opušteno druženje, večeru i piće.",
+            "Atmosfera je posebno važna zato što brunch podrazumeva da gosti često ostaju duže. Nije reč samo o tome da se obrok pojede brzo i da se nastavi dalje. Ljudi žele da razgovaraju, uživaju u prostoru, naruče još jednu kafu ili desert i provedu vreme bez osećaja da ih neko požuruje."
+          ]
+        },
+        {
+          "heading": "Hrana kao deo društvenog iskustva",
+          "paragraphs": [
+            "Brunch je postao popularan i zato što je snažno povezan sa druženjem. To je obrok koji se retko vezuje za strogu formalnost. On poziva na opušten razgovor, deljenje hrane, isprobavanje različitih jela i duže zadržavanje za stolom.",
+            "Za prijatelje, brunch može biti način da se okupe posle naporne nedelje. Za porodice, to je prilika da provedu više vremena zajedno. Za poslovne ljude, brunch može biti prijatnija alternativa formalnom sastanku u kancelariji.",
+            "Dobra hrana u takvom okruženju postaje više od obroka. Ona je deo susreta i iskustva koje se pamti."
+          ]
+        },
+        {
+          "heading": "Od obroka do kulture",
+          "paragraphs": [
+            "Brunch je postao popularan zato što odražava savremeni način života. Ljudi žele više slobode, raznovrsniju ponudu i priliku da svakodnevne trenutke pretvore u malo iskustvo.",
+            "U Brunch Lounge restoranima ta ideja živi kroz celodnevni meni, spoj različitih kuhinja i lokacije koje prate ritam gradova u kojima se nalaze. Nekada je dovoljno da sednete uz kafu. Nekada želite kompletan ručak. A nekada se kratko viđanje pretvori u višesatno druženje.",
+            "U tome je suština brunch kulture – ne određuje je sat, već način na koji biramo da provedemo vreme."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ukusi-koji-spajaju-svet",
+      "title": "UKUSI KOJI SPAJAJU SVET",
+      "subtitle": "Kako internacionalna kuhinja osvaja domaće goste",
+      "excerpt": "Savremeni restoranski jelovnici sve češće podsećaju na putovanje kroz različite zemlje i gastronomske tradicije. Na istom stolu mogu se pronaći italijanska pasta, mediteranska salata, američki burger i jelo inspirisano domaćom kuhinjom.",
+      "heroImage": "/images/editorial/NEM_2442.webp",
+      "inlineImage": "/images/editorial/NEM_2410.webp",
+      "imageAlt": "Sto sa mediteranskim i internacionalnim jelima",
+      "inlineImageAlt": "Mediteranska salata sa svežim povrćem i sirom",
+      "intro": [
+        "Savremeni restoranski jelovnici sve češće podsećaju na putovanje kroz različite zemlje i gastronomske tradicije. Na istom stolu mogu se pronaći italijanska pasta, mediteranska salata, američki burger i jelo inspirisano domaćom kuhinjom.",
+        "Takva raznovrsnost nije samo prolazni trend. Ona predstavlja prirodan odgovor na činjenicu da su gosti postali otvoreniji, radoznaliji i spremniji da probaju nešto novo.",
+        "Putovanja, društvene mreže, kulinarske emisije i dostupnost različitih namirnica približili su ljudima ukuse iz čitavog sveta. Jela koja su nekada bila poznata samo u određenim zemljama danas se mogu pronaći na jelovnicima restorana u gotovo svakom većem gradu."
+      ],
+      "sections": [
+        {
+          "heading": "Poznati sastojci u novim kombinacijama",
+          "paragraphs": [
+            "Internacionalna kuhinja ne mora da znači nepoznate ukuse ili previše komplikovane recepte. Njena najveća snaga često se nalazi u povezivanju namirnica koje već poznajemo na drugačiji način.",
+            "Kvalitetna testenina, aromatičan sos, sveže povrće, pažljivo pripremljeno meso ili dobar sir mogu biti osnova velikog broja jela. Razlika nastaje u začinima, načinu pripreme, teksturama i završnim detaljima.",
+            "Zbog toga gosti mogu da otkrivaju nove ukuse bez osećaja da su se previše udaljili od hrane koju inače vole. Dobar restoran omogućava im da naprave upravo taj korak – da probaju nešto novo, ali i dalje prijatno, razumljivo i blisko.",
+            "Na primer, klasična pasta može da se pripremi sa laganim mediteranskim sosom, bogatim kremastim dodatkom ili pikantnom kombinacijom začina. Burger može da zadrži prepoznatljivu osnovu, ali da dobije drugačiji karakter kroz sir, sos, povrće ili način pripreme mesa."
+          ]
+        },
+        {
+          "heading": "Mediteranski ukusi kao siguran izbor",
+          "paragraphs": [
+            "Mediteranska kuhinja posebno je popularna jer spaja jednostavnost, svežinu i bogatstvo ukusa. Maslinovo ulje, povrće, testenine, sirevi, začinsko bilje, riba i laganiji sosovi stvaraju jela koja mogu biti istovremeno aromatična i uravnotežena.",
+            "Pice i paste ostaju među najtraženijim izborima upravo zato što nude gotovo beskrajan broj kombinacija. Mogu biti jednostavne ili bogate, lagane ili veoma konkretne, poznate ili potpuno drugačije.",
+            "Kada se pripremaju od dobrih sastojaka i sa pažnjom, ova jela nisu samo praktičan izbor već obrok kojem se gosti vraćaju.",
+            "Mediteranska kuhinja odgovara i savremenoj potrebi za jelima koja su ukusna, ali ne moraju uvek biti teška. Sveže povrće, aromatični začini i pažljivo pripremljeni sosovi omogućavaju stvaranje bogatih ukusa bez nepotrebne složenosti."
+          ]
+        },
+        {
+          "heading": "Domaći ukus se ne zaboravlja",
+          "paragraphs": [
+            "Otvorenost prema internacionalnim jelima ne znači odricanje od domaće kuhinje. Naprotiv, najbolji savremeni jelovnici uspevaju da povežu globalne ideje sa ukusima na koje su lokalni gosti navikli.",
+            "Domaća jela donose osećaj poznatog, toplinu i sigurnost. Internacionalna ponuda donosi dinamiku, raznovrsnost i mogućnost izbora. Kada se te dve strane pažljivo spoje, nastaje jelovnik na kojem svako može da pronađe nešto za sebe.",
+            "Za neke goste savršen izbor biće tradicionalno pripremljeno meso ili poznato glavno jelo. Drugi će izabrati pastu, rižoto, salatu ili burger. Važno je da različite opcije ne deluju nepovezano, već da budu deo iste ideje – kvalitetne hrane pripremljene sa pažnjom."
+          ]
+        },
+        {
+          "heading": "Hrana koja okuplja različite generacije",
+          "paragraphs": [
+            "Raznovrstan jelovnik posebno je važan kada se za istim stolom okupe ljudi različitih godina i navika. Mlađi gosti mogu da biraju popularna internacionalna jela, stariji se mogu odlučiti za poznatije ukuse, dok oni koji vode računa o ishrani mogu da pronađu laganije opcije.",
+            "Upravo takva ponuda čini Brunch Lounge mestom za različite generacije i različite prilike. Za istim stolom neko može da izabere burger, neko pastu, neko laganu salatu, a neko konkretno glavno jelo.",
+            "Hrana tada prestaje da bude razlog za kompromis i postaje ono što bi trebalo da bude – povod za okupljanje."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kafa-kao-mali-ritual",
+      "title": "KAFA KAO MALI RITUAL",
+      "subtitle": "Zbog čega joj se vraćamo",
+      "excerpt": "Za mnoge ljude dan ne počinje prvim pogledom na telefon, uključivanjem računara ili izlaskom iz kuće. Počinje kafom.",
+      "heroImage": "/images/editorial/NEM_4111.webp",
+      "inlineImage": "/images/editorial/NEM_4050.webp",
+      "imageAlt": "Topao ambijent Brunch Lounge bara",
+      "inlineImageAlt": "Prijatan Brunch Lounge prostor za kafu i razgovor",
+      "intro": [
+        "Za mnoge ljude dan ne počinje prvim pogledom na telefon, uključivanjem računara ili izlaskom iz kuće. Počinje kafom.",
+        "Njen miris, toplina šolje i nekoliko minuta koje odvojimo za sebe čine mali ritual koji se ponavlja gotovo svakog dana. Kafa nas razbuđuje, ali njen značaj odavno prevazilazi samu potrebu za energijom.",
+        "Ona je poziv na razgovor, pauza između obaveza i jedan od najjednostavnijih načina da usporimo.",
+        "Kafa je prisutna u različitim kulturama, navikama i delovima dana. Neko je pije brzo, pre izlaska iz kuće. Drugi joj posvećuju više vremena i pretvaraju je u mali svakodnevni ritual. Bez obzira na način pripreme, kafa je postala simbol predaha i susreta."
+      ],
+      "sections": [
+        {
+          "heading": "Prva tačka svakog susreta",
+          "paragraphs": [
+            "„Hajde na kafu” retko znači samo ispijanje jednog napitka. To može biti dogovor sa prijateljem, prvi sastanak, poslovni razgovor ili dugo očekivano viđanje.",
+            "Kafa stvara prirodan okvir za susret. Dovoljno je neformalna da se ljudi opuste, ali i dovoljno univerzalna da odgovara gotovo svakoj prilici.",
+            "U restoranskom ambijentu ona često postaje uvod u duže druženje. Uz kafu se naručuje doručak, kasnije desert, a kratka pauza može da se pretvori u ručak. Upravo zbog toga kvalitetna kafa ima važno mesto u celodnevnim restoranima.",
+            "Za mnoge ljude omiljeni restoran ili kafić nije samo mesto na kojem se služi dobra kafa. To je prostor u kojem se osećaju prijatno, poznaju raspored, biraju omiljeni sto i imaju utisak da mogu da se opuste."
+          ]
+        },
+        {
+          "heading": "Zašto je važan prostor",
+          "paragraphs": [
+            "Isti napitak ne doživljavamo jednako u žurbi i u prijatnom prostoru. Ambijent, muzika, svetlost, udobnost i način serviranja utiču na to koliko ćemo uživati u trenutku.",
+            "Zato ljudi imaju omiljena mesta za kafu. Ona nisu nužno najbliža njihovoj kući ili poslu. To su mesta na kojima se osećaju prijatno, na kojima znaju šta mogu da očekuju i gde se rado vraćaju.",
+            "Brunch Lounge lokacije oblikovane su tako da podrže upravo različite vrste rituala. Neko dolazi na brzu jutarnju kafu pre obaveza, neko želi miran razgovor, dok drugi bira sto za poslovni sastanak ili popodnevni predah.",
+            "Prostor ima posebnu ulogu i kada želimo da radimo van kancelarije, pročitamo nekoliko stranica knjige ili jednostavno provedemo kratko vreme sami. Kafa tada postaje deo ličnog trenutka, a ne samo društvenog susreta."
+          ]
+        },
+        {
+          "heading": "Različiti ukusi i navike",
+          "paragraphs": [
+            "Neko voli kratku i snažnu kafu, neko napitak sa više mleka, dok drugi biraju blaže, hladne ili sezonske varijante. Upravo ta raznovrsnost pokazuje koliko je kafa prilagodljiva različitim ukusima.",
+            "Važan je i trenutak u kojem je pijemo. Jutarnja kafa često ima funkciju razbuđivanja. Kafa posle ručka zaokružuje obrok. Popodnevna kafa predstavlja pauzu, dok se večernja najčešće vezuje za druženje i duži razgovor.",
+            "Bez obzira na izbor, kvalitet kafe i način pripreme utiču na celokupan utisak. Gost možda neće uvek moći precizno da objasni zbog čega mu jedna kafa više prija, ali će prepoznati sklad ukusa, mirisa i teksture."
+          ]
+        },
+        {
+          "heading": "Kafa koja prati ceo dan",
+          "paragraphs": [
+            "Iako je najčešće povezujemo sa jutrom, kafa nema samo jedno vreme. Pijemo je posle ručka, uz desert, tokom popodnevne pauze ili kao uvod u večernje druženje.",
+            "Ona prati ritam dana i menja svoje značenje zajedno sa njim. Ujutru budi, tokom dana okuplja, a kasnije nas podseća da napravimo predah.",
+            "Možda upravo zato kafa ostaje jedan od najtrajnijih gastronomskih rituala. Menjaju se trendovi, načini pripreme i navike gostiju, ali potreba da sednemo, razgovaramo i na nekoliko minuta usporimo ostaje ista."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "porodicni-rucak-bez-zurbe",
+      "title": "PORODIČNI RUČAK BEZ ŽURBE",
+      "subtitle": "Kako izabrati restoran za sve",
+      "excerpt": "Organizovanje porodičnog ručka ponekad izgleda jednostavnije nego što zaista jeste. Potrebno je pronaći mesto koje odgovara različitim generacijama, ukusima i potrebama, u kojem će odrasli moći da razgovaraju, a deca se neće osećati sputano.",
+      "heroImage": "/images/editorial/NEM_4084.webp",
+      "inlineImage": "/images/editorial/NEM_4063.webp",
+      "imageAlt": "Prostran Brunch Lounge enterijer za porodična okupljanja",
+      "inlineImageAlt": "Gosti različitih generacija na porodičnom ručku u Brunch Lounge restoranu",
+      "intro": [
+        "Organizovanje porodičnog ručka ponekad izgleda jednostavnije nego što zaista jeste. Potrebno je pronaći mesto koje odgovara različitim generacijama, ukusima i potrebama, u kojem će odrasli moći da razgovaraju, a deca se neće osećati sputano.",
+        "Dobar porodični restoran zato nije samo mesto sa velikim stolovima. Potrebni su raznovrstan jelovnik, prijatan ambijent, dovoljno prostora i osoblje koje razume dinamiku porodičnog okupljanja.",
+        "Porodični ručak može biti redovno nedeljno okupljanje, proslava rođendana, obeležavanje važnog događaja ili jednostavno prilika da svi provedu više vremena zajedno. Zbog toga je važno da izbor restorana olakša druženje, a ne da ga učini komplikovanijim."
+      ],
+      "sections": [
+        {
+          "heading": "Ponuda za različite ukuse",
+          "paragraphs": [
+            "Za istim stolom često sede ljudi koji imaju potpuno različite navike. Neko želi meso, neko pastu, neko picu, neko salatu, a najmlađi gosti obično imaju svoje favorite.",
+            "Širok, ali smisleno osmišljen jelovnik olakšava izbor i smanjuje potrebu za kompromisom. Kada restoran nudi doručke, paste, pice, burgere, rižota, glavna jela i deserte, svako može da pronađe obrok koji odgovara njegovom raspoloženju.",
+            "Posebno je važno da ponuda ne bude raznovrsna samo na papiru. Jela moraju biti pažljivo pripremljena, ukusna i doslednog kvaliteta, bez obzira na kategoriju iz koje dolaze.",
+            "Porodični ručkovi često traju duže, pa je korisno da jelovnik nudi dovoljno izbora i za početak i za završetak obroka. Kafa, sokovi i deserti produžavaju druženje i omogućavaju da obrok ne bude završen čim se sklone tanjiri sa glavnim jelom."
+          ]
+        },
+        {
+          "heading": "Prostor u kojem deca mogu biti deca",
+          "paragraphs": [
+            "Roditeljima je mnogo lakše da se opuste kada znaju da je restoran prilagođen i mlađim gostima. Dovoljno prostora, prijatan raspored stolova i dečija igraonica mogu potpuno da promene iskustvo porodičnog ručka.",
+            "Dok se deca igraju u bezbednom i njima namenjenom prostoru, odrasli dobijaju priliku da zaista razgovaraju, završe obrok bez žurbe i provedu kvalitetno vreme zajedno.",
+            "Brunch Lounge u TC BIG u Novoj Pazovi posebno je usmeren na ovakva okupljanja, sa prostranim ambijentom, velikom igraonicom, parkingom i mogućnošću organizovanja proslava.",
+            "Važno je i da prostor bude dovoljno fleksibilan za porodice sa malom decom, veće grupe i različite vrste okupljanja. Kada roditelji ne moraju stalno da brinu da li će nekome smetati dečija energija, celokupna atmosfera postaje opuštenija."
+          ]
+        },
+        {
+          "heading": "Usluga koja razume porodični tempo",
+          "paragraphs": [
+            "Porodični ručak često ima drugačiji ritam od poslovnog ili romantičnog obroka. Deca mogu da se predomisle, neko može da poruči kasnije, a odrasli često žele da ostanu duže.",
+            "Dobra usluga prepoznaje takvu dinamiku i prilagođava joj se. Važno je da osoblje bude prisutno i pažljivo, ali bez stvaranja osećaja žurbe.",
+            "Kada se porodica oseća dobrodošlo, veća je verovatnoća da će se vratiti. Posebno kada pronađe mesto koje odgovara i odraslima i deci."
+          ]
+        },
+        {
+          "heading": "Ručak kao vreme provedeno zajedno",
+          "paragraphs": [
+            "Porodični ručak nije važan samo zbog hrane. To je jedan od retkih trenutaka kada se ljudi različitih godina i obaveza okupljaju za istim stolom.",
+            "Zbog toga restoran treba da podrži taj trenutak, a ne da ga ubrzava. Prijatan ambijent, dobra usluga i ponuda koja odgovara svima omogućavaju porodici da ostane duže, razgovara i uživa.",
+            "Kada se pronađe takvo mesto, ono često postaje deo porodične tradicije – restoran u koji se dolazi nedeljom, povodom rođendana ili jednostavno onda kada svi žele da budu zajedno."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "poslovni-rucak-sa-ukusom",
+      "title": "POSLOVNI RUČAK SA UKUSOM",
+      "subtitle": "Pravila uspešnog susreta za stolom",
+      "excerpt": "Poslovni razgovori više nisu vezani isključivo za kancelarije i sale za sastanke. Restoran može da ponudi prijatnije, opuštenije i kreativnije okruženje, posebno kada je cilj upoznavanje partnera, razmena ideja ili razgovor koji ne zahteva strogo formalnu atmosferu.",
+      "heroImage": "/images/editorial/NEM_4029.webp",
+      "inlineImage": "/images/editorial/NEM_4012.webp",
+      "imageAlt": "Glavno jelo servirano za poslovni ručak",
+      "inlineImageAlt": "Pažljivo pripremljen ručak u restoranskom ambijentu",
+      "intro": [
+        "Poslovni razgovori više nisu vezani isključivo za kancelarije i sale za sastanke. Restoran može da ponudi prijatnije, opuštenije i kreativnije okruženje, posebno kada je cilj upoznavanje partnera, razmena ideja ili razgovor koji ne zahteva strogo formalnu atmosferu.",
+        "Ipak, izbor mesta za poslovni ručak zahteva pažnju. Dobar restoran mora istovremeno da ponudi kvalitetnu hranu, diskretan ambijent, praktičnu lokaciju i uslugu koja neće prekidati tok razgovora.",
+        "Poslovni ručak može imati različite ciljeve. Nekada je to prvi susret sa potencijalnim saradnikom, nekada razgovor o važnom projektu, a nekada prilika da se odnosi sa postojećim partnerima dodatno učvrste. Ambijent u kojem se razgovor odvija može snažno da utiče na ukupan utisak."
+      ],
+      "sections": [
+        {
+          "heading": "Lokacija štedi vreme",
+          "paragraphs": [
+            "U poslovnom danu svaki minut ima značaj. Restoran treba da bude lako dostupan iz poslovnih i stambenih delova grada, da ima jasnu adresu i, kada je moguće, pristupačan parking.",
+            "Brunch Lounge u Mercator centru na Novom Beogradu nalazi se u srcu Bloka 31 i prirodno odgovara poslovnim sastancima, kratkim pauzama i ručkovima. Sličnu praktičnost nude i lokacije u novosadskim trgovačkim centrima i na glavnim gradskim pravcima.",
+            "Kada je restoran dobro pozicioniran, gosti ne gube vreme na komplikovan dolazak, a sastanak može lakše da se uklopi između drugih obaveza.",
+            "Praktična lokacija posebno je važna kada se sastaju ljudi iz različitih delova grada. Neutralno i lako dostupno mesto olakšava organizaciju i ostavlja profesionalan utisak."
+          ]
+        },
+        {
+          "heading": "Jelovnik treba da olakša razgovor",
+          "paragraphs": [
+            "Poslovni ručak nije trenutak za jela koja su komplikovana za serviranje ili zahtevaju previše vremena. Gosti najčešće traže izbor koji je kvalitetan, ukusan i dovoljno raznovrstan da odgovara različitim navikama.",
+            "Paste, salate, rižota, glavna jela i laganije varijante predstavljaju dobru osnovu. Važno je da ponuda omogućava i kratak ručak i duže druženje, u zavisnosti od toka sastanka.",
+            "Kafa ili desert nakon obroka često imaju posebnu ulogu. Upravo tada formalni deo razgovora popušta i stvaraju se uslovi za otvoreniju komunikaciju.",
+            "Dobro je da jelovnik ima dovoljno opcija za ljude sa različitim načinima ishrane i apetitima. Na taj način izbor hrane ne postaje neprijatna tema niti odvlači pažnju od samog sastanka."
+          ]
+        },
+        {
+          "heading": "Ambijent treba da podrži komunikaciju",
+          "paragraphs": [
+            "Previše glasna muzika, mali razmak između stolova ili stalna gužva mogu da otežaju poslovni razgovor. Idealno mesto treba da bude dovoljno živo da atmosfera ne deluje ukočeno, ali i dovoljno mirno da sagovornici mogu normalno da razgovaraju.",
+            "Udobna mesta za sedenje i prijatno osvetljenje takođe utiču na tok sastanka. Kada se ljudi osećaju prijatno, lakše komuniciraju i manje razmišljaju o prostoru oko sebe."
+          ]
+        },
+        {
+          "heading": "Profesionalno ne mora da znači hladno",
+          "paragraphs": [
+            "Najbolji poslovni susreti održavaju ravnotežu između ozbiljnosti i prijatne atmosfere. Prostor treba da bude dovoljno miran za razgovor, ali ne toliko formalan da stvara nepotrebnu distancu.",
+            "Topao enterijer, prijatna muzika i diskretna usluga pomažu sagovornicima da se opuste. U takvom okruženju lakše se grade odnosi, razmenjuju ideje i donose odluke.",
+            "Dobar poslovni ručak ne pamti se samo po tome šta je dogovoreno. Pamti se i po osećaju koji je sastanak ostavio."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pasta-koja-prica-pricu",
+      "title": "PASTA KOJA PRIČA PRIČU",
+      "subtitle": "Od jednostavnih sastojaka do uživanja",
+      "excerpt": "Malo je jela koja su istovremeno toliko jednostavna i toliko raznovrsna kao pasta. Njena osnova može biti svedena na nekoliko sastojaka, ali način na koji se oni povezuju pravi razliku između običnog obroka i jela kojem se vraćamo.",
+      "heroImage": "/images/editorial/NEM_4043.webp",
+      "inlineImage": "/images/editorial/NEM_2442.webp",
+      "imageAlt": "Brunch Lounge trpezarija tokom dana",
+      "inlineImageAlt": "Različita jela servirana za zajedničkim stolom",
+      "intro": [
+        "Malo je jela koja su istovremeno toliko jednostavna i toliko raznovrsna kao pasta. Njena osnova može biti svedena na nekoliko sastojaka, ali način na koji se oni povezuju pravi razliku između običnog obroka i jela kojem se vraćamo.",
+        "U tome se nalazi posebnost paste. Ona ne zahteva preteranu komplikovanost, već dobar odnos ukusa, pravilnu teksturu i pažljivo pripremljen sos.",
+        "Pasta je prisutna u gotovo svim delovima sveta i prilagođena je različitim kuhinjama. Može biti deo laganog ručka, bogate večere ili porodičnog obroka. Njena prilagodljivost omogućava da se priprema sa povrćem, mesom, ribom, morskim plodovima, sirevima i velikim brojem različitih sosova."
+      ],
+      "sections": [
+        {
+          "heading": "Sos je srce svake paste",
+          "paragraphs": [
+            "Kvalitetna testenina predstavlja osnovu, ali karakter jelu daje sos. Može biti lagan i svež, kremast i bogat, paradajzast, pikantan ili zasnovan na mesu, povrću, sirevima i morskim plodovima.",
+            "Važno je da sos ne bude samo dodatak preko testenine. Potrebno je da se poveže sa njom, obavije je i bude prisutan u svakom zalogaju. Zbog toga oblik paste takođe ima značaj – različite vrste testenine zadržavaju sos na različite načine.",
+            "Kada su svi elementi u ravnoteži, nijedan sastojak ne dominira bez potrebe. Ukusi se dopunjuju, a jelo ostaje prijatno od prvog do poslednjeg zalogaja.",
+            "Temperatura, vreme kuvanja i način završavanja jela takođe su veoma važni. Pasta ne bi trebalo da bude prekuvana, sos ne bi trebalo da bude odvojen, a završni dodaci treba da doprinesu ukusu umesto da služe samo kao dekoracija."
+          ]
+        },
+        {
+          "heading": "Poznato jelo koje se stalno menja",
+          "paragraphs": [
+            "Pasta je popularna i zato što može da prati različita godišnja doba i raspoloženja. Tokom toplijih dana prijaju laganiji sosovi, povrće i mediteranske arome. Kada je hladnije, češće biramo kremaste i bogatije kombinacije.",
+            "Može biti brz ručak, večera sa prijateljima ili deo porodičnog obroka. Može biti jednostavna i poznata ili kreativna i neočekivana.",
+            "U Brunch Lounge ponudi pasta ima važno mesto upravo zato što odgovara različitim gostima i prilikama. Ona se prirodno uklapa u koncept celodnevnog restorana, u kojem ljudi sami biraju ritam i veličinu obroka.",
+            "Pasta može da bude i lagano jelo i veoma zasitan obrok. Sve zavisi od vrste sosa, dodataka i količine. Upravo ta mogućnost prilagođavanja čini je odličnim izborom za različite delove dana."
+          ]
+        },
+        {
+          "heading": "Kvalitet sastojaka pravi razliku",
+          "paragraphs": [
+            "Kod jela sa relativno malo elemenata kvalitet svakog sastojka postaje posebno važan. Testenina, sos, sir, povrće, meso ili morski plodovi moraju biti pažljivo odabrani jer se njihov ukus jasno prepoznaje.",
+            "Dobra pasta ne zahteva veliki broj dodataka. Često su dovoljna tri ili četiri pažljivo usklađena sastojka da bi jelo bilo potpuno."
+          ]
+        },
+        {
+          "heading": "Zašto joj se uvek vraćamo",
+          "paragraphs": [
+            "Dobra pasta donosi poznat osećaj udobnosti. Ne mora da iznenadi neobičnim sastojcima da bi bila posebna. Dovoljno je da bude pravilno pripremljena, aromatična i servirana u pravom trenutku.",
+            "Možda je upravo zbog toga pasta jedno od najuniverzalnijih jela – dovoljno jednostavna da je svi razumeju, a dovoljno raznovrsna da nikada ne postane dosadna."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "burger-vise-nije-fast-food",
+      "title": "BURGER VIŠE NIJE FAST FOOD",
+      "subtitle": "Šta čini zaista dobar zalogaj",
+      "excerpt": "Burger je dugo nosio etiketu brzog i jednostavnog obroka. Međutim, savremena restoranska scena pokazala je da između prosečnog i zaista dobrog burgera postoji velika razlika.",
+      "heroImage": "/images/editorial/NEM_4052.webp",
+      "inlineImage": "/images/editorial/NEM_2277.webp",
+      "imageAlt": "Udoban Brunch Lounge enterijer sa drvenim stolovima",
+      "inlineImageAlt": "Različita Brunch jela postavljena za zajednički obrok",
+      "intro": [
+        "Burger je dugo nosio etiketu brzog i jednostavnog obroka. Međutim, savremena restoranska scena pokazala je da između prosečnog i zaista dobrog burgera postoji velika razlika.",
+        "Kvalitet mesa, struktura peciva, svežina dodataka, odnos sosova i način serviranja pretvaraju poznato jelo u potpuno gastronomsko iskustvo.",
+        "Dobar burger ne nastaje slučajnim slaganjem što većeg broja sastojaka. Potrebna je ravnoteža u kojoj svaki deo ima jasnu ulogu, a ukusi se međusobno dopunjuju."
+      ],
+      "sections": [
+        {
+          "heading": "Ravnoteža počinje od peciva",
+          "paragraphs": [
+            "Dobro burger pecivo mora biti dovoljno mekano da svaki zalogaj bude prijatan, ali i dovoljno čvrsto da zadrži meso, sosove i dodatke. Ne bi trebalo da bude suvo, preveliko niti da preuzme ukus celog jela.",
+            "Njegova uloga je da poveže sve sastojke. Kada se raspada ili upija previše sosa, burger gubi strukturu. Kada je previše teško, ostali ukusi padaju u drugi plan.",
+            "Naizgled jednostavan detalj tako postaje jedan od ključnih elemenata.",
+            "Važno je i da veličina peciva odgovara količini mesa i dodataka. Burger treba da može da se jede bez prevelikih poteškoća, a svaki zalogaj bi trebalo da sadrži približno isti odnos sastojaka."
+          ]
+        },
+        {
+          "heading": "Meso i dodaci moraju da sarađuju",
+          "paragraphs": [
+            "Meso je središte klasičnog burgera, pa kvalitet i način pripreme imaju presudan značaj. Potrebni su dobra tekstura, odgovarajuća debljina i sočnost koja se zadržava i nakon termičke obrade.",
+            "Dodaci zatim grade karakter jela. Sir donosi punoću, povrće svežinu, sos povezuje ukuse, dok pažljivo izabrani detalji mogu da dodaju dimljenu, pikantnu, slatkastu ili kiselkastu notu.",
+            "Međutim, više sastojaka ne znači automatski bolji burger. Najbolji rezultat nastaje kada svaki dodatak ima jasnu ulogu i kada nijedan ukus ne pokušava da nadjača sve ostale.",
+            "Sveže povrće posebno je važno jer donosi kontrast bogatijem ukusu mesa i sira. Sos treba da bude dovoljno izražen, ali ne toliko dominantan da prikrije ostale sastojke."
+          ]
+        },
+        {
+          "heading": "Prilozi zaokružuju obrok",
+          "paragraphs": [
+            "Pomfrit je klasičan pratilac burgera, ali i kod njega priprema pravi veliku razliku. Treba da bude hrskav spolja, mekan iznutra i pravilno začinjen.",
+            "Salata, pečeno povrće ili drugi laganiji prilozi mogu da pruže drugačiji balans. Izbor zavisi od toga da li gost želi veoma konkretan obrok ili nešto lakšu kombinaciju.",
+            "Piće takođe utiče na celokupan doživljaj. Osvežavajući napici, pivo ili drugi izbori mogu da dopune ukus burgera i učine obrok potpunijim."
+          ]
+        },
+        {
+          "heading": "Obrok za različite prilike",
+          "paragraphs": [
+            "Burger može biti brz ručak, obrok posle kupovine, izbor za druženje sa prijateljima ili konkretna večera. Upravo ta fleksibilnost učinila ga je jednim od najpopularnijih jela savremenih celodnevnih restorana.",
+            "Uz pomfrit, salatu, osvežavajuće piće ili pivo, burger postaje obrok koji je istovremeno poznat, opušten i dovoljno bogat da zadovolji ozbiljnu glad.",
+            "Zato burger više ne treba posmatrati samo kao brzu hranu. Kada se pripremi od kvalitetnih sastojaka i sa pažnjom, on pokazuje da i najpoznatija jela mogu imati ozbiljan kulinarski karakter."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "desert-kao-najlepsi-zavrsetak",
+      "title": "DESERT KAO NAJLEPŠI ZAVRŠETAK",
+      "subtitle": "Zašto uvek ostavljamo malo mesta",
+      "excerpt": "Čak i posle dobrog i obilnog obroka, pitanje „Da li ste za desert?” često dobije potvrdan odgovor. Razlog nije samo glad. Desert ima posebnu emocionalnu ulogu – on označava završetak obroka, produžava druženje i donosi trenutak čistog uživanja.",
+      "heroImage": "/images/editorial/NEM_4105.webp",
+      "inlineImage": "/images/editorial/NEM_3945.webp",
+      "imageAlt": "Topao i prijatan enterijer Brunch Lounge restorana",
+      "inlineImageAlt": "Brunch desert sa granolom, jogurtom, bananom, borovnicama i jabukom",
+      "inlineImageAspect": "portrait",
+      "intro": [
+        "Čak i posle dobrog i obilnog obroka, pitanje „Da li ste za desert?” često dobije potvrdan odgovor. Razlog nije samo glad. Desert ima posebnu emocionalnu ulogu – on označava završetak obroka, produžava druženje i donosi trenutak čistog uživanja.",
+        "Zbog toga se deserti ne biraju samo prema ukusu. Biraju se prema raspoloženju, prilici i ljudima sa kojima delimo sto.",
+        "Desert može da bude nagrada posle napornog dana, deo proslave ili jednostavan razlog da se uz kafu provede još malo vremena u prijatnom ambijentu."
+      ],
+      "sections": [
+        {
+          "heading": "Slatki predah tokom dana",
+          "paragraphs": [
+            "Desert ne mora da dolazi isključivo posle ručka ili večere. Može biti razlog za popodnevni izlazak, dodatak uz kafu ili mali predah između obaveza.",
+            "Upravo kombinacija kafe i deserta predstavlja jedan od omiljenih restoranskih rituala. Dovoljno je kratka da može da se uklopi u radni dan, ali i dovoljno posebna da običnu pauzu pretvori u prijatan trenutak.",
+            "Kolači, kremasti deserti, voćne kombinacije i čokoladne poslastice nude različite nivoe slatkoće, teksture i intenziteta. Neko želi lagan završetak, dok drugi bira bogat desert koji će biti glavni deo iskustva.",
+            "Za neke goste desert je unapred planiran deo obroka. Drugi ga naručuju spontano, tek kada vide ponudu ili kada požele da produže boravak za stolom."
+          ]
+        },
+        {
+          "heading": "Važni su ukus i prezentacija",
+          "paragraphs": [
+            "Kod deserta prvi utisak često nastaje pre prvog zalogaja. Boje, slojevi, teksture i način serviranja stvaraju očekivanje i pojačavaju doživljaj.",
+            "Ipak, lep izgled nije dovoljan. Potrebna je ravnoteža slatkoće, svežine i punoće. Desert ne bi trebalo da bude samo intenzivno sladak, već da ponudi kontraste – kremasto i hrskavo, toplo i hladno, slatko i blago kiselo.",
+            "Kada su ti elementi pravilno povezani, desert ostaje u sećanju jednako kao i glavno jelo.",
+            "Dobar desert često ima više slojeva ukusa. Čokolada može da se poveže sa voćem, krema sa hrskavim elementom, a bogat ukus sa laganom osvežavajućom notom."
+          ]
+        },
+        {
+          "heading": "Desert kao deo proslave",
+          "paragraphs": [
+            "Rođendani, godišnjice i druga okupljanja gotovo su nezamislivi bez deserta. On ima simboličnu ulogu i često predstavlja trenutak kojem se svi raduju.",
+            "Čak i kada nema posebnog povoda, zajednički desert može da stvori osećaj malog slavlja. Deljenje nekoliko različitih poslastica omogućava gostima da probaju više ukusa i dodatno produže druženje."
+          ]
+        },
+        {
+          "heading": "Još nekoliko minuta za stolom",
+          "paragraphs": [
+            "Možda je najvažnija uloga deserta upravo to što produžava vreme provedeno zajedno. Kada se tanjiri glavnog jela sklone, razgovor postaje opušteniji, poručuje se još jedna kafa i niko više ne gleda toliko često na sat.",
+            "Desert tako postaje mnogo više od poslednje stavke u jelovniku. On je mali razlog da ostanemo još malo."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gradski-predah-koji-prija",
+      "title": "GRADSKI PREDAH KOJI PRIJA",
+      "subtitle": "Kako restoran postaje omiljeno mesto",
+      "excerpt": "Savremeni gradovi nude veliki broj restorana, kafića i mesta za izlazak. Ipak, samo mali broj njih postane deo svakodnevnog života svojih gostiju.",
+      "heroImage": "/images/editorial/NEM_3938.webp",
+      "inlineImage": "/images/editorial/NEM_4107.webp",
+      "imageAlt": "Svetao Brunch Lounge enterijer za gradski predah",
+      "inlineImageAlt": "Udoban zeleni kutak Brunch Lounge restorana",
+      "intro": [
+        "Savremeni gradovi nude veliki broj restorana, kafića i mesta za izlazak. Ipak, samo mali broj njih postane deo svakodnevnog života svojih gostiju.",
+        "Omiljeni restoran nije nužno mesto koje posećujemo samo u posebnim prilikama. Često je to prostor u koji dolazimo spontano, bez dužeg planiranja, jer znamo da ćemo pronaći poznatu atmosferu, dobru hranu i sto za kojim se osećamo prijatno.",
+        "Takva mesta imaju posebnu ulogu u gradskom životu. Ona predstavljaju tačku između obaveza, prostor za susret, kratak predah ili duže druženje."
+      ],
+      "sections": [
+        {
+          "heading": "Lokacija jeste važna, ali nije dovoljna",
+          "paragraphs": [
+            "Pristupačna lokacija može da privuče gosta prvi put. Blizina posla, fakulteta, tržnog centra ili glavne gradske saobraćajnice svakako olakšava dolazak.",
+            "Međutim, gost se ne vraća samo zato što mu je restoran blizu. Vraća se zbog celokupnog iskustva.",
+            "Brunch Lounge lokacije zato prate različite delove svakodnevnog života. Brunch Mašinac u Novom Sadu prati ritam univerzitetskog kampusa. Mercator na Novom Beogradu odgovara poslovnom i stambenom okruženju. Lokali u trgovačkim centrima pružaju mesto za predah, ručak ili druženje tokom kupovine.",
+            "Svaka lokacija ima svoj karakter, ali gost mora da prepozna zajednički osećaj kvaliteta i dobrodošlice.",
+            "Dobra lokacija podrazumeva i praktičan dolazak, jasnu vidljivost i mogućnost da se restoran prirodno uklopi u dnevne obaveze gosta."
+          ]
+        },
+        {
+          "heading": "Ljudi se vraćaju osećaju",
+          "paragraphs": [
+            "Dobar ukus može da oduševi, ali osećaj pripadnosti stvara naviku. Kada osoblje prepozna gosta, kada on zna koji sto voli i kada može da pretpostavi kakav kvalitet će dobiti, restoran postaje deo njegove rutine.",
+            "To ne znači da iskustvo treba da bude uvek isto. Sezonske ponude, nova jela, posebni događaji i promene u enterijeru donose svežinu. Važno je da se, uprkos tim promenama, zadrži prepoznatljiva energija.",
+            "Gostima je važna doslednost. Žele da znaju da će njihovo omiljeno jelo biti jednako dobro, da će kafa imati poznat ukus i da će usluga ostati ljubazna i pažljiva."
+          ]
+        },
+        {
+          "heading": "Mesto za različite delove dana",
+          "paragraphs": [
+            "Restoran koji želi da postane deo svakodnevice mora da odgovori na različite potrebe. Ujutru može da bude mesto za kafu i doručak, tokom dana za ručak i sastanke, a uveče za druženje i večeru.",
+            "Takva fleksibilnost omogućava gostima da isti prostor doživljavaju na različite načine. Neko će ga upoznati kroz jutarnju kafu, neko kroz porodični ručak, a neko kroz večernji izlazak sa prijateljima."
+          ]
+        },
+        {
+          "heading": "Mesto između obaveza",
+          "paragraphs": [
+            "Gradskom čoveku često nije potreban samo restoran. Potrebno mu je mesto između posla i kuće, kupovine i sledećeg sastanka, jutarnjih obaveza i večernjih planova.",
+            "Takav prostor pruža mogućnost da se napravi pauza bez posebnog povoda. Nekada će to biti kafa, nekada ručak, a nekada piće sa prijateljima.",
+            "Kada restoran uspe da odgovori na različite potrebe tokom dana, on prestaje da bude samo lokacija na mapi. Postaje deo grada i života ljudi koji u njemu žive."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dobra-atmosfera-se-pamti",
+      "title": "DOBRA ATMOSFERA SE PAMTI",
+      "subtitle": "Šta goste vraća istom stolu",
+      "excerpt": "Kada ljudi preporučuju restoran, često prvo pomenu hranu. Međutim, kada objašnjavaju zbog čega mu se vraćaju, gotovo uvek govore i o atmosferi.",
+      "heroImage": "/images/editorial/NEM_4197.webp",
+      "inlineImage": "/images/editorial/NEM_4111.webp",
+      "imageAlt": "Brunch Lounge enterijer u toplim tonovima",
+      "inlineImageAlt": "Večernji ambijent Brunch Lounge bara",
+      "intro": [
+        "Kada ljudi preporučuju restoran, često prvo pomenu hranu. Međutim, kada objašnjavaju zbog čega mu se vraćaju, gotovo uvek govore i o atmosferi.",
+        "Atmosfera nije jedan detalj koji se može jednostavno dodati enterijeru. Ona nastaje iz odnosa prostora, svetlosti, muzike, usluge, energije gostiju i načina na koji se u restoranu osećamo.",
+        "Dobra atmosfera ne može lako da se izmeri, ali može jasno da se oseti. To je onaj trenutak kada uđemo u prostor i odmah poželimo da ostanemo. Kada se osećamo dovoljno opušteno da ne gledamo na sat i dovoljno prijatno da poželimo da se vratimo."
+      ],
+      "sections": [
+        {
+          "heading": "Enterijer govori pre jelovnika",
+          "paragraphs": [
+            "Prvi utisak o restoranu nastaje odmah po ulasku. Boje, materijali, raspored stolova, zelenilo, osvetljenje i dekoracija šalju poruku o tome kakvo iskustvo možemo da očekujemo.",
+            "Svetao i otvoren prostor može da bude idealan za jutarnju kafu i ručak. Topliji, intimniji delovi restorana odgovaraju večernjem druženju. Bašta donosi osećaj predaha i povezanosti sa spoljnim prostorom.",
+            "Najbolji enterijeri nisu samo vizuelno dopadljivi. Oni su funkcionalni, udobni i prilagođeni različitim gostima – pojedincima, parovima, porodicama, prijateljima i poslovnim grupama.",
+            "Raspored stolova utiče na privatnost i kvalitet razgovora. Udobne stolice i odgovarajuća visina stolova mogu delovati kao sitni detalji, ali snažno utiču na to koliko će se gost prijatno osećati tokom dužeg boravka."
+          ]
+        },
+        {
+          "heading": "Muzika i svetlost oblikuju raspoloženje",
+          "paragraphs": [
+            "Muzika treba da prati prostor, a ne da ga preuzme. Tokom jutra i dana može da bude lagana i nenametljiva, dok se u večernjim satima atmosfera može postepeno menjati.",
+            "Slično važi i za osvetljenje. Dnevna svetlost stvara osećaj otvorenosti i energije, dok toplije večernje osvetljenje doprinosi intimnijoj i opuštenijoj atmosferi.",
+            "Kada su muzika, svetlost i enterijer usklađeni, gost često ne razmišlja o pojedinačnim elementima. Jednostavno oseća da mu prostor prija."
+          ]
+        },
+        {
+          "heading": "Usluga određuje ton iskustva",
+          "paragraphs": [
+            "Čak i najlepši prostor gubi vrednost ako se gost ne oseća dobrodošlo. Ljubaznost, pažnja i sposobnost osoblja da prepozna tempo gosta presudni su za celokupan doživljaj.",
+            "Neko želi brz obrok jer ima malo vremena. Drugi je došao da provede nekoliko sati sa prijateljima. Dobra usluga ne nameće isti ritam svima, već prati situaciju.",
+            "Gost pamti kada je preporuka bila iskrena, kada je zahtev saslušan i kada je usluga bila prisutna bez nepotrebnog prekidanja razgovora.",
+            "Dosledna usluga gradi poverenje. Kada gost zna da će biti dočekan ljubazno i da će njegovo iskustvo biti prijatno, mnogo lakše se odlučuje da ponovo dođe."
+          ]
+        },
+        {
+          "heading": "Najbolji trenuci često nisu planirani",
+          "paragraphs": [
+            "Mnogi najlepši restoranski trenuci počinju sasvim obično. Jedna kafa pretvori se u doručak. Kratak ručak produži se desertom. Večera preraste u izlazak.",
+            "Takve situacije moguće su kada prostor gostima daje slobodu da ostanu, opuste se i zaborave na vreme.",
+            "Zbog toga Brunch Lounge nije definisan samo jelovnikom niti jednom vrstom obroka. Njegova ideja je da prati ceo dan i različite trenutke koji se u njemu događaju.",
+            "Dobra hrana privlači goste. Dosledan kvalitet gradi poverenje. Ali atmosfera je ono što restoran pretvara u mesto kojem se ljudi vraćaju – često za isti sto, sa istim ljudima i zbog nekih potpuno novih priča."
+          ]
+        }
+      ]
+    }
+  ]
+}

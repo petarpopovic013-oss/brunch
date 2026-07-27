@@ -34,48 +34,98 @@ export function LanguageSwitcher({
 
   return (
     <div className={`${styles.switcher} ${className ?? ""}`} aria-label={label}>
-      {locales.map((item) => {
-        const language = languageFlags[item];
+      <div className={styles.desktopSwitcher}>
+        {locales.map((item) => {
+          const language = languageFlags[item];
 
-        return item === locale ? (
-          <span
-            key={item}
-            className={`${styles.flagButton} ${styles.active}`}
-            aria-current="page"
-            title={language.name}
-          >
-            <Image
-              className={styles.flag}
-              src={language.src}
-              alt=""
-              width={24}
-              height={18}
-              unoptimized
-            />
-            <span className={styles.visuallyHidden}>{language.name}</span>
-          </span>
-        ) : (
-          <a
-            key={item}
-            className={`${styles.flagButton} ${styles.link} ${mutedClassName ?? ""}`}
-            href={localizedPath(item, pathname)}
-            hrefLang={localeMeta[item].htmlLang}
-            lang={localeMeta[item].htmlLang}
-            aria-label={language.name}
-            title={language.name}
-            onClick={(event) => switchLanguage(event, item)}
-          >
-            <Image
-              className={styles.flag}
-              src={language.src}
-              alt=""
-              width={24}
-              height={18}
-              unoptimized
-            />
-          </a>
-        );
-      })}
+          return item === locale ? (
+            <span
+              key={item}
+              className={`${styles.flagButton} ${styles.active}`}
+              aria-current="page"
+              title={language.name}
+            >
+              <Image
+                className={styles.flag}
+                src={language.src}
+                alt=""
+                width={24}
+                height={18}
+                unoptimized
+              />
+              <span className={styles.visuallyHidden}>{language.name}</span>
+            </span>
+          ) : (
+            <a
+              key={item}
+              className={`${styles.flagButton} ${styles.link} ${mutedClassName ?? ""}`}
+              href={localizedPath(item, pathname)}
+              hrefLang={localeMeta[item].htmlLang}
+              lang={localeMeta[item].htmlLang}
+              aria-label={language.name}
+              title={language.name}
+              onClick={(event) => switchLanguage(event, item)}
+            >
+              <Image
+                className={styles.flag}
+                src={language.src}
+                alt=""
+                width={24}
+                height={18}
+                unoptimized
+              />
+            </a>
+          );
+        })}
+      </div>
+
+      <details className={styles.mobileSwitcher}>
+        <summary
+          className={`${styles.flagButton} ${styles.active}`}
+          aria-label={`${label}: ${languageFlags[locale].name}`}
+          title={languageFlags[locale].name}
+        >
+          <Image
+            className={styles.flag}
+            src={languageFlags[locale].src}
+            alt=""
+            width={24}
+            height={18}
+            unoptimized
+          />
+          <span className={styles.visuallyHidden}>{languageFlags[locale].name}</span>
+        </summary>
+
+        <div className={styles.mobileMenu}>
+          {locales
+            .filter((item) => item !== locale)
+            .map((item) => {
+              const language = languageFlags[item];
+
+              return (
+                <a
+                  key={item}
+                  className={`${styles.flagButton} ${styles.link}`}
+                  href={localizedPath(item, pathname)}
+                  hrefLang={localeMeta[item].htmlLang}
+                  lang={localeMeta[item].htmlLang}
+                  aria-label={language.name}
+                  title={language.name}
+                  onClick={(event) => switchLanguage(event, item)}
+                >
+                  <Image
+                    className={styles.flag}
+                    src={language.src}
+                    alt=""
+                    width={24}
+                    height={18}
+                    unoptimized
+                  />
+                </a>
+              );
+            })}
+        </div>
+      </details>
     </div>
   );
 }

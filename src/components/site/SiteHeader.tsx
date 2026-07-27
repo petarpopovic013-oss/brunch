@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getEditorialCopy } from "@/src/data/editorial";
+import { getCities, getLocations } from "@/src/data/locations";
 import { localizedPath, type Locale } from "@/src/i18n/config";
 import type { Dictionary } from "@/src/i18n/dictionaries";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { NavigationDrawer } from "./NavigationDrawer";
 import styles from "./SiteHeader.module.css";
 
 type SiteHeaderProps = {
@@ -14,6 +17,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ locale, dictionary, pagePath, logo }: SiteHeaderProps) {
   const copy = dictionary.siteHeader;
+  const editorial = getEditorialCopy(locale);
   const homePath = localizedPath(locale, "/");
   const brandLogo = logo ?? { src: "/images/brunch/logo-white.webp", alt: "Brunch Lounge" };
 
@@ -24,7 +28,8 @@ export function SiteHeader({ locale, dictionary, pagePath, logo }: SiteHeaderPro
       </Link>
 
       <nav className={styles.desktopNav} aria-label={copy.mainNavigation}>
-        <Link href={`${homePath}#about`}>{copy.story}</Link>
+        <Link href={localizedPath(locale, "/o-nama/")}>{editorial.navAbout}</Link>
+        <Link href={localizedPath(locale, "/blog/")}>{editorial.navBlog}</Link>
         <Link href={`${homePath}#lokacije`}>{copy.locations}</Link>
         <Link href={`${homePath}#contact`}>{copy.contact}</Link>
       </nav>
@@ -38,18 +43,13 @@ export function SiteHeader({ locale, dictionary, pagePath, logo }: SiteHeaderPro
           mutedClassName={styles.mutedLanguage}
         />
 
-        <details className={styles.mobileMenu}>
-          <summary aria-label={copy.openNavigation}>
-            <span />
-            <span />
-          </summary>
-          <nav aria-label={copy.mobileNavigation}>
-            <Link href={homePath}>{copy.home}</Link>
-            <Link href={`${homePath}#about`}>{copy.story}</Link>
-            <Link href={`${homePath}#lokacije`}>{copy.locations}</Link>
-            <Link href={`${homePath}#contact`}>{copy.contact}</Link>
-          </nav>
-        </details>
+        <NavigationDrawer
+          locale={locale}
+          dictionary={dictionary}
+          locations={getLocations(locale)}
+          cities={getCities(locale)}
+          buttonClassName={styles.menuButton}
+        />
       </div>
     </header>
   );
