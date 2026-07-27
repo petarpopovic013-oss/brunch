@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cormorant } from "@/src/fonts";
 import { localeMeta } from "@/src/i18n/config";
 import { getDictionary } from "@/src/i18n/dictionaries";
-import { brandName, siteUrl } from "@/src/seo";
+import { brandName, siteUrl, socialCoverPath } from "@/src/seo";
 import "../globals.css";
 
 const dictionary = getDictionary("sr");
@@ -37,11 +37,15 @@ export const metadata: Metadata = {
     locale: localeMeta.sr.ogLocale,
     siteName: dictionary.metadata.siteName,
     images: [{
-      url: "/images/brunch/hero-guests.webp",
-      width: 2400,
-      height: 1600,
+      url: socialCoverPath,
+      width: 945,
+      height: 630,
       alt: "Brunch Lounge atmosfera",
     }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [socialCoverPath],
   },
 };
 

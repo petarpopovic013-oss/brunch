@@ -2,6 +2,7 @@ export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://brunch.rs")
 
 export const brandName = "Brunch Lounge";
 export const brandLogoPath = "/images/brunch/logo-black.webp";
+export const socialCoverPath = "/images/brunch/social-cover.jpg";
 export const brandSocialProfiles = [
   "https://www.instagram.com/brunch.rs/",
   "https://www.facebook.com/brunchlounge.rs/",

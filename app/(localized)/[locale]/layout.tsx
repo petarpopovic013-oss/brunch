@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { cormorant } from "@/src/fonts";
 import { isTranslatedLocale, localeMeta, translatedLocales } from "@/src/i18n/config";
 import { getDictionary } from "@/src/i18n/dictionaries";
-import { brandName, siteUrl } from "@/src/seo";
+import { brandName, siteUrl, socialCoverPath } from "@/src/seo";
 import "../../globals.css";
 
 type LocalizedLayoutProps = Readonly<{
@@ -53,11 +53,15 @@ export async function generateMetadata({ params }: LocalizedLayoutProps): Promis
       locale: localeMeta[locale].ogLocale,
       siteName: dictionary.metadata.siteName,
       images: [{
-        url: "/images/brunch/hero-guests.webp",
-        width: 2400,
-        height: 1600,
+        url: socialCoverPath,
+        width: 945,
+        height: 630,
         alt: dictionary.metadata.siteDescription,
       }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [socialCoverPath],
     },
   };
 }

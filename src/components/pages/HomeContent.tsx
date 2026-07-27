@@ -14,6 +14,7 @@ import {
   brandName,
   brandSocialProfiles,
   siteUrl,
+  socialCoverPath,
 } from "@/src/seo";
 
 export function getHomeMetadata(locale: Locale): Metadata {
@@ -37,17 +38,17 @@ export function getHomeMetadata(locale: Locale): Metadata {
       title: dictionary.metadata.homeTitle,
       description: dictionary.metadata.homeDescription,
       images: [{
-        url: "/images/brunch/hero-guests.webp",
-        width: 2400,
-        height: 1600,
-        alt: dictionary.story.imageOneAlt,
+        url: socialCoverPath,
+        width: 945,
+        height: 630,
+        alt: "Brunch Lounge",
       }],
     },
     twitter: {
       card: "summary_large_image",
       title: dictionary.metadata.homeTitle,
       description: dictionary.metadata.homeDescription,
-      images: ["/images/brunch/hero-guests.webp"],
+      images: [socialCoverPath],
     },
   };
 }
