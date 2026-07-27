@@ -31,6 +31,7 @@ export type Dictionary = {
     caption: string;
     chooseLocation: string;
     locationCount: string;
+    heroFooter: string;
     navigation: string;
     closeNavigation: string;
     openNavigation: string;
@@ -165,6 +166,7 @@ const sr: Dictionary = {
     caption: "Breakfast is a meal but brunch is a culture!",
     chooseLocation: "Izaberite Brunch Lounge lokaciju",
     locationCount: "7 lokacija · 3 grada",
+    heroFooter: "Više restorana · Isti Brunch doživljaj",
     navigation: "Navigacija",
     closeNavigation: "Zatvori navigaciju",
     openNavigation: "Otvori navigaciju",
@@ -306,6 +308,7 @@ const en: Dictionary = {
     caption: "Breakfast is a meal but brunch is a culture!",
     chooseLocation: "Choose a Brunch Lounge location",
     locationCount: "7 locations · 3 cities",
+    heroFooter: "More restaurants · The same Brunch experience",
     navigation: "Navigation",
     closeNavigation: "Close navigation",
     openNavigation: "Open navigation",
@@ -447,6 +450,7 @@ const ru: Dictionary = {
     caption: "Breakfast is a meal but brunch is a culture!",
     chooseLocation: "Выберите ресторан Brunch Lounge",
     locationCount: "7 ресторанов · 3 города",
+    heroFooter: "Больше ресторанов · То же впечатление Brunch",
     navigation: "Навигация",
     closeNavigation: "Закрыть навигацию",
     openNavigation: "Открыть навигацию",

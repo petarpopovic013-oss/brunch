@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRightIcon,
-  ClockIcon,
   CloseIcon,
   MenuIcon,
   PinIcon,
@@ -162,8 +161,7 @@ export function HeaderHero({ locale, dictionary, locations, cities }: HeaderHero
         </div>
 
         <div className={styles.hoursFooter}>
-          <ClockIcon />
-          <span>{copy.locationCount}</span>
+          <span>{copy.heroFooter}</span>
         </div>
       </section>
 
@@ -287,6 +285,7 @@ function Header({
           <Image src="/images/brunch/logo-white.webp" alt="Brunch Lounge" width={230} height={129} loading="eager" sizes="(max-width: 390px) 154px, (max-width: 1024px) 190px, 230px" />
         </a>
         <nav className={styles.desktopNav} aria-label={dictionary.siteHeader.mainNavigation}>
+          <Link href={homePath}>{dictionary.siteHeader.home}</Link>
           <Link href={localizedPath(locale, "/o-nama/")}>{editorial.navAbout}</Link>
           <Link href={localizedPath(locale, "/blog/")}>{editorial.navBlog}</Link>
           <a href={`${homePath}#lokacije`}>{dictionary.siteHeader.locations}</a>
